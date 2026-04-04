@@ -7,12 +7,14 @@ import styled from 'styled-components';
 const { Header, Sider, Footer, Content } = LayoutKit;
 
 const StyledLayout = styled(LayoutKit)`
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  padding: 0 20px;
+  width: 1440px;
+  max-width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: ${({ theme }) => `0 ${theme.spaces.l}`};
+  background-color: ${({ theme }) => theme.bg.default};
   box-sizing: border-box;
-  background-color: gray;
 `;
 
 const StyledContent = styled(Content)`
@@ -25,11 +27,13 @@ export const Layout = () => {
       <Header>Header</Header>
       <LayoutKit>
         <Sider>Sider</Sider>
-        <StyledContent>
-          <Outlet />
-        </StyledContent>
+        <LayoutKit>
+          <StyledContent>
+            <Outlet />
+          </StyledContent>
+          <Footer>Footer</Footer>
+        </LayoutKit>
       </LayoutKit>
-      <Footer>Footer</Footer>
     </StyledLayout>
   );
 };

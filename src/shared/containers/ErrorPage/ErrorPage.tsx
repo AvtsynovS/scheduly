@@ -17,9 +17,8 @@ const StyledWrapper = styled.div`
   height: 100vh;
 `;
 
-// TODO (savtsynov) настроить тему
 const StyledDescribe = styled(Paragraph)`
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.fontSize.xl};
 `;
 
 const StyledErrorImage = styled(ErrorImage)`

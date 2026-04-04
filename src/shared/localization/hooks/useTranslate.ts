@@ -1,7 +1,6 @@
 import { useCallback } from 'react';
 import { useIntl } from 'react-intl';
 
-// TODO (savtsynov) не сработал eslint
 import type {
   Formatters,
   MessageFormatElement,
