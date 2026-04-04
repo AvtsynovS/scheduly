@@ -1,5 +1,6 @@
-import { Select } from 'antd';
 import { useContext } from 'react';
+
+import { Select } from '@common/ui-kit';
 
 import { SupportedLocales } from '../constants';
 import { LOCALE_OPTIONS } from '../constants/options';

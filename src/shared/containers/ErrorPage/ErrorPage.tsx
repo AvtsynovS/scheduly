@@ -1,10 +1,11 @@
-import { Typography } from 'antd';
 import { Link } from 'react-router-dom';
 
-import styled from 'styled-components';
+import { Typography } from '@common/ui-kit';
+import { useTranslate } from '@shared';
 
 import { ErrorImage } from '../../assets';
-import { useTranslate } from '@shared';
+
+import styled from 'styled-components';
 
 const { Title, Paragraph } = Typography;
 

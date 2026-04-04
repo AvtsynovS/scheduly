@@ -1,11 +1,12 @@
 import { useCallback } from 'react';
+import { useIntl } from 'react-intl';
+
 // TODO (savtsynov) не сработал eslint
 import type {
   Formatters,
   MessageFormatElement,
   PrimitiveType,
 } from 'react-intl';
-import { useIntl } from 'react-intl';
 
 interface ParserOptions {
   ignoreTag?: boolean;

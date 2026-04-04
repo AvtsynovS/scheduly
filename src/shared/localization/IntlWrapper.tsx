@@ -1,11 +1,11 @@
 import { useCallback, useMemo, useState } from 'react';
-import type { PropsWithChildren } from 'react';
-
 import { IntlProvider } from 'react-intl';
 
 import { SupportedLocales } from './constants';
 import { getCurrentLocale, getTranslate, onChangeLocale } from './helpers';
 import { IntlContext } from './IntlContext';
+
+import type { PropsWithChildren } from 'react';
 
 export const IntlWrapper = ({ children }: PropsWithChildren) => {
   const [locale, setLocale] = useState<SupportedLocales>(() =>

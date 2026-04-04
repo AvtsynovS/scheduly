@@ -1,10 +1,10 @@
+import { readFileSync } from "fs";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
-import svgr from "vite-plugin-svgr";
 import mkcert from "vite-plugin-mkcert";
+import svgr from "vite-plugin-svgr";
 
 import react from "@vitejs/plugin-react";
-import { readFileSync } from "fs";
 
 export default defineConfig(({ mode }) => {
   const isAnalyze = mode === "analyze";

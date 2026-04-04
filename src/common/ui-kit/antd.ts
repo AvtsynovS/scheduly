@@ -1,1 +1,1 @@
-export { Flex, Layout as LayoutKit } from 'antd';
+export { Flex, Layout as LayoutKit, Select, Typography } from 'antd';

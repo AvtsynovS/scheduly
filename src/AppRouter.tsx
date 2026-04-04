@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
-import { ErrorPage, Layout } from '@shared';
 import { AuthPage } from '@modules/auth';
 import { DashboardPage } from '@modules/dashboard';
+import { ErrorPage, Layout } from '@shared';
 
 export const router = createBrowserRouter([
   {

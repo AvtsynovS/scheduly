@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-type DashboardPageProps = {};
-
 const StyledWrapper = styled.div`
   display: flex;
 `;
 
-export const DashboardPage = ({}: DashboardPageProps) => {
+export const DashboardPage = () => {
   return <StyledWrapper>DashboardPage</StyledWrapper>;
 };

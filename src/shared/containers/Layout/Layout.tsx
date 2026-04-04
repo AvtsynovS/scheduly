@@ -1,5 +1,7 @@
-import { LayoutKit } from '@common/ui-kit';
 import { Outlet } from 'react-router-dom';
+
+import { LayoutKit } from '@common/ui-kit';
+
 import styled from 'styled-components';
 
 const { Header, Sider, Footer, Content } = LayoutKit;

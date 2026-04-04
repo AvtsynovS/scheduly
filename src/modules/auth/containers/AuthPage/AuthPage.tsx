@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 
-type AuthPageProps = {};
-
 const StyledWrapper = styled.div`
   display: flex;
 `;
 
-export const AuthPage = ({}: AuthPageProps) => {
+export const AuthPage = () => {
   return <StyledWrapper>AuthPage</StyledWrapper>;
 };

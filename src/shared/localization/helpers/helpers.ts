@@ -17,7 +17,7 @@ export const getCurrentLocale = () => {
 
 export const onChangeLocale = (locale: SupportedLocales) => {
   localStorage.setItem('locale', locale);
-  // eslint-disable-next-line no-restricted-globals
+   
   location.reload();
 };
 
@@ -41,6 +41,7 @@ export const getTranslate = (locale: SupportedLocales) => {
 
 export const translate = async (key: string, locale = SupportedLocales.EN) => {
   const messages: Record<string, string> = getTranslate(locale);
+
   if (messages && messages[key]) {
     return messages[key];
   }
