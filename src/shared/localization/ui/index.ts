@@ -1,0 +1,1 @@
+export { LocalizationButton } from './LocalizationButton';

@@ -39,7 +39,7 @@ export default tseslint.config(
         alias: {
           map: [
             ['@common/containers', './src/common/containers'],
-            ['@common/ui-kit', './src/common/ui-kit'],
+            ['@common/ui-kit', './src/common/ui-kit/antd'],
             ['@common/types', './src/common/ui-kit/types'],
             ['@common/data-access', './src/common/data-access'],
             ['@shared', './src/shared'],
