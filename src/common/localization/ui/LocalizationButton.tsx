@@ -2,9 +2,9 @@ import { useContext } from 'react';
 
 import { Select } from '@common/ui-kit';
 
+import { IntlContext } from '../../providers/IntlProvider/IntlContext';
 import { SupportedLocales } from '../constants';
 import { LOCALE_OPTIONS } from '../constants/options';
-import { IntlContext } from '../IntlContext';
 
 export const LocalizationButton = () => {
   const { currentLocale, onChangeLocale } = useContext(IntlContext);

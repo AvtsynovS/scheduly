@@ -1,11 +1,11 @@
 import { type PropsWithChildren, useCallback, useMemo, useState } from 'react';
 
-import { getCurrentTheme, getTheme, onChangeTheme } from './helpers';
+import { getCurrentTheme, getTheme, onChangeTheme } from '../../themes/helpers';
 import { ThemeContext } from './ThemeContext';
 
 import { ThemeProvider } from 'styled-components';
 
-import type { SupportedTheme } from './constants';
+import type { SupportedTheme } from '../../themes/constants';
 
 export const ThemeWrapper = ({ children }: PropsWithChildren) => {
   const [theme, setTheme] = useState<SupportedTheme>(() => getCurrentTheme());

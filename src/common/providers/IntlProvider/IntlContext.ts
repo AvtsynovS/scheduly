@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
-import { SupportedLocales } from './constants';
-import { onChangeLocale } from './helpers';
+import { SupportedLocales } from '../../localization/constants';
+import { onChangeLocale } from '../../localization/helpers';
 
 type IntlContextType = {
   currentLocale: SupportedLocales;
