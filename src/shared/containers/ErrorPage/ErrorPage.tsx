@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
+import { useTranslate } from '@common/localization';
 import { Typography } from '@common/ui-kit';
-import { useTranslate } from '@shared';
 
 import { ErrorImage } from '../../assets';
 

@@ -17,7 +17,7 @@ export const getCurrentLocale = () => {
 
 export const onChangeLocale = (locale: SupportedLocales) => {
   localStorage.setItem('locale', locale);
-   
+
   location.reload();
 };
 

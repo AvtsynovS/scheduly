@@ -2,20 +2,17 @@ import { createRoot } from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
 import { Normalize } from 'styled-normalize';
 
-import { IntlWrapper, ThemeWrapper } from '@shared';
+import { AppProviders } from '@common/providers';
 
+import { router } from './AppRouter';
 import { GlobalStyles } from './GlobalStyles';
-
-import { router } from 'AppRouter';
 
 createRoot(document.getElementById('root')!).render(
   <>
     <Normalize />
-    <IntlWrapper>
-      <ThemeWrapper>
-        <GlobalStyles />
-        <RouterProvider router={router} />
-      </ThemeWrapper>
-    </IntlWrapper>
+    <AppProviders>
+      <GlobalStyles />
+      <RouterProvider router={router} />
+    </AppProviders>
   </>,
 );

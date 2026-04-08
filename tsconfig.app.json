@@ -7,15 +7,16 @@
     "module": "ESNext",
     "types": ["vite/client"],
     "skipLibCheck": true,
-    "baseUrl": "src",
     "paths": {
-      "@common/containers": ["common/containers"],
-      "@common/ui-kit": ["common/ui-kit/antd"],
-      "@common/types": ["common/ui-kit/types"],
-      "@common/data-access": ["common/data-access"],
-      "@shared": ["shared"],
-      "@modules/auth": ["modules/auth"],
-      "@modules/dashboard": ["modules/dashboard"]
+      "@common/containers": ["./src/common/containers"],
+      "@common/ui-kit": ["./src/common/ui-kit/antd"],
+      "@common/types": ["./src/common/ui-kit/types"],
+      "@common/data-access": ["./src/common/data-access"],
+      "@common/localization": ["./src/common/localization"],
+      "@common/providers": ["./src/common/providers/AppProviders"],
+      "@shared": ["./src/shared"],
+      "@modules/auth": ["./src/modules/auth"],
+      "@modules/dashboard": ["./src/modules/dashboard"]
     },
 
     /* Bundler mode */

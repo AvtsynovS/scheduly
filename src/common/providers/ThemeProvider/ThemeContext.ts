@@ -1,7 +1,7 @@
 import { createContext } from 'react';
 
-import { SupportedTheme } from './constants';
-import { onChangeTheme } from './helpers';
+import { SupportedTheme } from '../../themes/constants';
+import { onChangeTheme } from '../../themes/helpers';
 
 type ThemeContextType = {
   currentTheme: SupportedTheme;
