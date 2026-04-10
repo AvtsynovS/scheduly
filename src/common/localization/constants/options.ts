@@ -1,12 +1,6 @@
 import { SupportedLocales } from './types';
 
 export const LOCALE_OPTIONS = [
-  {
-    label: 'EN',
-    value: SupportedLocales.EN,
-  },
-  {
-    label: 'RU',
-    value: SupportedLocales.RU,
-  },
-];
+  { key: SupportedLocales.EN, label: 'EN' },
+  { key: SupportedLocales.RU, label: 'RU' },
+] satisfies { key: SupportedLocales; label: string }[];

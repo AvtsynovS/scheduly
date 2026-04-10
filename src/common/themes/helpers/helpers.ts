@@ -5,13 +5,10 @@ import { lightTheme } from '../lightTheme';
 export const getCurrentTheme = () => {
   const currentTheme = localStorage.getItem('theme');
   const isTheme =
-    !!currentTheme && Object.keys(SupportedTheme).includes(currentTheme);
+    !!currentTheme &&
+    Object.values(SupportedTheme).includes(currentTheme as SupportedTheme);
 
-  if (isTheme) {
-    return currentTheme as SupportedTheme;
-  } else {
-    return SupportedTheme.LIGHT;
-  }
+  return isTheme ? currentTheme : SupportedTheme.LIGHT;
 };
 
 export const onChangeTheme = (theme: SupportedTheme) => {

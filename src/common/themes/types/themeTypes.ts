@@ -39,6 +39,7 @@ export type BoxShadowType = {
   bottom: string;
   rightBottom: string;
   center: string;
+  theme: string;
 };
 
 export type BorderRadiusType = SizeType;
@@ -84,7 +85,7 @@ export type LineHeightType = {
   xxl: string;
 };
 
-type ControlKeyType = 'card' | 'button';
+type ControlKeyType = 'avatar' | 'card' | 'button' | 'themeSwitcher';
 
 type ControlType = Record<ControlKeyType, ComponentControlType>;
 
