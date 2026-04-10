@@ -33,6 +33,11 @@ export const darkTheme: DefaultTheme = {
     disabled: 'rgb(233, 230, 230)',
   },
   controls: {
+    avatar: {
+      bg: { default: 'rgb(135, 208, 104)' },
+      color: { default: 'rgb(0, 0, 0)' },
+      border: { default: '1px solid rgb(200, 200, 200)' },
+    },
     card: {
       color: {
         default: 'rgb(78, 142, 177)',
@@ -57,6 +62,14 @@ export const darkTheme: DefaultTheme = {
       border: {
         default: 'none',
       },
+    },
+    themeSwitcher: {
+      bg: {
+        default: 'linear-gradient(180deg, #0f2027, #203a43, #2c5364)',
+        accent: 'rgb(11, 28, 44)',
+      },
+      color: { default: 'rgb(0, 0, 0)' },
+      border: { default: '1px solid rgb(200, 200, 200)' },
     },
   },
   spaces: spaces,

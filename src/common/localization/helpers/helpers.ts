@@ -1,18 +1,12 @@
 import { SupportedLocales } from '../constants';
 import { messages_en, messages_ru } from '../locales';
+import { isSupportedLocale } from './guards';
 
 export const getCurrentLocale = () => {
   const currentLocale = localStorage.getItem('locale');
+  const isLocale = !!currentLocale && isSupportedLocale(currentLocale);
 
-  const isLocale =
-    !!currentLocale &&
-    Object.values<string>(SupportedLocales).includes(currentLocale);
-
-  if (isLocale) {
-    return currentLocale as SupportedLocales;
-  } else {
-    return SupportedLocales.RU;
-  }
+  return isLocale ? currentLocale : SupportedLocales.RU;
 };
 
 export const onChangeLocale = (locale: SupportedLocales) => {

@@ -1,29 +1,31 @@
 import { useContext } from 'react';
 
-import { Select } from '@common/ui-kit';
+import { Button, Dropdown } from '@common/ui-kit';
 
 import { IntlContext } from '../../providers/IntlProvider/IntlContext';
-import { SupportedLocales } from '../constants';
 import { LOCALE_OPTIONS } from '../constants/options';
+import { isSupportedLocale } from '../helpers/guards';
+import { LanguagesIcon } from './icons';
+
+import type { MenuInfo } from '@common/ui-kit/types';
 
 export const LocalizationButton = () => {
   const { currentLocale, onChangeLocale } = useContext(IntlContext);
 
-  const handleChange = (locale: SupportedLocales) => {
-    switch (locale) {
-      case SupportedLocales.EN:
-        onChangeLocale(SupportedLocales.EN);
-        break;
-      default:
-        onChangeLocale(SupportedLocales.RU);
-    }
+  const handleClick = ({ key }: MenuInfo) => {
+    if (isSupportedLocale(key)) onChangeLocale(key);
   };
 
   return (
-    <Select
-      options={LOCALE_OPTIONS}
-      onChange={handleChange}
-      value={currentLocale}
-    />
+    <Dropdown
+      menu={{
+        items: LOCALE_OPTIONS,
+        selectedKeys: [currentLocale],
+        onClick: handleClick,
+      }}
+      trigger={['click']}
+    >
+      <Button type="text" icon={<LanguagesIcon />} />
+    </Dropdown>
   );
 };
