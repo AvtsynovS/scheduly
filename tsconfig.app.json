@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "paths": {
       "@app": ["./src/app"],
+      "@app/routes": ["./src/app/routes"],
       "@common/containers": ["./src/common/containers"],
       "@common/ui-kit": ["./src/common/ui-kit/antd"],
       "@common/ui-kit/types": ["./src/common/ui-kit/antdTypes"],
@@ -19,7 +20,8 @@
       "@common/providers": ["./src/common/providers/AppProviders"],
       "@shared": ["./src/shared"],
       "@modules/auth": ["./src/modules/auth"],
-      "@modules/dashboard": ["./src/modules/dashboard"]
+      "@modules/dashboard": ["./src/modules/dashboard"],
+      "@modules/business/dashboard": ["./src/modules/business/dashboard"]
     },
 
     /* Bundler mode */

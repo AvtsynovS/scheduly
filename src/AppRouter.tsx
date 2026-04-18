@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { MainLayout } from '@app';
+import { DashboardRoute } from '@app/routes';
 import { AuthPage } from '@modules/auth';
 import { DashboardPage } from '@modules/dashboard';
 import { ErrorPage } from '@shared';
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: 'dashboard',
         element: <DashboardPage />,
+      },
+      {
+        path: '/business/:businessId',
+        element: <DashboardRoute />,
       },
     ],
   },
