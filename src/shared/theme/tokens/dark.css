@@ -1,0 +1,51 @@
+.dark {
+  --background: rgb(10, 10, 10);
+  --foreground: rgb(250, 250, 250);
+
+  --card: rgb(23, 23, 23);
+  --card-foreground: rgb(250, 250, 250);
+
+  --popover: rgb(23, 23, 23);
+  --popover-foreground: rgb(250, 250, 250);
+
+  --primary: rgb(0, 89, 138);
+  --primary-foreground: rgb(240, 249, 255);
+  --primary-hover: rgb(51, 122, 161);
+  --primary-active: rgb(0, 80, 124);
+  --primary-active-hover: rgb(51, 122, 161);
+
+  --secondary: rgb(39, 39, 42);
+  --secondary-foreground: rgb(250, 250, 250);
+
+  --muted: rgb(38, 38, 38);
+  --muted-foreground: rgb(161, 161, 161);
+
+  --accent: rgb(38, 38, 38);
+  --accent-foreground: rgb(250, 250, 250);
+
+  --destructive: rgb(255, 100, 103);
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: rgb(115, 115, 115);
+
+  --chart-1: rgb(116, 212, 255);
+  --chart-2: rgb(0, 166, 244);
+  --chart-3: rgb(0, 132, 209);
+  --chart-4: rgb(0, 105, 168);
+  --chart-5: rgb(0, 89, 138);
+
+  --sidebar: rgb(23, 23, 23);
+  --sidebar-foreground: rgb(250, 250, 250);
+  --sidebar-primary: rgb(0, 166, 244);
+  --sidebar-primary-foreground: rgb(5, 47, 74);
+  --sidebar-accent: rgb(38, 38, 38);
+  --sidebar-accent-foreground: rgb(250, 250, 250);
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: rgb(115, 115, 115);
+
+  /* Error / success */
+  --success: rgb(73, 149, 55);
+  --warning: rgb(207, 146, 0);
+  --error: var(--destructive);
+}

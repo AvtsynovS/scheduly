@@ -1,5 +1,10 @@
-export { IntlWrapper } from './IntlWrapper';
+export { IntlContext } from './model/IntlContext';
+export { LocaleButton } from './ui/LocaleButton';
+export { SupportedLocales } from './model/types';
+export {
+  getCurrentLocale,
+  translate,
+  getTranslate,
+  onChangeLocale,
+} from './helpers/helpers';
 export { useTranslate } from './hooks';
-export { LocalizationButton } from './ui';
-export { SupportedLocales } from './constants/types';
-export { translate, getTranslate } from './helpers/helpers';

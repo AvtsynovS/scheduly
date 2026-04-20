@@ -73,6 +73,11 @@ export default tseslint.config(
               message: 'Импорт из модулей в common запрещен',
             },
             {
+              target: ['./src/shared'],
+              from: ['./src/app/**', './src/modules/**'],
+              message: 'Импорт из модулей app и modules в shared запрещен',
+            },
+            {
               target: ['./src/modules/**', './src/shared/**'],
               from: ['./node_modules/antd'],
               message:

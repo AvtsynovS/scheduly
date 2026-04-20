@@ -1,21 +1,17 @@
 import { createRoot } from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
 import { Normalize } from 'styled-normalize';
 
-import { IntlWrapper, ThemeWrapper } from '@shared';
+import { AppProviders } from '@app';
 
-import { GlobalStyles } from './GlobalStyles';
+import { AppRouter } from './AppRouter';
 
-import { router } from 'AppRouter';
+import '@shared/theme/tokens';
 
 createRoot(document.getElementById('root')!).render(
   <>
     <Normalize />
-    <IntlWrapper>
-      <ThemeWrapper>
-        <GlobalStyles />
-        <RouterProvider router={router} />
-      </ThemeWrapper>
-    </IntlWrapper>
+    <AppProviders>
+      <AppRouter />
+    </AppProviders>
   </>,
 );

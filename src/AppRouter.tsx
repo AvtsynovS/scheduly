@@ -1,13 +1,15 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+import { MainLayout } from '@app';
+import { DashboardRoute } from '@app/routes';
 import { AuthPage } from '@modules/auth';
 import { DashboardPage } from '@modules/dashboard';
-import { ErrorPage, Layout } from '@shared';
+import { ErrorPage } from '@shared';
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: <MainLayout />,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <DashboardPage /> },
@@ -15,9 +17,17 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element: <DashboardPage />,
       },
+      {
+        path: '/business/:businessId',
+        element: <DashboardRoute />,
+      },
     ],
   },
   { path: '/auth', element: <AuthPage /> },
   { path: '/error/:status', element: <ErrorPage /> },
   { path: '*', element: <ErrorPage /> },
 ]);
+
+export const AppRouter = () => {
+  return <RouterProvider router={router} />;
+};

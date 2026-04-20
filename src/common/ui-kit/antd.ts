@@ -1,1 +1,9 @@
-export { Flex, Layout as LayoutKit, Select, Typography } from 'antd';
+export {
+  Avatar,
+  Button,
+  Dropdown,
+  Flex,
+  Layout,
+  Select,
+  Typography,
+} from 'antd';

@@ -1,23 +1,17 @@
-import { SupportedLocales } from '../constants';
+import { SupportedLocales } from '../config';
 import { messages_en, messages_ru } from '../locales';
+import { isSupportedLocale } from './guards';
 
 export const getCurrentLocale = () => {
   const currentLocale = localStorage.getItem('locale');
+  const isLocale = !!currentLocale && isSupportedLocale(currentLocale);
 
-  const isLocale =
-    !!currentLocale &&
-    Object.values<string>(SupportedLocales).includes(currentLocale);
-
-  if (isLocale) {
-    return currentLocale as SupportedLocales;
-  } else {
-    return SupportedLocales.RU;
-  }
+  return isLocale ? currentLocale : SupportedLocales.RU;
 };
 
 export const onChangeLocale = (locale: SupportedLocales) => {
   localStorage.setItem('locale', locale);
-   
+
   location.reload();
 };
 
@@ -46,5 +40,5 @@ export const translate = async (key: string, locale = SupportedLocales.EN) => {
     return messages[key];
   }
 
-  return 'Перевод не найден';
+  return 'Translation not found';
 };

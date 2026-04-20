@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 
-import { LayoutKit } from '@common/ui-kit';
+import { Layout as LayoutKit } from '@common/ui-kit';
 
 import styled from 'styled-components';
 

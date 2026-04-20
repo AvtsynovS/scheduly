@@ -1,0 +1,54 @@
+/* oklch(L - Lightness C - Chroma H - Hue) */
+:root {
+  --background: rgb(245, 245, 245);
+  --foreground: rgb(10, 10, 10);
+
+  --card: rgb(255, 255, 255);
+  --card-foreground: rgb(10, 10, 10);
+
+  --popover: rgb(255, 255, 255);
+  --popover-foreground: rgb(10, 10, 10);
+
+  --primary: rgb(0, 105, 168);
+  --primary-foreground: rgb(240, 249, 255);
+  --primary-hover: rgb(77, 139, 173);
+  --primary-active: rgb(179, 210, 229);
+  --primary-active-hover: rgb(77, 139, 173);
+
+  --secondary: rgb(244, 244, 245);
+  --secondary-foreground: rgb(24, 24, 27);
+
+  --muted: rgb(245, 245, 245);
+  --muted-foreground: rgb(115, 115, 115);
+
+  --accent: rgb(245, 245, 245);
+  --accent-foreground: rgb(23, 23, 23);
+
+  --destructive: rgb(231, 0, 11);
+
+  --border-color: rgb(229, 229, 229);
+  --input: rgb(229, 229, 229);
+  --ring: rgb(161, 161, 161);
+
+  --chart-1: rgb(116, 212, 255);
+  --chart-2: rgb(0, 166, 244);
+  --chart-3: rgb(0, 132, 209);
+  --chart-4: rgb(0, 105, 168);
+  --chart-5: rgb(0, 89, 138);
+
+  --radius: 0.625rem;
+
+  --sidebar: rgb(250, 250, 250);
+  --sidebar-foreground: rgb(10, 10, 10);
+  --sidebar-primary: rgb(0, 132, 209);
+  --sidebar-primary-foreground: rgb(240, 249, 255);
+  --sidebar-accent: rgb(245, 245, 245);
+  --sidebar-accent-foreground: rgb(23, 23, 23);
+  --sidebar-border: rgb(229, 229, 229);
+  --sidebar-ring: rgb(161, 161, 161);
+
+  /* Error / success */
+  --success: rgb(73, 149, 55);
+  --warning: rgb(207, 146, 0);
+  --error: var(--destructive);
+}
