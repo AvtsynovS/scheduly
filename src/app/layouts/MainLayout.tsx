@@ -1,10 +1,8 @@
 import { Outlet } from 'react-router-dom';
 
-import { LocalizationButton } from '@common/localization';
-import { ThemeButton } from '@common/themes';
 // TODO (savtsynov) настроить тему для Button
 import { Button, Flex, Layout, Typography } from '@common/ui-kit';
-import { Avatar, LogoutIcon, spaces } from '@shared';
+import { Avatar, LocaleButton, LogoutIcon, spaces, ThemeButton } from '@shared';
 
 import styled from 'styled-components';
 
@@ -24,11 +22,11 @@ const StyledHeader = styled(Header)`
   justify-content: space-between;
   height: 64px;
   padding: 0 ${({ theme }) => theme.spaces.l};
-  background: ${({ theme }) => theme.bg.default};
-  border-bottom: ${({ theme }) => theme.borders.default};
+  background: ${({ theme }) => theme.colors.background};
+  border-bottom: 1px solid;
 `;
 const StyledTitle = styled(Title)`
-  color: ${({ theme }) => theme.colors.default};
+  color: ${({ theme }) => theme.colors.foreground};
 
   && {
     margin: 0;
@@ -46,10 +44,10 @@ export const MainLayout = ({ children }: PropsWithChildren) => {
       <StyledHeader>
         <StyledTitle level={3}>Company</StyledTitle>
         <Flex align="center" gap={spaces.m}>
-          <LocalizationButton />
+          <LocaleButton />
           <ThemeButton />
           <Flex align="center" gap={spaces.s}>
-            <Avatar />
+            <Avatar size="small" />
             <Text>Иванов И</Text>
           </Flex>
           <Button type="text" icon={<LogoutIcon />} />

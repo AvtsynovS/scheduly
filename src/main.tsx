@@ -1,16 +1,16 @@
 import { createRoot } from 'react-dom/client';
 import { Normalize } from 'styled-normalize';
 
-import { AppProviders } from '@common/providers';
+import { AppProviders } from '@app';
 
 import { AppRouter } from './AppRouter';
-import { GlobalStyles } from './GlobalStyles';
+
+import '@shared/theme/tokens';
 
 createRoot(document.getElementById('root')!).render(
   <>
     <Normalize />
     <AppProviders>
-      <GlobalStyles />
       <AppRouter />
     </AppProviders>
   </>,
