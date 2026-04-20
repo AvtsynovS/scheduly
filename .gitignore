@@ -27,3 +27,5 @@ ideas.md
 # Ignore certs
 certs/*.pem
 certs/*.key
+
+dev_utils.ts

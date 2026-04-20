@@ -16,9 +16,9 @@
       "@common/types": ["./src/common/ui-kit/types"],
       "@common/data-access": ["./src/common/data-access"],
       "@common/localization": ["./src/common/localization"],
-      "@common/themes": ["./src/common/themes"],
       "@common/providers": ["./src/common/providers/AppProviders"],
       "@shared": ["./src/shared"],
+      "@shared/theme/tokens": ["./src/shared/theme/tokens"],
       "@modules/auth": ["./src/modules/auth"],
       "@modules/dashboard": ["./src/modules/dashboard"],
       "@modules/business/dashboard": ["./src/modules/business/dashboard"]
