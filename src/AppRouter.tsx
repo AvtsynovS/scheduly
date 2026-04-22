@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from '@app';
 import { DashboardRoute } from '@app/routes';
 import { AuthPage } from '@modules/auth';
+import { ServicesPage } from '@modules/business';
 import { DashboardPage } from '@modules/dashboard';
 import { ErrorPage } from '@shared';
 
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
       },
       {
         path: '/business/:businessId',
-        element: <DashboardRoute />,
+        children: [
+          { index: true, element: <DashboardRoute /> },
+          { path: 'services', element: <ServicesPage /> },
+        ],
       },
     ],
   },

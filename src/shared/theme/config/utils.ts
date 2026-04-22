@@ -1,4 +1,7 @@
 import { dropdownTokens } from './antd/dropdown';
+import { getLayoutTokens } from './antd/layoutTokens';
+import { getMenuTokens } from './antd/menuTokens';
+import { typographyTokens } from './antd/typography';
 
 export const getCssVariables = (root: HTMLElement, variables: string[]) => {
   return variables.reduce(
@@ -43,7 +46,6 @@ export const getAntdTheme = () => {
       colorError: cssVar('--error'),
 
       fontFamily: cssVar('--font-sans'),
-
       fontSize: 14,
       borderRadius: 8,
       padding: 16,
@@ -51,6 +53,9 @@ export const getAntdTheme = () => {
     },
     components: {
       Dropdown: dropdownTokens,
+      Typography: typographyTokens,
+      Layout: getLayoutTokens(cssVar),
+      Menu: getMenuTokens(cssVar),
     },
   };
 };

@@ -1,3 +1,4 @@
-export type { AvatarProps } from 'antd';
-export type { MenuProps } from 'antd/es/menu';
+export type { AvatarProps, MenuProps } from 'antd';
 export type { MenuInfo } from '@rc-component/menu/lib/interface';
+export type { ItemType } from 'antd/es/menu/interface';
+export type { DefaultOptionType } from 'antd/es/select';

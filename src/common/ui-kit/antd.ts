@@ -4,6 +4,7 @@ export {
   Dropdown,
   Flex,
   Layout,
+  Menu,
   Select,
   Typography,
 } from 'antd';

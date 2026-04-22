@@ -1,5 +1,6 @@
 /* oklch(L - Lightness C - Chroma H - Hue) */
 :root {
+  --white: rgb(255, 255, 255);
   --background: rgb(245, 245, 245);
   --foreground: rgb(10, 10, 10);
 
@@ -11,8 +12,8 @@
 
   --primary: rgb(0, 105, 168);
   --primary-foreground: rgb(240, 249, 255);
-  --primary-hover: rgb(77, 139, 173);
-  --primary-active: rgb(179, 210, 229);
+  --primary-hover: rgb(179, 210, 229);
+  --primary-active: rgb(77, 139, 173);
   --primary-active-hover: rgb(77, 139, 173);
 
   --secondary: rgb(244, 244, 245);

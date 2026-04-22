@@ -1,3 +1,5 @@
+import { useParams } from 'react-router-dom';
+
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
@@ -5,5 +7,7 @@ const StyledWrapper = styled.div`
 `;
 
 export const DashboardPage = () => {
-  return <StyledWrapper>DashboardPage</StyledWrapper>;
+  const { businessId } = useParams();
+
+  return <StyledWrapper>{`DashboardPage ${businessId}`} </StyledWrapper>;
 };
