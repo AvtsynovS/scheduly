@@ -1,19 +1,28 @@
+import { type PropsWithChildren } from 'react';
 import { Outlet } from 'react-router-dom';
 
 // TODO (savtsynov) настроить тему для Button
 import { Button, Flex, Layout, Typography } from '@common/ui-kit';
-import { Avatar, LocaleButton, LogoutIcon, spaces, ThemeButton } from '@shared';
+import {
+  Avatar,
+  CalendarIcon,
+  LocaleButton,
+  LogoutIcon,
+  spaces,
+  ThemeButton,
+} from '@shared';
+
+import { SideBar } from './ui/SideBar';
 
 import styled from 'styled-components';
 
-import type { PropsWithChildren } from 'react';
-
 const { Header, Footer, Content } = Layout;
-// TODO (savtsynov) настроить тему для Typography
+
 const { Title, Text } = Typography;
 
 const StyledWrapper = styled(Flex)`
   height: 100vh;
+  overflow: hidden;
 `;
 
 const StyledHeader = styled(Header)`
@@ -26,10 +35,21 @@ const StyledHeader = styled(Header)`
   border-bottom: 1px solid;
 `;
 const StyledTitle = styled(Title)`
-  color: ${({ theme }) => theme.colors.foreground};
-
   && {
+    color: ${({ theme }) => theme.colors.foreground};
     margin: 0;
+  }
+`;
+
+const StyledIconWrapper = styled.div`
+  padding: ${({ theme }) => theme.spaces.xxs};
+  background-color: ${({ theme }) => theme.colors.primary};
+  border-radius: ${({ theme }) => theme.radius.sm};
+
+  & svg {
+    width: 20px;
+    height: 20px;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -42,7 +62,12 @@ export const MainLayout = ({ children }: PropsWithChildren) => {
   return (
     <StyledWrapper vertical>
       <StyledHeader>
-        <StyledTitle level={3}>Company</StyledTitle>
+        <Flex align="center" gap={spaces.m}>
+          <StyledIconWrapper>
+            <CalendarIcon />
+          </StyledIconWrapper>
+          <StyledTitle level={3}>Scheduly</StyledTitle>
+        </Flex>
         <Flex align="center" gap={spaces.m}>
           <LocaleButton />
           <ThemeButton />
@@ -53,8 +78,13 @@ export const MainLayout = ({ children }: PropsWithChildren) => {
           <Button type="text" icon={<LogoutIcon />} />
         </Flex>
       </StyledHeader>
-      <StyledContent>{children || <Outlet />}</StyledContent>
-      <Footer>Footer</Footer>
+      <Layout>
+        <SideBar />
+        <Layout>
+          <StyledContent>{children || <Outlet />}</StyledContent>
+          <Footer>Footer</Footer>
+        </Layout>
+      </Layout>
     </StyledWrapper>
   );
 };

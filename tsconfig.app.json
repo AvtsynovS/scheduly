@@ -21,7 +21,7 @@
       "@shared/theme/tokens": ["./src/shared/theme/tokens"],
       "@modules/auth": ["./src/modules/auth"],
       "@modules/dashboard": ["./src/modules/dashboard"],
-      "@modules/business/dashboard": ["./src/modules/business/dashboard"]
+      "@modules/business": ["./src/modules/business"]
     },
 
     /* Bundler mode */
@@ -36,7 +36,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
+    "erasableSyntaxOnly": false,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },

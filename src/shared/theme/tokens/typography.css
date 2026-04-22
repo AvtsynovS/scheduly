@@ -1,6 +1,6 @@
 :root {
-  --font-sans: 'Roboto', 'Roboto Fallback';
-  --font-heading: 'Roboto', 'Roboto Fallback';
+  --font-sans: 'Roboto', sans-serif;
+  --font-heading: 'Roboto', sans-serif;
 
   --text-xs: 12px;
   --text-sm: 14px;
