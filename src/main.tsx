@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import { Normalize } from 'styled-normalize';
 
-import { AppProviders } from '@app';
+import { AppProviders } from '@app/providers';
 
 import { AppRouter } from './AppRouter';
 

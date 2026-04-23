@@ -58,7 +58,7 @@ const StyledContent = styled(Content)`
   overflow: auto;
 `;
 
-export const MainLayout = ({ children }: PropsWithChildren) => {
+export const ClientLayout = ({ children }: PropsWithChildren) => {
   return (
     <StyledWrapper vertical>
       <StyledHeader>
