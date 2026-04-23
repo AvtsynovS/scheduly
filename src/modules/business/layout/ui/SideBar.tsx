@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { Button, Flex, Layout, Typography } from '@common/ui-kit';
 import {
@@ -12,6 +13,8 @@ import {
 import { items } from '../config/itemsMenu';
 
 import styled from 'styled-components';
+
+import type { SelectInfo } from '@common/ui-kit/types';
 
 const { Sider } = Layout;
 const { Title } = Typography;
@@ -38,7 +41,9 @@ const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
 `;
 
 export const SideBar = () => {
+  const { businessId } = useParams();
   const translate = useTranslate();
+  const navigate = useNavigate();
 
   const [collapsed, setCollapsed] = useState(false);
 
@@ -46,6 +51,10 @@ export const SideBar = () => {
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
+  };
+
+  const onSelect = ({ key }: SelectInfo) => {
+    navigate(`/business/${businessId}/${key}`);
   };
 
   return (
@@ -74,6 +83,7 @@ export const SideBar = () => {
         inlineIndent={12}
         defaultSelectedKeys={['dashboard']}
         tooltip={collapsed ? { placement: 'right' } : false}
+        onSelect={onSelect}
       />
     </Sider>
   );

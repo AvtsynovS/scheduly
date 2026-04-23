@@ -8,20 +8,20 @@
     "types": ["vite/client"],
     "skipLibCheck": true,
     "paths": {
-      "@app": ["./src/app"],
       "@app/routes": ["./src/app/routes"],
+      "@app/providers": ["./src/app/providers"],
       "@common/containers": ["./src/common/containers"],
       "@common/ui-kit": ["./src/common/ui-kit/antd"],
       "@common/ui-kit/types": ["./src/common/ui-kit/antdTypes"],
       "@common/types": ["./src/common/ui-kit/types"],
       "@common/data-access": ["./src/common/data-access"],
       "@common/localization": ["./src/common/localization"],
-      "@common/providers": ["./src/common/providers/AppProviders"],
       "@shared": ["./src/shared"],
       "@shared/theme/tokens": ["./src/shared/theme/tokens"],
       "@modules/auth": ["./src/modules/auth"],
-      "@modules/dashboard": ["./src/modules/dashboard"],
-      "@modules/business": ["./src/modules/business"]
+      "@modules/business": ["./src/modules/business"],
+      "@modules/employee": ["./src/modules/employee"],
+      "@modules/client": ["./src/modules/client"]
     },
 
     /* Bundler mode */

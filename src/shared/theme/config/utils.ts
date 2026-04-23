@@ -1,6 +1,7 @@
 import { dropdownTokens } from './antd/dropdown';
 import { getLayoutTokens } from './antd/layoutTokens';
 import { getMenuTokens } from './antd/menuTokens';
+import { getSpinTokens } from './antd/spinTokens';
 import { typographyTokens } from './antd/typography';
 
 export const getCssVariables = (root: HTMLElement, variables: string[]) => {
@@ -56,6 +57,7 @@ export const getAntdTheme = () => {
       Typography: typographyTokens,
       Layout: getLayoutTokens(cssVar),
       Menu: getMenuTokens(cssVar),
+      Spin: getSpinTokens(cssVar),
     },
   };
 };

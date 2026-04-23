@@ -6,5 +6,6 @@ export {
   Layout,
   Menu,
   Select,
+  Spin,
   Typography,
 } from 'antd';
