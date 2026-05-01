@@ -3,7 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
     box-sizing: border-box;
-  }
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      border-color 0.3s ease;
+}
 
   body {
     margin: 0;
@@ -17,18 +21,17 @@ export const GlobalStyles = createGlobalStyle`
     
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease;
 
     @media (max-width: 1024px) {
       font-size: ${({ theme }) => theme.fontSize.sm};
     }
   }
 
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5 {
+    color: ${({ theme }) => theme.colors.foreground};
     font-family: ${({ theme }) => theme.fonts.heading};
       text-rendering: optimizeLegibility;
+    margin: 0;
   }
 
   p {

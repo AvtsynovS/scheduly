@@ -1,0 +1,22 @@
+{
+  "business.button.label.add.service": "Добавить услугу",
+
+  "business.sider.title.menu": "Меню",
+
+  "business.menu.item.dashboard": "Дашборд",
+  "business.menu.item.records": "Записи",
+  "business.menu.item.clients": "Клиенты",
+  "business.menu.item.employees": "Сотрудники",
+  "business.menu.item.services": "Услуги",
+  "business.menu.item.finance": "Финансы",
+  "business.menu.item.reports": "Отчеты",
+  "business.menu.item.settings": "Настройки",
+
+  "business.stats.total": "Всего услуг",
+  "business.stats.categories": "Всего категорий",
+  "business.stats.average.price": "Средняя цена",
+  "business.stats.average.time": "Среднее время",
+
+  "business.page.title.services": "Услуги",
+  "business.page.description.services": "Управление услугами и ценами"
+}

@@ -1,0 +1,14 @@
+{
+  "button.label.home": "Go to home page",
+
+  "dropdown.option.light": "Light",
+  "dropdown.option.dark": "Dark",
+
+  "sider.title.menu": "Menu",
+
+  "page.title.fallback": "An unexpected error occurred",
+  "page.description.fallback": "Something went wrong...",
+
+  "text.minute": "min",
+  "text.hour": "hours"
+}

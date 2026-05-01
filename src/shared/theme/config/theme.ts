@@ -4,6 +4,8 @@ export const theme = {
     background: 'var(--background)',
     foreground: 'var(--foreground)',
 
+    header: 'var(--header)',
+
     card: 'var(--card)',
     cardForeground: 'var(--card-foreground)',
 
@@ -19,7 +21,12 @@ export const theme = {
     accent: 'var(--accent)',
     accentForeground: 'var(--accent-foreground)',
 
-    destructive: 'var(--destructive)',
+    positive: 'var(--status-positive)',
+    negative: 'var(--status-negative)',
+    neutral: 'var(--status-neutral)',
+    success: 'var(--status-success)',
+    warning: 'var(--status-warning)',
+    error: 'var(--status-error)',
 
     border: 'var(--border)',
     input: 'var(--input)',
@@ -53,5 +60,7 @@ export const theme = {
     m: '16px',
     l: '20px',
     xl: '24px',
+    xxl: '32px',
+    xxxl: '48px',
   },
 };

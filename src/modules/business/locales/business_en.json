@@ -1,0 +1,22 @@
+{
+  "business.button.label.add.service": "Add service",
+
+  "business.sider.title.menu": "Menu",
+
+  "business.menu.item.dashboard": "Dashboard",
+  "business.menu.item.records": "Records",
+  "business.menu.item.clients": "Clients",
+  "business.menu.item.employees": "Employees",
+  "business.menu.item.services": "Services",
+  "business.menu.item.finance": "Finance",
+  "business.menu.item.reports": "Reports",
+  "business.menu.item.settings": "Settings",
+
+  "business.stats.total": "Total services",
+  "business.stats.categories": "Total categories",
+  "business.stats.average.price": "Average price",
+  "business.stats.average.time": "Average time",
+
+  "business.page.title.services": "Services",
+  "business.page.description.services": "Service and pricing management"
+}

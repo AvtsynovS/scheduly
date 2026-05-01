@@ -4,7 +4,7 @@ import { Button, Dropdown } from '@common/ui-kit';
 
 import { LangIcon } from '../../assets';
 import { LOCALE_OPTIONS } from '../config/options';
-import { isSupportedLocale } from '../helpers/guards';
+import { isSupportedLocale } from '../lib/guards';
 import { IntlContext } from '../model/IntlContext';
 
 import type { MenuInfo } from '@common/ui-kit/types';

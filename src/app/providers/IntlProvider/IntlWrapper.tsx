@@ -1,13 +1,13 @@
 import { useCallback, useMemo, useState } from 'react';
 import { IntlProvider } from 'react-intl';
 
+import { IntlContext, SupportedLocales } from '@shared';
+
 import {
   getCurrentLocale,
   getTranslate,
-  IntlContext,
   onChangeLocale,
-  SupportedLocales,
-} from '@shared';
+} from '../../localization/helpers';
 
 import type { PropsWithChildren } from 'react';
 

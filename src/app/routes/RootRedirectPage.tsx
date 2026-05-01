@@ -6,7 +6,7 @@ export const RootRedirectPage = () => {
   const businessId = 1;
 
   if (role === 'business') {
-    return <Navigate to={`/business/${businessId}`} replace />;
+    return <Navigate to={`/business/${businessId}/dashboard`} replace />;
   }
 
   if (role === 'employee') {

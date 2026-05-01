@@ -1,0 +1,14 @@
+{
+  "button.label.home": "Вернуться на домашнюю страницу",
+
+  "dropdown.option.light": "Светлая",
+  "dropdown.option.dark": "Темная",
+
+  "sider.title.menu": "Меню",
+
+  "page.title.fallback": "Произошла непредвиденная ошибка",
+  "page.description.fallback": "Что-то пошло не так...",
+
+  "text.minute": "мин",
+  "text.hour": "часов"
+}

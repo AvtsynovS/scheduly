@@ -1,3 +1,4 @@
+import { buttonTokens } from './antd/button';
 import { dropdownTokens } from './antd/dropdown';
 import { getLayoutTokens } from './antd/layoutTokens';
 import { getMenuTokens } from './antd/menuTokens';
@@ -25,10 +26,8 @@ export const getAntdTheme = () => {
 
   return {
     token: {
-      colorPrimary: cssVar('--foreground'),
+      colorPrimary: cssVar('--primary'),
 
-      controlItemBgActive: cssVar('--primary-active'),
-      controlItemBgActiveHover: cssVar('--primary-active-hover'),
       controlItemBgHover: cssVar('--primary-hover'),
 
       colorBgBase: cssVar('--background'),
@@ -39,12 +38,15 @@ export const getAntdTheme = () => {
       colorText: cssVar('--foreground'),
       colorTextSecondary: cssVar('--secondary-foreground'),
       colorTextDisabled: cssVar('--muted-foreground'),
+      colorLink: cssVar('--primary'),
+      colorLinkActive: cssVar('--primary-active'),
+      colorLinkHover: cssVar('--primary-hover'),
 
       colorBorder: cssVar('--border-color'),
 
-      colorSuccess: cssVar('--success'),
-      colorWarning: cssVar('--warning'),
-      colorError: cssVar('--error'),
+      colorSuccess: cssVar('--status-success'),
+      colorWarning: cssVar('--status-warning'),
+      colorError: cssVar('--status-error'),
 
       fontFamily: cssVar('--font-sans'),
       fontSize: 14,
@@ -53,11 +55,12 @@ export const getAntdTheme = () => {
       controlHeight: 40,
     },
     components: {
+      Button: buttonTokens,
       Dropdown: dropdownTokens,
-      Typography: typographyTokens,
       Layout: getLayoutTokens(cssVar),
       Menu: getMenuTokens(cssVar),
       Spin: getSpinTokens(cssVar),
+      Typography: typographyTokens,
     },
   };
 };

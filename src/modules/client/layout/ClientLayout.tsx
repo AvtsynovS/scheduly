@@ -34,12 +34,6 @@ const StyledHeader = styled(Header)`
   background: ${({ theme }) => theme.colors.background};
   border-bottom: 1px solid;
 `;
-const StyledTitle = styled(Title)`
-  && {
-    color: ${({ theme }) => theme.colors.foreground};
-    margin: 0;
-  }
-`;
 
 const StyledIconWrapper = styled.div`
   padding: ${({ theme }) => theme.spaces.xxs};
@@ -66,7 +60,7 @@ export const ClientLayout = ({ children }: PropsWithChildren) => {
           <StyledIconWrapper>
             <CalendarIcon />
           </StyledIconWrapper>
-          <StyledTitle level={3}>Scheduly</StyledTitle>
+          <Title level={3}>Scheduly</Title>
         </Flex>
         <Flex align="center" gap={spaces.m}>
           <LocaleButton />

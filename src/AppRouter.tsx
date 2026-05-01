@@ -2,7 +2,7 @@ import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
 import { PrivateRoute, RootRedirectPage } from '@app/routes';
 import { AuthPage } from '@modules/auth';
-import { BusinessLayout, businessRoutes } from '@modules/business';
+import { businessRoutes } from '@modules/business';
 import { ErrorPage } from '@shared';
 
 const router = createBrowserRouter([
@@ -20,8 +20,7 @@ const router = createBrowserRouter([
         element: <RootRedirectPage />,
       },
       {
-        path: 'business/:businessId',
-        element: <BusinessLayout />,
+        path: 'business',
         children: [...businessRoutes],
       },
     ],
