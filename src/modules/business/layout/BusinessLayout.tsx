@@ -30,14 +30,8 @@ const StyledHeader = styled(Header)`
   justify-content: space-between;
   height: 64px;
   padding: 0 ${({ theme }) => theme.spaces.l};
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.header};
   border-bottom: 1px solid;
-`;
-const StyledTitle = styled(Title)`
-  && {
-    color: ${({ theme }) => theme.colors.foreground};
-    margin: 0;
-  }
 `;
 
 const StyledIconWrapper = styled.div`
@@ -65,7 +59,7 @@ export const BusinessLayout = () => {
           <StyledIconWrapper>
             <CalendarIcon />
           </StyledIconWrapper>
-          <StyledTitle level={3}>Scheduly</StyledTitle>
+          <Title level={3}>Scheduly</Title>
         </Flex>
         <Flex align="center" gap={spaces.m}>
           <LocaleButton />

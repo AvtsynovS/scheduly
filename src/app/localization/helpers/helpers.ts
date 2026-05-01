@@ -1,6 +1,7 @@
-import { SupportedLocales } from '../config';
-import { messages_en, messages_ru } from '../locales';
-import { isSupportedLocale } from './guards';
+import { isSupportedLocale, SupportedLocales } from '@shared';
+
+import { messages_en } from '../locales/en';
+import { messages_ru } from '../locales/ru';
 
 export const getCurrentLocale = () => {
   const currentLocale = localStorage.getItem('locale');

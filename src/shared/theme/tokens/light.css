@@ -1,7 +1,21 @@
 /* oklch(L - Lightness C - Chroma H - Hue) */
 :root {
+  --color-base-white: rgb(255, 255, 255);
+  --color-base-black: rgb(0, 0, 0);
+
+  --color-base-grey-1: rgb(250, 250, 250);
+  --color-base-grey-2: rgb(245, 245, 245);
+  --color-base-grey-3: rgb(235, 235, 235);
+  --color-base-grey-4: rgb(212, 212, 212);
+  --color-base-grey-5: rgb(163, 163, 163);
+  --color-base-grey-6: rgb(115, 115, 115);
+  --color-base-grey-7: rgb(82, 82, 82);
+  --color-base-grey-8: rgb(64, 64, 64);
+  --color-base-grey-9: rgb(38, 38, 38);
+  --color-base-grey-10: rgb(23, 23, 23);
+
   --white: rgb(255, 255, 255);
-  --background: rgb(245, 245, 245);
+  --background: var(--color-base-grey-2);
   --foreground: rgb(10, 10, 10);
 
   --card: rgb(255, 255, 255);
@@ -39,7 +53,11 @@
 
   --radius: 0.625rem;
 
-  --sidebar: rgb(250, 250, 250);
+  --body: var(--color-base-grey-2);
+  --header: var(--color-base-white);
+  --footer: var(--color-base-grey-3);
+
+  --sidebar: var(--color-base-grey-1);
   --sidebar-foreground: rgb(10, 10, 10);
   --sidebar-primary: rgb(0, 132, 209);
   --sidebar-primary-foreground: rgb(240, 249, 255);
@@ -48,8 +66,13 @@
   --sidebar-border: rgb(229, 229, 229);
   --sidebar-ring: rgb(161, 161, 161);
 
-  /* Error / success */
-  --success: rgb(73, 149, 55);
-  --warning: rgb(207, 146, 0);
-  --error: var(--destructive);
+  --menu: var(--color-base-grey-1);
+
+  /* statuses */
+  --status-positive: rgb(0, 188, 125);
+  --status-negative: rgb(255, 77, 79);
+  --status-neutral: rgb(140, 140, 140);
+  --status-success: rgb(73, 149, 55);
+  --status-warning: rgb(207, 146, 0);
+  --status-error: var(--destructive);
 }

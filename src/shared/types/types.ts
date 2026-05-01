@@ -7,4 +7,5 @@ export type SizeType = {
   l: string;
   xl: string;
   xxl: string;
+  xxxl: string;
 };

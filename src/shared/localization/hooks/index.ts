@@ -1,1 +1,0 @@
-export { useTranslate } from './useTranslate';

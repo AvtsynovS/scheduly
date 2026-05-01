@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
 import { Button, Flex, Layout, Typography } from '@common/ui-kit';
 import {
@@ -28,7 +28,6 @@ const ToggleWrapper = styled(Flex)<{ $collapsed: boolean }>`
 `;
 
 const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
-  margin: 0;
   max-width: ${({ $collapsed }) => ($collapsed ? '0px' : '120px')};
   overflow: hidden;
 
@@ -44,10 +43,14 @@ export const SideBar = () => {
   const { businessId } = useParams();
   const translate = useTranslate();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [collapsed, setCollapsed] = useState(false);
 
   const menuItems = useTranslateMenuItems(items);
+  const selectedKey = location.pathname
+    .replace(`/business/${businessId}/`, '')
+    .split('/')[0];
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
@@ -67,7 +70,7 @@ export const SideBar = () => {
     >
       <ToggleWrapper align="center" $collapsed={collapsed}>
         <StyledTitle $collapsed={collapsed} level={5}>
-          {translate('sider.title.menu')}
+          {translate('business.sider.title.menu')}
         </StyledTitle>
         <Button
           type="text"
@@ -81,7 +84,7 @@ export const SideBar = () => {
         mode="inline"
         inlineCollapsed={collapsed}
         inlineIndent={12}
-        defaultSelectedKeys={['dashboard']}
+        selectedKeys={[selectedKey ?? 'dashboard']}
         tooltip={collapsed ? { placement: 'right' } : false}
         onSelect={onSelect}
       />

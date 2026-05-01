@@ -28,7 +28,6 @@ const ToggleWrapper = styled(Flex)<{ $collapsed: boolean }>`
 `;
 
 const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
-  margin: 0;
   max-width: ${({ $collapsed }) => ($collapsed ? '0px' : '120px')};
   overflow: hidden;
 
