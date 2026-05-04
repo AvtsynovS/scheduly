@@ -1,6 +1,12 @@
 {
   "business.button.label.add.service": "Add service",
 
+  "business.dropdown.option.haircut": "Haircut",
+  "business.dropdown.option.coloring": "Coloring",
+  "business.dropdown.option.styling": "Styling",
+  "business.dropdown.option.nails": "Nails",
+  "business.dropdown.option.allCategories": "All categories",
+
   "business.sider.title.menu": "Menu",
 
   "business.menu.item.dashboard": "Dashboard",
@@ -11,6 +17,9 @@
   "business.menu.item.finance": "Finance",
   "business.menu.item.reports": "Reports",
   "business.menu.item.settings": "Settings",
+
+  "business.select.placeholder.search": "Search...",
+  "business.select.option.allCategories": "All Categories",
 
   "business.stats.total": "Total services",
   "business.stats.categories": "Total categories",

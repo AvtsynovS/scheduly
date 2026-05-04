@@ -52,7 +52,6 @@ export const getAntdTheme = () => {
       fontSize: 14,
       borderRadius: 8,
       padding: 16,
-      controlHeight: 40,
     },
     components: {
       Button: buttonTokens,

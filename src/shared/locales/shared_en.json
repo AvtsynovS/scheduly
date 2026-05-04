@@ -1,6 +1,8 @@
 {
   "button.label.home": "Go to home page",
 
+  "empty.description": "Nothing found",
+
   "dropdown.option.light": "Light",
   "dropdown.option.dark": "Dark",
 

@@ -1,6 +1,12 @@
 {
   "business.button.label.add.service": "Добавить услугу",
 
+  "business.dropdown.option.haircut": "Стрижка",
+  "business.dropdown.option.coloring": "Окрашивание",
+  "business.dropdown.option.styling": "Укладка",
+  "business.dropdown.option.nails": "Ногти",
+  "business.dropdown.option.allCategories": "Все категории",
+
   "business.sider.title.menu": "Меню",
 
   "business.menu.item.dashboard": "Дашборд",
@@ -11,6 +17,9 @@
   "business.menu.item.finance": "Финансы",
   "business.menu.item.reports": "Отчеты",
   "business.menu.item.settings": "Настройки",
+
+  "business.select.placeholder.search": "Поиск...",
+  "business.select.option.allCategories": "Все категории",
 
   "business.stats.total": "Всего услуг",
   "business.stats.categories": "Всего категорий",

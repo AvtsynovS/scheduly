@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import { Button, Flex, Layout, Typography } from '@common/ui-kit';
+import { Button, Flex, Grid, Layout, Typography } from '@common/ui-kit';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -16,6 +16,7 @@ import styled from 'styled-components';
 
 import type { SelectInfo } from '@common/ui-kit/types';
 
+const { useBreakpoint } = Grid;
 const { Sider } = Layout;
 const { Title } = Typography;
 
@@ -39,11 +40,15 @@ const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
   white-space: nowrap;
 `;
 
+// TODO (savtsynov) Переделать меню на Drower на мобилках и планшетах
 export const SideBar = () => {
   const { businessId } = useParams();
   const translate = useTranslate();
   const navigate = useNavigate();
   const location = useLocation();
+  const screens = useBreakpoint();
+
+  const isMobileOrTablet = !screens.lg;
 
   const [collapsed, setCollapsed] = useState(false);
 
@@ -59,6 +64,10 @@ export const SideBar = () => {
   const onSelect = ({ key }: SelectInfo) => {
     navigate(`/business/${businessId}/${key}`);
   };
+
+  useEffect(() => {
+    setCollapsed(isMobileOrTablet);
+  }, [isMobileOrTablet]);
 
   return (
     <Sider
