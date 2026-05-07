@@ -1,4 +1,6 @@
 {
+  "business.badge.service": "{count, plural, one {# услуга} few {# услуги} many {# услуги} other {# услуги}}",
+
   "business.button.label.add.service": "Добавить услугу",
 
   "business.dropdown.option.haircut": "Стрижка",
@@ -8,6 +10,10 @@
   "business.dropdown.option.allCategories": "Все категории",
 
   "business.sider.title.menu": "Меню",
+  "business.text.category.haircut": "Стрижка",
+  "business.text.category.coloring": "Окрашивание",
+  "business.text.category.styling": "Укладка",
+  "business.text.category.nails": "Ногти",
 
   "business.menu.item.dashboard": "Дашборд",
   "business.menu.item.records": "Записи",

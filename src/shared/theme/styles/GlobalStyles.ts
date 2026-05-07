@@ -14,8 +14,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.sans};
     font-size: ${({ theme }) => theme.fontSize.md};
 
-    background: ${({ theme }) => theme.colors.background};
-    color: ${({ theme }) => theme.colors.foreground};
+    background: ${({ theme }) => theme.bg.secondary};
+    color: ${({ theme }) => theme.colors.default};
 
     font-synthesis: none;
     
@@ -28,7 +28,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5 {
-    color: ${({ theme }) => theme.colors.foreground};
+    color: ${({ theme }) => theme.colors.default};
     font-family: ${({ theme }) => theme.fonts.heading};
       text-rendering: optimizeLegibility;
     margin: 0;

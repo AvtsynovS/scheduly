@@ -1,4 +1,5 @@
 {
+  "business.badge.service": "{count, plural, one {# service} other {# services}}",
   "business.button.label.add.service": "Add service",
 
   "business.dropdown.option.haircut": "Haircut",
@@ -8,6 +9,10 @@
   "business.dropdown.option.allCategories": "All categories",
 
   "business.sider.title.menu": "Menu",
+  "business.text.category.haircut": "Haircut",
+  "business.text.category.coloring": "Coloring",
+  "business.text.category.styling": "Styling",
+  "business.text.category.nails": "Nails",
 
   "business.menu.item.dashboard": "Dashboard",
   "business.menu.item.records": "Records",

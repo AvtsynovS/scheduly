@@ -1,0 +1,22 @@
+:root {
+  --border-default: 1px solid var(--color-base-grey-3);
+  --border-subtle: 1px solid var(--color-base-grey-2);
+  --border-strong: 1px solid var(--color-base-grey-4);
+  --border-focus: 2px solid var(--color-base-blue-6);
+
+  --border-divider: 1px solid var(--color-base-grey-2);
+  --border-card: 1px solid var(--color-base-grey-4);
+  --border-card-primary: 1px solid var(--color-base-grey-3);
+  --border-input: 1px solid var(--color-base-grey-4);
+}
+
+.dark {
+  --border-default: 1px solid var(--color-base-grey-7);
+  --border-subtle: 1px solid var(--color-base-grey-8);
+  --border-strong: 1px solid var(--color-base-grey-6);
+  --border-focus: 2px solid var(--primary);
+
+  --border-divider: 1px solid var(--color-base-grey-8);
+  --border-card: 1px solid var(--color-base-grey-7);
+  --border-input: 1px solid var(--color-base-grey-6);
+}

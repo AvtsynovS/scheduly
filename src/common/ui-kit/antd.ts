@@ -1,5 +1,6 @@
 export {
   Avatar,
+  Badge,
   Button,
   Card,
   Col,

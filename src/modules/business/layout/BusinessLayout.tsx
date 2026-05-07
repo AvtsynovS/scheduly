@@ -29,8 +29,8 @@ const StyledHeader = styled(Header)`
   align-items: center;
   justify-content: space-between;
   height: 64px;
-  padding: 0 ${({ theme }) => theme.spaces.l};
-  background: ${({ theme }) => theme.colors.header};
+  padding: ${({ theme }) => `${theme.spaces.xs} ${theme.spaces.l}`};
+  background: ${({ theme }) => theme.bg.white};
   border-bottom: 1px solid;
 `;
 

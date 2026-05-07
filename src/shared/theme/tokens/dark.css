@@ -13,12 +13,36 @@
   --color-base-grey-9: rgb(24, 24, 27);
   --color-base-grey-10: rgb(10, 10, 10);
 
+  --color-base-blue-1: rgb(5, 47, 74); /* deep bg */
+  --color-base-blue-2: rgb(10, 60, 95);
+  --color-base-blue-3: rgb(0, 80, 124); /* active */
+  --color-base-blue-4: rgb(51, 122, 161); /* hover */
+  --color-base-blue-5: rgb(70, 140, 180);
+  --color-base-blue-6: rgb(0, 89, 138); /* primary */
+  --color-base-blue-7: rgb(90, 160, 200);
+  --color-base-blue-8: rgb(120, 190, 230);
+  --color-base-blue-9: rgb(160, 210, 240);
+  --color-base-blue-10: rgb(240, 249, 255); /* text/foreground */
+
+  --color-base-red-1: rgb(45, 20, 20);
+  --color-base-red-2: rgb(60, 24, 24);
+  --color-base-red-3: rgb(80, 30, 30);
+  --color-base-red-4: rgb(110, 40, 40);
+  --color-base-red-5: rgb(150, 55, 55);
+  --color-base-red-6: rgb(200, 70, 70); /* primary */
+  --color-base-red-7: rgb(230, 100, 100);
+  --color-base-red-8: rgb(245, 135, 135);
+  --color-base-red-9: rgb(255, 170, 170);
+  --color-base-red-10: rgb(255, 210, 210);
+
   --white: rgb(255, 255, 255);
   --background: var(--color-base-grey-10);
   --foreground: rgb(250, 250, 250);
 
   --card: var(--color-base-grey-7);
+  --card-primary: rgb(206, 233, 255);
   --card-foreground: rgb(250, 250, 250);
+  --card-foreground-primary: rgb(23 99 161);
 
   --popover: var(--color-base-grey-9);
   --popover-foreground: rgb(250, 250, 250);
@@ -66,10 +90,10 @@
   --menu: var(--color-base-grey-10);
 
   /* statuses */
-  --status-positive: rgb(0, 188, 125);
-  --status-negative: rgb(255, 77, 79);
-  --status-neutral: rgb(140, 140, 140);
-  --status-success: rgb(73, 149, 55);
-  --status-warning: rgb(207, 146, 0);
-  --status-error: var(--destructive);
+  --color-status-positive: rgb(0, 188, 125);
+  --color-status-negative: rgb(255, 77, 79);
+  --color-status-neutral: rgb(140, 140, 140);
+  --color-status-success: rgb(73, 149, 55);
+  --color-status-warning: rgb(207, 146, 0);
+  --color-status-error: var(--destructive);
 }

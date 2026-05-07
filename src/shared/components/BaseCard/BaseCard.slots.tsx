@@ -1,3 +1,5 @@
+import { MEDIA } from '../../constants';
+
 import styled from 'styled-components';
 
 import type { ReactNode } from 'react';
@@ -16,7 +18,11 @@ type TrendProps = {
 };
 
 const StyledContent = styled.div`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme }) => theme.fontSize.lg};
+
+  @media ${MEDIA.md} {
+    font-size: ${({ theme }) => theme.fontSize.xl};
+  }
 `;
 
 const StyledTrend = styled.span<{
@@ -35,7 +41,7 @@ const StyledTrend = styled.span<{
 `;
 
 const StyledFooter = styled.div`
-  color: ${({ theme }) => theme.colors.mutedForeground};
+  color: ${({ theme }) => theme.colors.muted};
 `;
 
 export const Content = ({ children, ...props }: SlotProps) => (

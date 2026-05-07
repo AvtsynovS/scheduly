@@ -26,27 +26,25 @@ export const getAntdTheme = () => {
 
   return {
     token: {
-      colorPrimary: cssVar('--primary'),
+      colorPrimary: cssVar('--text-primary'),
 
-      controlItemBgHover: cssVar('--primary-hover'),
+      controlItemBgHover: cssVar('--color-control-bg-primary-hover'),
 
-      colorBgBase: cssVar('--background'),
-      colorBgContainer: cssVar('--card'),
-      colorBgElevated: cssVar('--card'),
+      colorBgContainer: cssVar('--color-bg-default'),
+      colorBgElevated: cssVar('--color-bg-default'),
 
-      colorTextBase: cssVar('--foreground'),
-      colorText: cssVar('--foreground'),
-      colorTextSecondary: cssVar('--secondary-foreground'),
-      colorTextDisabled: cssVar('--muted-foreground'),
-      colorLink: cssVar('--primary'),
-      colorLinkActive: cssVar('--primary-active'),
-      colorLinkHover: cssVar('--primary-hover'),
+      colorText: cssVar('--text'),
+      colorTextSecondary: cssVar('--text-secondary'),
+      colorTextDisabled: cssVar('--text-muted'),
+      colorLink: cssVar('--text-primary'),
+      colorLinkActive: cssVar('--text-primary-active'),
+      colorLinkHover: cssVar('--text-primary-hover'),
 
-      colorBorder: cssVar('--border-color'),
+      colorBorder: cssVar('--border-default'),
 
-      colorSuccess: cssVar('--status-success'),
-      colorWarning: cssVar('--status-warning'),
-      colorError: cssVar('--status-error'),
+      colorSuccess: cssVar('--color-status-success'),
+      colorWarning: cssVar('--color-status-warning'),
+      colorError: cssVar('--color-status-error'),
 
       fontFamily: cssVar('--font-sans'),
       fontSize: 14,
