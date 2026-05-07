@@ -1,3 +1,3 @@
 export const getSpinTokens = (cssVar: (name: string) => string) => ({
-  colorPrimary: cssVar('--primary'),
+  colorPrimary: cssVar('--color-base-blue-6'),
 });

@@ -9,3 +9,8 @@ export type SizeType = {
   xxl: string;
   xxxl: string;
 };
+
+export type NumberFormatConfigType =
+  | { type: 'currency'; currency: string }
+  | { type: 'duration' }
+  | { type: 'number' };

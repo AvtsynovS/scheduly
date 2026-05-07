@@ -16,6 +16,7 @@ import {
   CATEGORIES,
   servicesStatsData,
 } from '../model/mocks';
+import { ServiceContent } from './ServiceContent/ServiceContent';
 import { ServicesStatsCard } from './ServicesStatsCard';
 
 import styled from 'styled-components';
@@ -100,6 +101,7 @@ export const ServicesPage = () => {
           />
         </Col>
       </Row>
+      <ServiceContent />
     </StyledWrapper>
   );
 };

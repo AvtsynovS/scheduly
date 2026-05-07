@@ -3,10 +3,12 @@ import { ReactComponent as CalendarIcon } from './calendar.svg?react';
 import { ReactComponent as ChartIcon } from './chart.svg?react';
 import { ReactComponent as ChevronLeftIcon } from './chevron-left.svg?react';
 import { ReactComponent as ChevronRightIcon } from './chevron-right.svg?react';
+import { ReactComponent as ClockIcon } from './clock.svg?react';
 import { ReactComponent as DashboardIcon } from './dashboard.svg?react';
 import { ReactComponent as ErrorImage } from './errorImage.svg?react';
 import { ReactComponent as LangIcon } from './languages.svg?react';
 import { ReactComponent as LogoutIcon } from './log-out.svg?react';
+import { ReactComponent as MoreIcon } from './more-vertical.svg?react';
 import { ReactComponent as PackageIcon } from './package.svg?react';
 import { ReactComponent as PlusIcon } from './plus.svg?react';
 import { ReactComponent as SettingsIcon } from './settings.svg?react';
@@ -21,10 +23,12 @@ export {
   ChartIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  ClockIcon,
   DashboardIcon,
   ErrorImage,
   LangIcon,
   LogoutIcon,
+  MoreIcon,
   PackageIcon,
   PlusIcon,
   SettingsIcon,

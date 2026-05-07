@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import type { CardProps } from '@common/ui-kit/types';
 
 const StyledCard = styled(CardKit)`
-  background-color: ${({ theme }) => theme.colors.card};
+  background-color: ${({ theme }) => theme.bg.card.default.base};
 `;
 
 export const Card = ({ children, ...props }: CardProps) => {

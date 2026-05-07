@@ -19,6 +19,6 @@ export const servicesStatsConfig: ServicesStatsConfigType[] = [
   {
     key: 'averageTime',
     label: 'business.stats.average.time',
-    config: { type: 'duration', unit: 'minute' },
+    config: { type: 'duration' },
   },
 ];

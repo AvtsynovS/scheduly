@@ -1,6 +1,6 @@
 export const getLayoutTokens = (cssVar: (name: string) => string) => ({
-  siderBg: cssVar('--sidebar'),
-  bodyBg: cssVar('--body'),
-  footerBg: cssVar('--footer'),
+  siderBg: cssVar('--color-bg-sidebar'),
+  bodyBg: cssVar('--color-bg-body'),
+  footerBg: cssVar('--color-bg-footer'),
   footerPadding: '8px 12px',
 });

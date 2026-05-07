@@ -31,7 +31,7 @@ const StyledHeader = styled(Header)`
   justify-content: space-between;
   height: 64px;
   padding: 0 ${({ theme }) => theme.spaces.l};
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.bg.secondary};
   border-bottom: 1px solid;
 `;
 

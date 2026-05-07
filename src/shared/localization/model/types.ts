@@ -5,8 +5,3 @@ export const SupportedLocales = {
 
 export type SupportedLocales =
   (typeof SupportedLocales)[keyof typeof SupportedLocales];
-
-export type FormatConfigType =
-  | { type: 'currency'; currency?: string }
-  | { type: 'duration'; unit: 'minute' | 'hour' }
-  | { type: 'number' };

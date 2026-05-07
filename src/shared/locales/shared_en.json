@@ -12,5 +12,7 @@
   "page.description.fallback": "Something went wrong...",
 
   "text.minute": "min",
-  "text.hour": "hours"
+  "text.hour": "hours",
+  "text.hours": "{hours, plural, one {# hour} other {# hours}}",
+  "text.minutes": "{minutes, plural, one {# minute} other {# minutes}}"
 }

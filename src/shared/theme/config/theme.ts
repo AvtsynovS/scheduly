@@ -1,36 +1,44 @@
 export const theme = {
   colors: {
-    white: 'var(--white)',
-    background: 'var(--background)',
-    foreground: 'var(--foreground)',
+    white: 'var(--text-white)',
+    default: 'var(--text)',
+    secondary: 'var(--text-secondary)',
+    primary: 'var(--text-primary)',
+    accent: 'var(--text-accent)',
+    muted: 'var(--text-muted)',
+    positive: 'var(--color-status-positive)',
+    negative: 'var(--color-status-negative)',
+    neutral: 'var(--color-status-neutral)',
+    success: 'var(--color-status-success)',
+    warning: 'var(--color-status-warning)',
+    error: 'var(--color-status-error)',
+  },
 
-    header: 'var(--header)',
-
-    card: 'var(--card)',
-    cardForeground: 'var(--card-foreground)',
-
-    primary: 'var(--primary)',
-    primaryForeground: 'var(--primary-foreground)',
-
-    secondary: 'var(--secondary)',
-    secondaryForeground: 'var(--secondary-foreground)',
-
-    muted: 'var(--muted)',
-    mutedForeground: 'var(--muted-foreground)',
-
-    accent: 'var(--accent)',
-    accentForeground: 'var(--accent-foreground)',
-
-    positive: 'var(--status-positive)',
-    negative: 'var(--status-negative)',
-    neutral: 'var(--status-neutral)',
-    success: 'var(--status-success)',
-    warning: 'var(--status-warning)',
-    error: 'var(--status-error)',
-
-    border: 'var(--border)',
-    input: 'var(--input)',
-    ring: 'var(--ring)',
+  bg: {
+    white: 'var(--color-bg-white)',
+    default: 'var(--color-bg-default)',
+    secondary: 'var(--color-bg-secondary)',
+    muted: 'var(--color-bg-muted)',
+    layout: {
+      body: 'var(--color-bg-body)',
+      header: 'var(--color-bg-header)',
+      footer: 'var(--color-bg-footer)',
+      sidebar: 'var(--color-bg-sidebar)',
+    },
+    card: {
+      default: {
+        base: 'var(--color-bg-white)',
+        hover: 'var(--color-container-bg-hover)',
+        active: 'var(--color-container-bg-active)',
+        focus: 'var(--color-container-bg-focus)',
+      },
+      primary: {
+        base: 'var(--color-container-bg-primary)',
+        hover: 'var(--color-container-bg-primary-hover)',
+        active: 'var(--color-container-bg-primary-active)',
+        focus: 'var(--color-container-bg-primary-focus)',
+      },
+    },
   },
 
   radius: {
@@ -62,5 +70,31 @@ export const theme = {
     xl: '24px',
     xxl: '32px',
     xxxl: '48px',
+  },
+
+  borders: {
+    layout: {
+      base: 'var(--border-default)',
+    },
+    card: {
+      base: 'var(--border-card)',
+    },
+  },
+
+  shadows: {
+    layout: {
+      body: 'var(--shadow-body)',
+    },
+    card: {
+      default: {
+        base: 'var(--shadow-card)',
+        hover: 'var(--shadow-card-hover)',
+      },
+    },
+    modal: {
+      default: {
+        base: 'var(--shadow-modal)',
+      },
+    },
   },
 };
