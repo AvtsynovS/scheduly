@@ -8,6 +8,7 @@ import { ReactComponent as DashboardIcon } from './dashboard.svg?react';
 import { ReactComponent as ErrorImage } from './errorImage.svg?react';
 import { ReactComponent as LangIcon } from './languages.svg?react';
 import { ReactComponent as LogoutIcon } from './log-out.svg?react';
+import { ReactComponent as MenuIcon } from './menu.svg?react';
 import { ReactComponent as MoreIcon } from './more-vertical.svg?react';
 import { ReactComponent as PackageIcon } from './package.svg?react';
 import { ReactComponent as PlusIcon } from './plus.svg?react';
@@ -28,6 +29,7 @@ export {
   ErrorImage,
   LangIcon,
   LogoutIcon,
+  MenuIcon,
   MoreIcon,
   PackageIcon,
   PlusIcon,

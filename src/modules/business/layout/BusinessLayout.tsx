@@ -9,14 +9,15 @@ import {
   LogoutIcon,
   spaces,
   ThemeButton,
+  useDevice,
 } from '@shared';
 
+import { DrawerSideBar } from './ui/DrawerSideBar';
 import { SideBar } from './ui/SideBar';
 
 import styled from 'styled-components';
 
 const { Header, Footer, Content } = Layout;
-
 const { Title, Text } = Typography;
 
 const StyledWrapper = styled(Flex)`
@@ -28,8 +29,9 @@ const StyledHeader = styled(Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: ${({ theme }) => theme.spaces.xs};
   height: 64px;
-  padding: ${({ theme }) => `${theme.spaces.xs} ${theme.spaces.l}`};
+  padding: ${({ theme }) => `${theme.spaces.xs} ${theme.spaces.m}`};
   background: ${({ theme }) => theme.bg.white};
   border-bottom: 1px solid;
 `;
@@ -52,27 +54,33 @@ const StyledContent = styled(Content)`
 `;
 
 export const BusinessLayout = () => {
+  const { isMobile } = useDevice();
+
   return (
     <StyledWrapper vertical>
       <StyledHeader>
-        <Flex align="center" gap={spaces.m}>
-          <StyledIconWrapper>
-            <CalendarIcon />
-          </StyledIconWrapper>
-          <Title level={3}>Scheduly</Title>
-        </Flex>
-        <Flex align="center" gap={spaces.m}>
+        {isMobile ? (
+          <DrawerSideBar />
+        ) : (
+          <Flex align="center" gap={spaces.m}>
+            <StyledIconWrapper>
+              <CalendarIcon />
+            </StyledIconWrapper>
+            <Title level={3}>Scheduly</Title>
+          </Flex>
+        )}
+        <Flex align="center" gap={isMobile ? spaces.xs : spaces.m}>
           <LocaleButton />
           <ThemeButton />
           <Flex align="center" gap={spaces.s}>
             <Avatar size="small" />
-            <Text>Иванов И</Text>
+            {!isMobile && <Text>Иванов И</Text>}
           </Flex>
           <Button type="text" icon={<LogoutIcon />} />
         </Flex>
       </StyledHeader>
       <Layout>
-        <SideBar />
+        {!isMobile && <SideBar />}
         <Layout>
           <StyledContent>{<Outlet />}</StyledContent>
           <Footer>Footer</Footer>
