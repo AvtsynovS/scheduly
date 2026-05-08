@@ -1,22 +1,17 @@
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
 
-import { Button, Flex, Grid, Layout, Typography } from '@common/ui-kit';
+import { Button, Flex, Layout, Typography } from '@common/ui-kit';
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
-  Menu,
+  useDevice,
   useTranslate,
-  useTranslateMenuItems,
 } from '@shared';
 
-import { items } from '../config/itemsMenu';
+import { CommonMenu } from './CommonMenu';
 
 import styled from 'styled-components';
 
-import type { SelectInfo } from '@common/ui-kit/types';
-
-const { useBreakpoint } = Grid;
 const { Sider } = Layout;
 const { Title } = Typography;
 
@@ -40,34 +35,19 @@ const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
   white-space: nowrap;
 `;
 
-// TODO (savtsynov) Переделать меню на Drower на мобилках и планшетах
 export const SideBar = () => {
-  const { businessId } = useParams();
+  const { isTabletDown } = useDevice();
   const translate = useTranslate();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const screens = useBreakpoint();
-
-  const isMobileOrTablet = !screens.lg;
 
   const [collapsed, setCollapsed] = useState(false);
-
-  const menuItems = useTranslateMenuItems(items);
-  const selectedKey = location.pathname
-    .replace(`/business/${businessId}/`, '')
-    .split('/')[0];
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
   };
 
-  const onSelect = ({ key }: SelectInfo) => {
-    navigate(`/business/${businessId}/${key}`);
-  };
-
   useEffect(() => {
-    setCollapsed(isMobileOrTablet);
-  }, [isMobileOrTablet]);
+    setCollapsed(isTabletDown);
+  }, [isTabletDown]);
 
   return (
     <Sider
@@ -88,15 +68,7 @@ export const SideBar = () => {
           icon={collapsed ? <ChevronRightIcon /> : <ChevronLeftIcon />}
         />
       </ToggleWrapper>
-      <Menu
-        items={menuItems}
-        mode="inline"
-        inlineCollapsed={collapsed}
-        inlineIndent={12}
-        selectedKeys={[selectedKey ?? 'dashboard']}
-        tooltip={collapsed ? { placement: 'right' } : false}
-        onSelect={onSelect}
-      />
+      <CommonMenu collapsed={collapsed} />
     </Sider>
   );
 };
