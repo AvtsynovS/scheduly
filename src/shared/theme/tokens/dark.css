@@ -1,72 +1,105 @@
 .dark {
+  /* ===== Base ===== */
   --color-base-white: rgb(255, 255, 255);
   --color-base-black: rgb(0, 0, 0);
 
-  --color-base-grey-1: rgb(245, 245, 245);
-  --color-base-grey-2: rgb(228, 228, 231);
-  --color-base-grey-3: rgb(212, 212, 216);
-  --color-base-grey-4: rgb(161, 161, 170);
-  --color-base-grey-5: rgb(113, 113, 122);
-  --color-base-grey-6: rgb(82, 82, 91);
-  --color-base-grey-7: rgb(63, 63, 70);
-  --color-base-grey-8: rgb(39, 39, 42);
-  --color-base-grey-9: rgb(24, 24, 27);
-  --color-base-grey-10: rgb(10, 10, 10);
+  --color-base-grey-1: rgb(245, 245, 245); /* primary text */
+  --color-base-grey-2: rgb(228, 228, 231); /* secondary text */
+  --color-base-grey-3: rgb(212, 212, 216); /* muted bright text */
+  --color-base-grey-4: rgb(161, 161, 170); /* disabled text */
+  --color-base-grey-5: rgb(113, 113, 122); /* subtle borders */
+  --color-base-grey-6: rgb(82, 82, 91); /* active surfaces */
+  --color-base-grey-7: rgb(63, 63, 70); /* hover surfaces */
+  --color-base-grey-8: rgb(39, 39, 42); /* elevated surfaces */
+  --color-base-grey-9: rgb(24, 24, 27); /* cards / containers */
+  --color-base-grey-10: rgb(10, 10, 10); /* app background */
 
-  --color-base-blue-1: rgb(5, 47, 74); /* deep bg */
-  --color-base-blue-2: rgb(10, 60, 95);
-  --color-base-blue-3: rgb(0, 80, 124); /* active */
-  --color-base-blue-4: rgb(51, 122, 161); /* hover */
-  --color-base-blue-5: rgb(70, 140, 180);
-  --color-base-blue-6: rgb(0, 89, 138); /* primary */
-  --color-base-blue-7: rgb(90, 160, 200);
-  --color-base-blue-8: rgb(120, 190, 230);
-  --color-base-blue-9: rgb(160, 210, 240);
-  --color-base-blue-10: rgb(240, 249, 255); /* text/foreground */
+  --color-base-blue-1: rgb(6, 35, 54); /* subtle dark bg */
+  --color-base-blue-2: rgb(10, 50, 74); /* primary container */
+  --color-base-blue-3: rgb(15, 70, 102); /* focused container */
+  --color-base-blue-4: rgb(25, 95, 135); /* hover surface */
+  --color-base-blue-5: rgb(40, 120, 165); /* active surface */
+  --color-base-blue-6: rgb(0, 145, 220); /* primary action */
+  --color-base-blue-7: rgb(90, 175, 230); /* primary text */
+  --color-base-blue-8: rgb(140, 205, 240); /* links */
+  --color-base-blue-9: rgb(190, 225, 248); /* strong highlight */
+  --color-base-blue-10: rgb(240, 249, 255); /* bright foreground */
 
-  --color-base-red-1: rgb(45, 20, 20);
-  --color-base-red-2: rgb(60, 24, 24);
-  --color-base-red-3: rgb(80, 30, 30);
-  --color-base-red-4: rgb(110, 40, 40);
-  --color-base-red-5: rgb(150, 55, 55);
-  --color-base-red-6: rgb(200, 70, 70); /* primary */
-  --color-base-red-7: rgb(230, 100, 100);
-  --color-base-red-8: rgb(245, 135, 135);
-  --color-base-red-9: rgb(255, 170, 170);
-  --color-base-red-10: rgb(255, 210, 210);
+  --color-base-red-1: rgb(38, 18, 18); /* subtle error bg */
+  --color-base-red-2: rgb(55, 24, 24); /* hover error bg */
+  --color-base-red-3: rgb(80, 30, 30); /* error container */
+  --color-base-red-4: rgb(110, 40, 40); /* error hover */
+  --color-base-red-5: rgb(150, 55, 55); /* active error surface */
+  --color-base-red-6: rgb(200, 70, 70); /* destructive action */
+  --color-base-red-7: rgb(230, 100, 100); /* error text */
+  --color-base-red-8: rgb(245, 135, 135); /* hover text */
+  --color-base-red-9: rgb(255, 170, 170); /* bright accent */
+  --color-base-red-10: rgb(255, 210, 210); /* bright foreground */
 
-  --white: rgb(255, 255, 255);
-  --background: var(--color-base-grey-10);
-  --foreground: rgb(250, 250, 250);
+  /* ===== Background colors ===== */
+  --color-bg-white: var(--color-base-white);
+  --color-bg-default: var(--color-base-grey-10); /*  основной фон */
+  --color-bg-secondary: var(--color-base-grey-9); /* sections */
+  --color-bg-muted: var(--color-base-grey-8);
 
-  --card: var(--color-base-grey-7);
-  --card-primary: rgb(206, 233, 255);
-  --card-foreground: rgb(250, 250, 250);
-  --card-foreground-primary: rgb(23 99 161);
+  /* ===== Controls ===== */
+  /* ===== Inputs, buttons, interactive surfaces ===== */
+  --color-control-bg: var(--color-base-grey-9);
+  --color-control-bg-disabled: var(--color-base-grey-8);
+  --color-control-bg-primary: var(--color-base-blue-6);
+  --color-control-bg-primary-hover: var(--color-base-blue-5);
+  --color-control-bg-primary-active: var(--color-base-blue-4);
+
+  /* ===== Containers ===== */
+  /* ===== Cards, modals, dropdowns, popovers ===== */
+  --color-container-bg: var(--color-base-grey-8);
+  --color-container-bg-hover: var(--color-base-grey-7);
+  --color-container-bg-focus: var(--color-base-grey-6);
+  --color-container-bg-active: var(--color-base-grey-5);
+  /* elevated surfaces */
+  --color-container-bg-elevated: var(--color-base-grey-8);
+  --color-container-bg-primary: var(--color-base-blue-2);
+  --color-container-bg-primary-hover: var(--color-base-blue-3);
+  --color-container-bg-primary-focus: var(--color-base-blue-4);
+  --color-container-bg-primary-active: var(--color-base-blue-5);
+  --color-container-bg-overlay: var(--color-base-grey-8); /* modal / popover */
+
+  /* ===== Text colors ===== */
+  --text: var(--color-base-grey-1);
+  --text-secondary: var(--color-base-grey-2);
+  --text-muted: var(--color-base-grey-4); /* muted / helper text */
+  --text-disabled: var(--color-base-grey-5);
+  --text-white: var(--color-base-white);
+  --text-link: var(--color-base-blue-8);
+  --text-link-hover: var(--color-base-blue-9);
+  --text-primary: var(--color-base-blue-7);
+  --text-primary-hover: var(--color-base-blue-8);
+  --text-primary-active: var(--color-base-blue-6);
+  --text-primary-active-hover: var(--color-base-blue-7);
+  --text-soft: var(--color-base-blue-9);
+  --text-error: var(--color-base-red-7);
+
+  /* ===== Layout bg colors ===== */
+  --color-bg-body: var(--color-base-grey-10);
+  --color-bg-header: var(--color-base-grey-9);
+  --color-bg-footer: var(--color-base-grey-10);
+  --color-bg-sidebar: var(--color-base-grey-9);
+
+  /* ===== Statuses ===== */
+  --color-status-positive: rgb(0, 188, 125);
+  --color-status-negative: rgb(255, 77, 79);
+  --color-status-neutral: rgb(140, 140, 140);
+  --color-status-success: rgb(73, 149, 55);
+  --color-status-warning: rgb(207, 146, 0);
+  --color-status-error: var(--text-error);
+  --color-status-bg-error: var(--color-base-red-2);
+  --color-status-bg-error-hover: var(--color-base-red-3);
+
+  --color-icon: var(--color-base-grey-1);
+  --color-placeholder: var(--color-base-grey-4);
 
   --popover: var(--color-base-grey-9);
-  --popover-foreground: rgb(250, 250, 250);
-
-  --primary: rgb(0, 89, 138);
-  --primary-foreground: rgb(240, 249, 255);
-  --primary-hover: rgb(51, 122, 161);
-  --primary-active: rgb(0, 80, 124);
-  --primary-active-hover: rgb(51, 122, 161);
-
-  --secondary: rgb(39, 39, 42);
-  --secondary-foreground: rgb(250, 250, 250);
-
-  --muted: rgb(38, 38, 38);
-  --muted-foreground: rgb(161, 161, 161);
-
-  --accent: rgb(38, 38, 38);
-  --accent-foreground: rgb(250, 250, 250);
-
-  --destructive: rgb(255, 100, 103);
-
-  --border-color: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: rgb(115, 115, 115);
+  --popover-foreground: var(--color-base-grey-1);
 
   --chart-1: rgb(116, 212, 255);
   --chart-2: rgb(0, 166, 244);
@@ -74,26 +107,5 @@
   --chart-4: rgb(0, 105, 168);
   --chart-5: rgb(0, 89, 138);
 
-  --body: var(--color-base-grey-9);
-  --header: var(--color-base-black);
-  --footer: var(--color-base-grey-8);
-
-  --sidebar: var(--color-base-grey-10);
-  --sidebar-foreground: rgb(250, 250, 250);
-  --sidebar-primary: rgb(0, 166, 244);
-  --sidebar-primary-foreground: rgb(5, 47, 74);
-  --sidebar-accent: rgb(38, 38, 38);
-  --sidebar-accent-foreground: rgb(250, 250, 250);
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgb(115, 115, 115);
-
-  --menu: var(--color-base-grey-10);
-
-  /* statuses */
-  --color-status-positive: rgb(0, 188, 125);
-  --color-status-negative: rgb(255, 77, 79);
-  --color-status-neutral: rgb(140, 140, 140);
-  --color-status-success: rgb(73, 149, 55);
-  --color-status-warning: rgb(207, 146, 0);
-  --color-status-error: var(--destructive);
+  --radius: 0.625rem;
 }

@@ -32,8 +32,8 @@ const StyledHeader = styled(Header)`
   gap: ${({ theme }) => theme.spaces.xs};
   height: 64px;
   padding: ${({ theme }) => `${theme.spaces.xs} ${theme.spaces.m}`};
-  background: ${({ theme }) => theme.bg.white};
-  border-bottom: 1px solid;
+  background: ${({ theme }) => theme.bg.layout.header};
+  border-bottom: ${({ theme }) => theme.borders.layout.base};
 `;
 
 const StyledIconWrapper = styled.div`

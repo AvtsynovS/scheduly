@@ -21,6 +21,7 @@ const ToggleWrapper = styled(Flex)<{ $collapsed: boolean }>`
   padding: ${({ theme }) => theme.spaces.xs};
   padding-left: ${({ theme, $collapsed }) =>
     $collapsed ? theme.spaces.xs : theme.spaces.m};
+  border-right: ${({ theme }) => theme.borders.layout.base};
 `;
 
 const StyledTitle = styled(Title)<{ $collapsed: boolean }>`

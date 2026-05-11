@@ -27,7 +27,7 @@ export const theme = {
     },
     card: {
       default: {
-        base: 'var(--color-bg-white)',
+        base: 'var(--color-container-bg)',
         hover: 'var(--color-container-bg-hover)',
         active: 'var(--color-container-bg-active)',
         focus: 'var(--color-container-bg-focus)',
@@ -73,17 +73,26 @@ export const theme = {
   },
 
   borders: {
+    default: 'var(--border-default)',
+    subtle: 'var(--border-subtle)',
+    strong: 'var(--border-strong)',
+    focus: 'var(--border-focus)',
     layout: {
-      base: 'var(--border-default)',
+      base: 'var(--border-layout)',
     },
     card: {
       base: 'var(--border-card)',
     },
+    input: {
+      base: 'var(--border-input)',
+    },
   },
 
   shadows: {
+    focus: 'var(--shadow-focus)',
     layout: {
       body: 'var(--shadow-body)',
+      hover: 'var(--shadow-body-hover)',
     },
     card: {
       default: {
@@ -91,10 +100,14 @@ export const theme = {
         hover: 'var(--shadow-card-hover)',
       },
     },
+    dropdown: {
+      base: 'var(--shadow-dropdown)',
+    },
+    popover: {
+      base: 'var(--shadow-popover)',
+    },
     modal: {
-      default: {
-        base: 'var(--shadow-modal)',
-      },
+      base: 'var(--shadow-modal)',
     },
   },
 };

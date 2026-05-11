@@ -1,7 +1,9 @@
 import { buttonTokens } from './antd/button';
-import { dropdownTokens } from './antd/dropdown';
+import { getCardTokens } from './antd/cardTokens';
+import { getDropdownTokens } from './antd/dropdown';
 import { getLayoutTokens } from './antd/layoutTokens';
 import { getMenuTokens } from './antd/menuTokens';
+import { getSelectTokens } from './antd/select';
 import { getSpinTokens } from './antd/spinTokens';
 import { typographyTokens } from './antd/typography';
 
@@ -31,7 +33,13 @@ export const getAntdTheme = () => {
       controlItemBgHover: cssVar('--color-control-bg-primary-hover'),
 
       colorBgContainer: cssVar('--color-bg-default'),
-      colorBgElevated: cssVar('--color-bg-default'),
+      colorBgElevated: cssVar('--color-container-bg-elevated'),
+      colorBorder: cssVar('--color-base-grey-4'),
+      colorSplit: cssVar('--color-base-grey-5'),
+      colorIcon: cssVar('--color-icon'),
+      colorTextPlaceholder: cssVar('--color-placeholder'),
+      colorTextQuaternary: 'var(--text-muted)',
+      colorTextDescription: cssVar('--text-muted'),
 
       colorText: cssVar('--text'),
       colorTextSecondary: cssVar('--text-secondary'),
@@ -40,11 +48,14 @@ export const getAntdTheme = () => {
       colorLinkActive: cssVar('--text-primary-active'),
       colorLinkHover: cssVar('--text-primary-hover'),
 
-      colorBorder: cssVar('--border-default'),
-
       colorSuccess: cssVar('--color-status-success'),
       colorWarning: cssVar('--color-status-warning'),
       colorError: cssVar('--color-status-error'),
+
+      // cards, buttons, surfaces
+      boxShadow: cssVar('--shadow-card'),
+      // dropdown, tooltip, popover, modal
+      boxShadowSecondary: cssVar('--shadow-dropdown'),
 
       fontFamily: cssVar('--font-sans'),
       fontSize: 14,
@@ -53,11 +64,13 @@ export const getAntdTheme = () => {
     },
     components: {
       Button: buttonTokens,
-      Dropdown: dropdownTokens,
+      Dropdown: getDropdownTokens(cssVar),
       Layout: getLayoutTokens(cssVar),
       Menu: getMenuTokens(cssVar),
       Spin: getSpinTokens(cssVar),
       Typography: typographyTokens,
+      Card: getCardTokens(cssVar),
+      Select: getSelectTokens(cssVar),
     },
   };
 };

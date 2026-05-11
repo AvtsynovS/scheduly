@@ -1,22 +1,44 @@
 :root {
-  --border-default: 1px solid var(--color-base-grey-3);
-  --border-subtle: 1px solid var(--color-base-grey-2);
-  --border-strong: 1px solid var(--color-base-grey-4);
-  --border-focus: 2px solid var(--color-base-blue-6);
+  /* ===== Base ===== */
+  --color-border-1: var(--color-base-grey-2);
+  --color-border-2: var(--color-base-grey-3);
+  --color-border-3: var(--color-base-grey-4);
+  --color-border-4: var(--color-base-grey-5);
+  --color-border-focus: var(--color-base-blue-9);
 
-  --border-divider: 1px solid var(--color-base-grey-2);
-  --border-card: 1px solid var(--color-base-grey-4);
-  --border-card-primary: 1px solid var(--color-base-grey-3);
-  --border-input: 1px solid var(--color-base-grey-4);
+  /* ===== Semantic borders ===== */
+  --border-default: 1px solid var(--color-border-2);
+  --border-controls: 1px solid var(--color-border-4);
+  --border-subtle: 1px solid var(--color-border-1);
+  --border-strong: 1px solid var(--color-border-3);
+  --border-focus: 2px solid var(--color-border-focus);
+
+  --border-layout: 1px solid var(--color-border-4);
+  --border-divider: 1px solid var(--color-border-1);
+  --border-card: 1px solid var(--color-border-3);
+  --border-card-primary: 1px solid var(--color-border-2);
+  --border-input: 1px solid var(--color-border-3);
 }
 
 .dark {
-  --border-default: 1px solid var(--color-base-grey-7);
-  --border-subtle: 1px solid var(--color-base-grey-8);
-  --border-strong: 1px solid var(--color-base-grey-6);
-  --border-focus: 2px solid var(--primary);
+  /* ===== Base ===== */
+  --color-border-1: var(--color-base-grey-8);
+  --color-border-2: var(--color-base-grey-7);
+  --color-border-3: var(--color-base-grey-6);
+  --color-border-4: var(--color-base-grey-5);
+  --color-border-5: var(--color-base-grey-4);
+  --color-border-focus: var(--color-base-blue-6);
 
-  --border-divider: 1px solid var(--color-base-grey-8);
-  --border-card: 1px solid var(--color-base-grey-7);
-  --border-input: 1px solid var(--color-base-grey-6);
+  /* ===== Semantic borders ===== */
+  --border-default: 1px solid var(--color-border-2);
+  --border-controls: 1px solid var(--color-border-5);
+  --border-subtle: 1px solid var(--color-border-1);
+  --border-strong: 1px solid var(--color-border-3);
+  --border-focus: 2px solid var(--color-border-focus);
+
+  --border-layout: 1px solid var(--color-border-4);
+  --border-divider: 1px solid var(--color-border-1);
+  --border-card: 1px solid var(--color-border-2);
+  --border-card-primary: 1px solid var(--color-border-3);
+  --border-input: 1px solid var(--color-border-3);
 }
