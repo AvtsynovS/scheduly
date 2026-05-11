@@ -10,7 +10,6 @@ const StyledWrapper = styled(Flex)`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: ${({ theme }) => theme.spaces.s};
 `;
 
 export const EmptyBox = ({ description }: EmptyBoxProps) => {

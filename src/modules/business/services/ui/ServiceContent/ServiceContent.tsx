@@ -13,7 +13,7 @@ const StyledCategoryCard = styled(Flex)`
   padding: ${({ theme }) => theme.spaces.xl};
   background-color: ${({ theme }) => theme.bg.card.default.base};
   border-radius: ${({ theme }) => theme.radius.lg};
-  border: 1px solid ${({ theme }) => theme.borders.layout.base};
+  border: 1px solid ${({ theme }) => theme.borders.default};
   box-shadow: ${({ theme }) => theme.shadows.layout.body};
 `;
 

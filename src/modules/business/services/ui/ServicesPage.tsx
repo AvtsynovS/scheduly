@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 
 import { Button, Col, Flex, Grid, Row, Select } from '@common/ui-kit';
 import {
+  EmptyBox,
   FilterSelect,
   MEDIA,
   PageHeader,
@@ -82,6 +83,9 @@ export const ServicesPage = () => {
         <Col xs={24} md={16} lg={18}>
           <StyledSearchField
             placeholder={translate('business.select.placeholder.search')}
+            notFoundContent={
+              <EmptyBox description={translate('empty.description')} />
+            }
           />
         </Col>
         <Col xs={24} md={8} lg={6}>
