@@ -6,6 +6,9 @@
   "dropdown.option.light": "Светлая",
   "dropdown.option.dark": "Темная",
 
+  "segmented.option.table": "Таблица",
+  "segmented.option.cards": "Карточки",
+
   "sider.title.menu": "Меню",
 
   "page.title.fallback": "Произошла непредвиденная ошибка",
