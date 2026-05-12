@@ -5,12 +5,12 @@ import type { SegmentedLabeledOption } from '@common/ui-kit/types';
 
 export const serviceViewType: SegmentedLabeledOption<ViewModeType>[] = [
   {
-    label: 'Таблица',
+    label: 'segmented.option.table',
     value: 'table',
     icon: <TableIcon />,
   },
   {
-    label: 'Карточки',
+    label: 'segmented.option.cards',
     value: 'card',
     icon: <CardIcon />,
   },
