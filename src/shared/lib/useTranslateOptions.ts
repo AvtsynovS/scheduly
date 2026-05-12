@@ -2,9 +2,15 @@ import { useMemo } from 'react';
 
 import { useTranslate } from '../localization';
 
-import type { ItemType } from '@common/ui-kit/types';
+import type { ReactNode } from 'react';
 
-export const useTranslateOptions = (options?: ItemType[]) => {
+type OptionType = {
+  label?: string | ReactNode;
+};
+
+export const useTranslateOptions = <T extends OptionType>(
+  options: T[],
+): T[] => {
   const translate = useTranslate();
 
   return useMemo(() => {

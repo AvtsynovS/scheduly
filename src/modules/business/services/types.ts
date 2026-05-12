@@ -22,3 +22,5 @@ export type ServicesStatsConfigType = {
   label: string;
   config: NumberFormatConfigType;
 };
+
+export type ViewModeType = 'table' | 'card';
