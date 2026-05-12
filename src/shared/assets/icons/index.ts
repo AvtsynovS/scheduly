@@ -1,5 +1,6 @@
 import { ReactComponent as BriefcaseIcon } from './briefcase.svg?react';
 import { ReactComponent as CalendarIcon } from './calendar.svg?react';
+import { ReactComponent as CardIcon } from './card.svg?react';
 import { ReactComponent as ChartIcon } from './chart.svg?react';
 import { ReactComponent as ChevronLeftIcon } from './chevron-left.svg?react';
 import { ReactComponent as ChevronRightIcon } from './chevron-right.svg?react';
@@ -14,6 +15,7 @@ import { ReactComponent as PackageIcon } from './package.svg?react';
 import { ReactComponent as PlusIcon } from './plus.svg?react';
 import { ReactComponent as SettingsIcon } from './settings.svg?react';
 import { ReactComponent as ThemeIcon } from './sun-moon.svg?react';
+import { ReactComponent as TableIcon } from './table.svg?react';
 import { ReactComponent as UserIcon } from './user.svg?react';
 import { ReactComponent as UsersIcon } from './users.svg?react';
 import { ReactComponent as WalletIcon } from './wallet.svg?react';
@@ -22,6 +24,7 @@ export {
   BriefcaseIcon,
   CalendarIcon,
   ChartIcon,
+  CardIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
   ClockIcon,
@@ -35,6 +38,7 @@ export {
   PlusIcon,
   SettingsIcon,
   ThemeIcon,
+  TableIcon,
   UserIcon,
   UsersIcon,
   WalletIcon,

@@ -12,6 +12,7 @@ export {
   Layout,
   Menu,
   Row,
+  Segmented,
   Select,
   Spin,
   Tag,

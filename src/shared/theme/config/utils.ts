@@ -3,6 +3,7 @@ import { getCardTokens } from './antd/cardTokens';
 import { getDropdownTokens } from './antd/dropdown';
 import { getLayoutTokens } from './antd/layoutTokens';
 import { getMenuTokens } from './antd/menuTokens';
+import { getSegmentedTokens } from './antd/segmented';
 import { getSelectTokens } from './antd/select';
 import { getSpinTokens } from './antd/spinTokens';
 import { typographyTokens } from './antd/typography';
@@ -71,6 +72,7 @@ export const getAntdTheme = () => {
       Typography: typographyTokens,
       Card: getCardTokens(cssVar),
       Select: getSelectTokens(cssVar),
+      Segmented: getSegmentedTokens(cssVar),
     },
   };
 };

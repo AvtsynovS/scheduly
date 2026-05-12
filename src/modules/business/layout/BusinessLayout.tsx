@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 
 // TODO (savtsynov) настроить тему для Button
-import { Button, Flex, Layout, Typography } from '@common/ui-kit';
+import { Button, Flex, Typography } from '@common/ui-kit';
 import {
   Avatar,
   CalendarIcon,
@@ -17,7 +17,6 @@ import { SideBar } from './ui/SideBar';
 
 import styled from 'styled-components';
 
-const { Header, Footer, Content } = Layout;
 const { Title, Text } = Typography;
 
 const StyledWrapper = styled(Flex)`
@@ -25,7 +24,7 @@ const StyledWrapper = styled(Flex)`
   overflow: hidden;
 `;
 
-const StyledHeader = styled(Header)`
+const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,9 +47,10 @@ const StyledIconWrapper = styled.div`
   }
 `;
 
-const StyledContent = styled(Content)`
+const StyledContent = styled.main`
   flex: 1;
   overflow: auto;
+  scrollbar-gutter: stable;
 `;
 
 export const BusinessLayout = () => {
@@ -79,13 +79,10 @@ export const BusinessLayout = () => {
           <Button type="text" icon={<LogoutIcon />} />
         </Flex>
       </StyledHeader>
-      <Layout>
+      <StyledWrapper>
         {!isMobile && <SideBar />}
-        <Layout>
-          <StyledContent>{<Outlet />}</StyledContent>
-          <Footer>Footer</Footer>
-        </Layout>
-      </Layout>
+        <StyledContent>{<Outlet />}</StyledContent>
+      </StyledWrapper>
     </StyledWrapper>
   );
 };

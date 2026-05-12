@@ -51,9 +51,13 @@
   /* ===== Controls ===== */
   /* ===== Inputs, buttons, interactive surfaces ===== */
   --color-control-bg: var(--color-base-grey-1);
+  --color-control-bg-hover: var(--color-base-grey-2);
+  --color-control-bg-active: var(--color-base-grey-3);
+  --color-control-bg-selected: var(--color-base-grey-3);
   --color-control-bg-primary: var(--color-base-blue-3);
   --color-control-bg-primary-hover: var(--color-base-blue-4);
   --color-control-bg-primary-active: var(--color-base-blue-5);
+  --color-control-bg-primary-selected: var(--color-base-blue-5);
 
   --color-container-bg: var(--color-base-white);
   --color-container-bg-hover: var(--color-base-grey-4);
@@ -99,6 +103,11 @@
 
   --color-icon: var(--color-base-grey-10);
   --color-placeholder: var(--color-base-grey-4);
+
+  --color-bg-segmented: var(--color-base-white);
+  --color-bg-segmented-hover: var(--color-base-grey-2);
+  --color-bg-segmented-active: var(--color-base-grey-3);
+  --color-bg-segmented-selected: var(--color-base-grey-3);
 
   --popover: var(--color-base-white);
   --popover-foreground: var(--color-base-grey-10);

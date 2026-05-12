@@ -1,57 +1,49 @@
-import { Badge, Col, Flex, Row, Typography } from '@common/ui-kit';
-import { spaces, useGroupByKey, useTranslate } from '@shared';
+import { useState } from 'react';
+
+import { Flex, Segmented } from '@common/ui-kit';
+import { spaces, useGroupByKey, useTranslateOptions } from '@shared';
 
 import { mockServices } from '../../model/mocks';
-import { ServiceCard } from './ui/ServiceCard';
+import { serviceViewType } from './model/constants';
+import { ServicesCards } from './ui/ServicesCards';
+import { ServicesTable } from './ui/ServicesTable';
 
 import styled from 'styled-components';
 
-const { Title } = Typography;
-const { Ribbon } = Badge;
+import type { ViewModeType } from '../../types';
 
-const StyledCategoryCard = styled(Flex)`
-  padding: ${({ theme }) => theme.spaces.xl};
-  background-color: ${({ theme }) => theme.bg.card.default.base};
-  border-radius: ${({ theme }) => theme.radius.lg};
-  border: 1px solid ${({ theme }) => theme.borders.default};
-  box-shadow: ${({ theme }) => theme.shadows.layout.body};
+// TODO (savtsynov) возможно стоит сделать стилизованные сегменты в будущем
+const StyledSegmented = styled(Segmented<ViewModeType>)`
+  width: fit-content;
+
+  svg {
+    vertical-align: middle;
+  }
 `;
 
 export const ServiceContent = () => {
-  const translate = useTranslate();
-  // Tab + Content
+  const [viewMode, setViewMode] = useState<ViewModeType>('table');
+
   // TODO получаем сервисы с бэка
   const services = mockServices;
+
   const servicesByCategory = useGroupByKey(services, 'category');
+  const options = useTranslateOptions(serviceViewType);
+
+  const handleChangeView = (view: ViewModeType) => setViewMode(view);
 
   return (
-    <>
-      {servicesByCategory.map(({ group: category, items: services }) => (
-        <Ribbon
-          key={category}
-          text={translate(
-            'business.badge.service',
-            {},
-            { count: services.length },
-          )}
-          color="blue-inverse"
-        >
-          <StyledCategoryCard vertical gap={spaces.xl}>
-            <Flex align="center" justify="space-between" gap={spaces.xs}>
-              <Title level={5}>
-                {translate(`business.text.category.${category}`)}
-              </Title>
-            </Flex>
-            <Row gutter={[16, 8]}>
-              {services.map(({ id, ...service }) => (
-                <Col key={id} xs={24} md={12} xl={8}>
-                  <ServiceCard {...service} />
-                </Col>
-              ))}
-            </Row>
-          </StyledCategoryCard>
-        </Ribbon>
-      ))}
-    </>
+    <Flex vertical gap={spaces.m}>
+      <StyledSegmented
+        options={options}
+        value={viewMode}
+        onChange={handleChangeView}
+      />
+      {viewMode === 'table' ? (
+        <ServicesTable />
+      ) : (
+        <ServicesCards services={servicesByCategory} />
+      )}
+    </Flex>
   );
 };

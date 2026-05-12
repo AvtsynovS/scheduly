@@ -98,6 +98,11 @@
   --color-icon: var(--color-base-grey-1);
   --color-placeholder: var(--color-base-grey-4);
 
+  --color-bg-segmented: var(--color-base-grey-8);
+  --color-bg-segmented-hover: var(--color-base-grey-7);
+  --color-bg-segmented-active: var(--color-base-grey-10);
+  --color-bg-segmented-selected: var(--color-base-grey-10);
+
   --popover: var(--color-base-grey-9);
   --popover-foreground: var(--color-base-grey-1);
 
