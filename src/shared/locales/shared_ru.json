@@ -11,6 +11,8 @@
 
   "sider.title.menu": "Меню",
 
+  "table.description.empty": "Нет данных",
+
   "page.title.fallback": "Произошла непредвиденная ошибка",
   "page.description.fallback": "Что-то пошло не так...",
 

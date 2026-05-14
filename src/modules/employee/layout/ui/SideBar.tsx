@@ -41,7 +41,7 @@ const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
 
 export const SideBar = () => {
   const { businessId } = useParams();
-  const translate = useTranslate();
+  const { translate } = useTranslate();
   const navigate = useNavigate();
 
   const [collapsed, setCollapsed] = useState(false);

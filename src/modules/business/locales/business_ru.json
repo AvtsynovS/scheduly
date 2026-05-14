@@ -10,6 +10,7 @@
   "business.dropdown.option.allCategories": "Все категории",
 
   "business.sider.title.menu": "Меню",
+
   "business.text.category.haircut": "Стрижка",
   "business.text.category.coloring": "Окрашивание",
   "business.text.category.styling": "Укладка",
@@ -26,6 +27,12 @@
 
   "business.select.placeholder.search": "Поиск...",
   "business.select.option.allCategories": "Все категории",
+
+  "business.table.column.services": "Услуги",
+  "business.table.column.categories": "Категории",
+  "business.table.column.duration": "Продолжительность",
+  "business.table.column.price": "Цена",
+  "business.table.column.serviceMobile": "Услуга",
 
   "business.stats.total": "Всего услуг",
   "business.stats.categories": "Всего категорий",

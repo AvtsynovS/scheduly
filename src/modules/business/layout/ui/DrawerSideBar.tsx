@@ -36,7 +36,7 @@ const StyledButton = styled(Button)`
 `;
 
 export const DrawerSideBar = () => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
   const toggleDrawerOpen = () => {

@@ -11,6 +11,8 @@
 
   "sider.title.menu": "Menu",
 
+  "table.description.empty": "No data",
+
   "page.title.fallback": "An unexpected error occurred",
   "page.description.fallback": "Something went wrong...",
 

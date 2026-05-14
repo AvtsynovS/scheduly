@@ -6,7 +6,7 @@ import { servicesStatsConfig } from '../config/servicesStatsConfig';
 
 export const useServicesStats = (data: Record<string, number>) => {
   const format = useNumberFormat();
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   return useMemo(
     () =>

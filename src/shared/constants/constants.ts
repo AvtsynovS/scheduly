@@ -1,4 +1,7 @@
 import type { SizeType } from '../types/types';
+import type { Breakpoint } from '@common/ui-kit/types';
+
+type AntdBreakpointType = Exclude<Breakpoint, 'xxxl'>;
 
 export const spaces: SizeType = {
   xxxs: '2px',
@@ -12,20 +15,41 @@ export const spaces: SizeType = {
   xxxl: '50px',
 };
 
-const breakpoints = {
-  xs: 480,
+export const breakpoints = {
+  xs: 0,
   sm: 576,
   md: 768,
   lg: 992,
   xl: 1200,
   xxl: 1600,
-};
+} as const;
 
 export const MEDIA = {
-  xs: `(min-width: ${breakpoints.xs}px)`,
-  sm: `(min-width: ${breakpoints.sm}px)`,
-  md: `(min-width: ${breakpoints.md}px)`,
-  lg: `(min-width: ${breakpoints.lg}px)`,
-  xl: `(min-width: ${breakpoints.xl}px)`,
-  xxl: `(min-width: ${breakpoints.xxl}px)`,
+  up: (breakpoint: AntdBreakpointType) =>
+    `@media (min-width: ${breakpoints[breakpoint]}px)`,
+
+  down: (breakpoint: AntdBreakpointType) =>
+    `@media (max-width: ${breakpoints[breakpoint] - 1}px)`,
+
+  between: (min: AntdBreakpointType, max: AntdBreakpointType) =>
+    `@media (min-width: ${breakpoints[min]}px) and (max-width: ${
+      breakpoints[max] - 1
+    }px)`,
+
+  only: (breakpoint: AntdBreakpointType) => {
+    const entries = Object.entries(breakpoints);
+
+    const index = entries.findIndex(([key]) => key === breakpoint);
+
+    const current = entries[index];
+    const next = entries[index + 1];
+
+    if (!next) {
+      return `@media (min-width: ${current[1]}px)`;
+    }
+
+    return `@media (min-width: ${current[1]}px) and (max-width: ${
+      next[1] - 1
+    }px)`;
+  },
 };

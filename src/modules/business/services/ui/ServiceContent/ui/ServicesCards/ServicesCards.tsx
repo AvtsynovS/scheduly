@@ -1,21 +1,16 @@
 import { Badge, Col, Flex, Row, Typography } from '@common/ui-kit';
-import { spaces, useTranslate } from '@shared';
+import { spaces, useGroupByKey, useTranslate } from '@shared';
 
-import { ServiceCard } from './ServiceCard';
+import { ServiceCard } from './ui/ServiceCard/ServiceCard';
 
 import styled from 'styled-components';
 
-import type { CategoryType, ServiceType } from '../../../types';
+import type { ServiceType } from '../../../../types';
 
 const { Title } = Typography;
 const { Ribbon } = Badge;
 
-type ServiceByCategoryType = {
-  group: CategoryType;
-  items: ServiceType[];
-};
-
-type ServicesCardsProps = { services: ServiceByCategoryType[] };
+type ServicesCardsProps = { services: ServiceType[] };
 
 const StyledCategoryCard = styled(Flex)`
   padding: ${({ theme }) => theme.spaces.xl};
@@ -26,24 +21,26 @@ const StyledCategoryCard = styled(Flex)`
 `;
 
 export const ServicesCards = ({ services }: ServicesCardsProps) => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
+
+  const servicesByCategory = useGroupByKey(services, 'categories');
 
   return (
     <>
-      {services.map(({ group: category, items: services }) => (
+      {servicesByCategory.map(({ group: category, items: services }) => (
         <Ribbon
-          key={category}
+          key={category.id}
           text={translate(
             'business.badge.service',
             {},
             { count: services.length },
           )}
-          color="blue-inverse"
+          color={category.color}
         >
           <StyledCategoryCard vertical gap={spaces.xl}>
             <Flex align="center" justify="space-between" gap={spaces.xs}>
               <Title level={5}>
-                {translate(`business.text.category.${category}`)}
+                {translate(`business.text.category.${category.name}`)}
               </Title>
             </Flex>
             <Row gutter={[16, 8]}>

@@ -25,7 +25,7 @@ type MessageSettings = {
 };
 
 export const useTranslate = () => {
-  const { formatMessage } = useIntl();
+  const { formatMessage, locale } = useIntl();
 
   const translate = useCallback(
     (
@@ -37,5 +37,5 @@ export const useTranslate = () => {
     [formatMessage],
   );
 
-  return translate;
+  return { translate, locale };
 };

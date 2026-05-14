@@ -9,6 +9,7 @@
   "business.dropdown.option.allCategories": "All categories",
 
   "business.sider.title.menu": "Menu",
+
   "business.text.category.haircut": "Haircut",
   "business.text.category.coloring": "Coloring",
   "business.text.category.styling": "Styling",
@@ -25,6 +26,12 @@
 
   "business.select.placeholder.search": "Search...",
   "business.select.option.allCategories": "All Categories",
+
+  "business.table.column.services": "Services",
+  "business.table.column.categories": "Categories",
+  "business.table.column.duration": "Duration",
+  "business.table.column.price": "Price",
+  "business.table.column.serviceMobile": "Service",
 
   "business.stats.total": "Total services",
   "business.stats.categories": "Total categories",

@@ -1,12 +1,12 @@
 import { useState } from 'react';
 
 import { Flex, Segmented } from '@common/ui-kit';
-import { spaces, useGroupByKey, useTranslateOptions } from '@shared';
+import { spaces, useTranslateOptions } from '@shared';
 
 import { mockServices } from '../../model/mocks';
 import { serviceViewType } from './model/constants';
-import { ServicesCards } from './ui/ServicesCards';
-import { ServicesTable } from './ui/ServicesTable';
+import { ServicesCards } from './ui/ServicesCards/ServicesCards';
+import { ServicesTable } from './ui/ServicesTable/ServicesTable';
 
 import styled from 'styled-components';
 
@@ -27,7 +27,6 @@ export const ServiceContent = () => {
   // TODO получаем сервисы с бэка
   const services = mockServices;
 
-  const servicesByCategory = useGroupByKey(services, 'category');
   const options = useTranslateOptions(serviceViewType);
 
   const handleChangeView = (view: ViewModeType) => setViewMode(view);
@@ -40,9 +39,9 @@ export const ServiceContent = () => {
         onChange={handleChangeView}
       />
       {viewMode === 'table' ? (
-        <ServicesTable />
+        <ServicesTable services={services} />
       ) : (
-        <ServicesCards services={servicesByCategory} />
+        <ServicesCards services={services} />
       )}
     </Flex>
   );

@@ -27,7 +27,7 @@ const { useBreakpoint } = Grid;
 const StyledWrapper = styled(Flex)`
   padding: ${({ theme }) => theme.spaces.m};
 
-  @media ${MEDIA.xl} {
+  ${MEDIA.up('xl')} {
     padding: ${({ theme }) => theme.spaces.xxl};
   }
 `;
@@ -40,8 +40,16 @@ const StyledFilterSelect = styled(FilterSelect)`
   width: 100%;
 `;
 
+const StyledButton = styled(Button)`
+  ${MEDIA.down('sm')} {
+    span:not(.ant-btn-icon) {
+      display: none;
+    }
+  }
+`;
+
 export const ServicesPage = () => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
   const screens = useBreakpoint();
 
   const stats = useServicesStats(servicesStatsData);
@@ -67,9 +75,9 @@ export const ServicesPage = () => {
         title={translate('business.page.title.services')}
         description={translate('business.page.description.services')}
         actions={
-          <Button icon={<PlusIcon />} type="primary">
+          <StyledButton icon={<PlusIcon />} type="primary">
             {translate('business.button.label.add.service')}
-          </Button>
+          </StyledButton>
         }
       />
       <Row gutter={[16, 8]}>
