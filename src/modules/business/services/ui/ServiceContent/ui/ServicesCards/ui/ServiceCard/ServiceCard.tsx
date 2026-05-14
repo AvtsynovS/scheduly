@@ -9,6 +9,8 @@ import {
 
 import styled from 'styled-components';
 
+import type { MoneyType } from '../../../../../../types';
+
 const { useBreakpoint } = Grid;
 const { Text, Title } = Typography;
 const { Content } = BaseCard;
@@ -16,7 +18,7 @@ const { Content } = BaseCard;
 type ServiceCardProps = {
   name: string;
   duration: number;
-  price: number;
+  price: MoneyType;
 };
 
 const StyledBaseCard = styled(BaseCard)`
@@ -55,7 +57,10 @@ export const ServiceCard = ({ name, duration, price }: ServiceCardProps) => {
   const screen = useBreakpoint();
 
   const isXs = screen.xs ?? false;
-  const formattedPrice = format(price, { type: 'currency', currency: 'RUB' });
+  const formattedPrice = format(price.amount, {
+    type: 'currency',
+    currency: price.currency,
+  });
   const formattedDuration = format(duration, { type: 'duration' });
 
   return (

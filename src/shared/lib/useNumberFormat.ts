@@ -6,7 +6,7 @@ import type { NumberFormatConfigType } from '@shared';
 
 export const useNumberFormat = () => {
   const intl = useIntl();
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   return (value: number, config?: NumberFormatConfigType): string => {
     if (value == null) return '';

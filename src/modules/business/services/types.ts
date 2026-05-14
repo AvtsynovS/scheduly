@@ -7,14 +7,23 @@ export type ServicesStatsData = {
   total: number;
 };
 
-export type CategoryType = 'haircut' | 'coloring' | 'styling' | 'nails';
+export type CategoryType = {
+  id: string;
+  name: 'haircut' | 'coloring' | 'styling' | 'nails';
+  color: string;
+};
+
+export type MoneyType = {
+  amount: number;
+  currency: 'RUB' | 'USD' | 'EUR';
+};
 
 export type ServiceType = {
   id: string;
   name: string;
-  category: CategoryType; // массив?
+  categories: CategoryType[];
   duration: number;
-  price: number;
+  price: MoneyType;
 };
 
 export type ServicesStatsConfigType = {

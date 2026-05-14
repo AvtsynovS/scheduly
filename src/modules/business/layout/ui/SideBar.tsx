@@ -38,7 +38,7 @@ const StyledTitle = styled(Title)<{ $collapsed: boolean }>`
 
 export const SideBar = () => {
   const { isTabletDown } = useDevice();
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   const [collapsed, setCollapsed] = useState(false);
 

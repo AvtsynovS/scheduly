@@ -11,7 +11,7 @@ type OptionType = {
 export const useTranslateOptions = <T extends OptionType>(
   options: T[],
 ): T[] => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   return useMemo(() => {
     return options

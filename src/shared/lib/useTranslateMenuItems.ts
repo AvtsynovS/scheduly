@@ -5,7 +5,7 @@ import { useTranslate } from '../localization';
 import type { ItemType } from '@common/ui-kit/types';
 
 export const useTranslateMenuItems = <T extends ItemType>(items?: T[]) => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   return useMemo(() => {
     const mapItems = <U extends ItemType>(list?: U[]): U[] => {

@@ -14,7 +14,9 @@ export {
   Row,
   Segmented,
   Select,
+  Space,
   Spin,
   Tag,
+  Table,
   Typography,
 } from 'antd';

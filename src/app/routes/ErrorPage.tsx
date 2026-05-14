@@ -25,7 +25,7 @@ const StyledErrorImage = styled(ErrorImage)`
 `;
 
 export const ErrorPage = () => {
-  const translate = useTranslate();
+  const { translate } = useTranslate();
 
   return (
     <StyledWrapper>

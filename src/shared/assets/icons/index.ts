@@ -4,6 +4,7 @@ import { ReactComponent as CardIcon } from './card.svg?react';
 import { ReactComponent as ChartIcon } from './chart.svg?react';
 import { ReactComponent as ChevronLeftIcon } from './chevron-left.svg?react';
 import { ReactComponent as ChevronRightIcon } from './chevron-right.svg?react';
+import { ReactComponent as ClipboardListIcon } from './clipboard-list.svg?react';
 import { ReactComponent as ClockIcon } from './clock.svg?react';
 import { ReactComponent as DashboardIcon } from './dashboard.svg?react';
 import { ReactComponent as ErrorImage } from './errorImage.svg?react';
@@ -27,6 +28,7 @@ export {
   CardIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
+  ClipboardListIcon,
   ClockIcon,
   DashboardIcon,
   ErrorImage,
