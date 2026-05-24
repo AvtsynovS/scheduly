@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
-import { Button, Col, Flex, Grid, Row, Select } from '@common/ui-kit';
+import { Button, Col, Flex, Row, Select } from '@common/ui-kit';
 import {
   EmptyBox,
   FilterSelect,
@@ -17,12 +17,13 @@ import {
   CATEGORIES,
   servicesStatsData,
 } from '../model/mocks';
-import { ServiceContent } from './ServiceContent/ServiceContent';
-import { ServicesStatsCard } from './ServicesStatsCard';
+import { ServiceContent } from '../ui/ServiceContent/ServiceContent';
+import { ServiceDrawer } from '../ui/ServiceDrawer/ServiceDrawer';
+import { ServicesStatsCard } from '../ui/ServicesStatsCard/ServicesStatsCard';
 
 import styled from 'styled-components';
 
-const { useBreakpoint } = Grid;
+import type { ConfirmActionType, ModeType, ServiceActionType } from '../types';
 
 const StyledWrapper = styled(Flex)`
   padding: ${({ theme }) => theme.spaces.m};
@@ -50,18 +51,53 @@ const StyledButton = styled(Button)`
 
 export const ServicesPage = () => {
   const { translate } = useTranslate();
-  const screens = useBreakpoint();
 
   const stats = useServicesStats(servicesStatsData);
 
-  const maxTagCount =
-    !screens.md || screens.xxxl ? undefined : screens.xxl ? 2 : 1;
+  const [drawerMode, setDrawerMode] = useState<ModeType>(null);
+  const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
+
+  // TODO для отображения модальных окон архивации и удаления
+  console.log('confirmAction', confirmAction);
+
+  const onCloseDrawer = () => setDrawerMode(null);
+
+  const handleActions = useCallback((action: ServiceActionType) => {
+    switch (action.type) {
+      case 'create':
+        setDrawerMode({ type: 'create' });
+        break;
+      case 'edit':
+        setDrawerMode({ type: 'edit', id: action.id });
+        break;
+      case 'duplicate':
+        setDrawerMode({ type: 'duplicate', id: action.id });
+        break;
+      case 'archive':
+        setConfirmAction({ type: 'archive', id: action.id });
+        break;
+      case 'delete':
+        setConfirmAction({ type: 'delete', id: action.id });
+        break;
+      default:
+        break;
+    }
+  }, []);
 
   const options = useMemo(() => {
-    return [ALL_CATEGORIES_OPTION, ...CATEGORIES].map(({ value, label }) => ({
-      label: translate(label),
-      value,
-    }));
+    const all = {
+      ...ALL_CATEGORIES_OPTION,
+      label: translate(ALL_CATEGORIES_OPTION.label),
+    };
+
+    const categories = CATEGORIES.map((category) => {
+      return {
+        ...category,
+        label: category.value,
+      };
+    });
+
+    return [all, ...categories];
   }, [translate]);
 
   const handleFilterChange = (value: string[]) => {
@@ -75,7 +111,11 @@ export const ServicesPage = () => {
         title={translate('business.page.title.services')}
         description={translate('business.page.description.services')}
         actions={
-          <StyledButton icon={<PlusIcon />} type="primary">
+          <StyledButton
+            icon={<PlusIcon />}
+            type="primary"
+            onClick={() => handleActions({ type: 'create' })}
+          >
             {translate('business.button.label.add.service')}
           </StyledButton>
         }
@@ -105,7 +145,7 @@ export const ServicesPage = () => {
             showSearch={{
               optionFilterProp: 'label',
             }}
-            maxTagCount={maxTagCount}
+            maxTagCount="responsive"
             allowClear
             onChange={handleFilterChange}
             emptyDescription={translate('empty.description')}
@@ -114,6 +154,7 @@ export const ServicesPage = () => {
         </Col>
       </Row>
       <ServiceContent />
+      <ServiceDrawer mode={drawerMode} onClose={onCloseDrawer} />
     </StyledWrapper>
   );
 };

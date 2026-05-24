@@ -9,7 +9,7 @@ import {
 
 import styled from 'styled-components';
 
-import type { MoneyType } from '../../../../../../types';
+import type { PriceType } from '../../../../types';
 
 const { useBreakpoint } = Grid;
 const { Text, Title } = Typography;
@@ -18,7 +18,7 @@ const { Content } = BaseCard;
 type ServiceCardProps = {
   name: string;
   duration: number;
-  price: MoneyType;
+  price: PriceType;
 };
 
 const StyledBaseCard = styled(BaseCard)`

@@ -24,6 +24,7 @@ type MessageSettings = {
   defaultMessage?: string | MessageFormatElement[];
 };
 
+// TODO перенести в common
 export const useTranslate = () => {
   const { formatMessage, locale } = useIntl();
 

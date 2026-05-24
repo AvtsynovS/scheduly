@@ -7,7 +7,7 @@ import { EmptyBox } from '../EmptyBox/EmptyBox';
 import type { SelectProps } from '@common/ui-kit/types';
 import type { ReactNode } from 'react';
 
-type TestProps = SelectProps & {
+type FilterSelectProps = SelectProps & {
   baseOption: { label: string; value: string };
   allTagLabel: string;
   emptyDescription: string;
@@ -27,7 +27,7 @@ export const FilterSelect = ({
   options,
   onChange,
   ...props
-}: TestProps) => {
+}: FilterSelectProps) => {
   const [selected, setSelected] = useState<string[]>([baseOption.value]);
 
   const handleSelect = (value: string) => {

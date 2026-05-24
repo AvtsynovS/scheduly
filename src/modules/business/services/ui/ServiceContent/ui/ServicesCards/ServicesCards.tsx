@@ -1,11 +1,11 @@
 import { Badge, Col, Flex, Row, Typography } from '@common/ui-kit';
 import { spaces, useGroupByKey, useTranslate } from '@shared';
 
-import { ServiceCard } from './ui/ServiceCard/ServiceCard';
+import { ServiceCard } from './ServiceCard';
 
 import styled from 'styled-components';
 
-import type { ServiceType } from '../../../../types';
+import type { ServiceType } from '../../../../model/types';
 
 const { Title } = Typography;
 const { Ribbon } = Badge;

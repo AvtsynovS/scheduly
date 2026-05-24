@@ -8,7 +8,20 @@
   "business.dropdown.option.nails": "Nails",
   "business.dropdown.option.allCategories": "All categories",
 
+  "business.input.service.name.label": "Service",
+  "business.input.service.categories.label": "Categories",
+  "business.input.service.duration.label": "Duration",
+  "business.input.service.price.label": "Price",
+  "business.input.service.name.placeholder": "Service name",
+  "business.input.service.categories.placeholder": "Add categories",
+  "business.input.service.duration.placeholder": "Duration",
+  "business.input.service.price.placeholder": "Price",
+
   "business.sider.title.menu": "Menu",
+
+  "business.drawer.title.service.create": "New service",
+  "business.drawer.title.service.edit": "Edit service",
+  "business.drawer.title.service.duplicate": "New service",
 
   "business.text.category.haircut": "Haircut",
   "business.text.category.coloring": "Coloring",
@@ -39,5 +52,11 @@
   "business.stats.average.time": "Average time",
 
   "business.page.title.services": "Services",
-  "business.page.description.services": "Service and pricing management"
+  "business.page.description.services": "Service and pricing management",
+
+  "business.service.error.name.required": "Enter service name",
+  "business.service.error.categories.required": "Select categories",
+  "business.service.error.categories.min": "Select at least one category",
+  "business.service.error.duration.required": "Enter duration",
+  "business.service.error.price.required": "Enter price"
 }

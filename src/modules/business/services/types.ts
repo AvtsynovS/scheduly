@@ -1,4 +1,4 @@
-import type { NumberFormatConfigType } from '@shared';
+import type { CurrencyType, NumberFormatConfigType } from '@shared';
 
 export type ServicesStatsData = {
   averagePrice: number;
@@ -7,23 +7,9 @@ export type ServicesStatsData = {
   total: number;
 };
 
-export type CategoryType = {
-  id: string;
-  name: 'haircut' | 'coloring' | 'styling' | 'nails';
-  color: string;
-};
-
-export type MoneyType = {
+export type PriceType = {
   amount: number;
-  currency: 'RUB' | 'USD' | 'EUR';
-};
-
-export type ServiceType = {
-  id: string;
-  name: string;
-  categories: CategoryType[];
-  duration: number;
-  price: MoneyType;
+  currency: CurrencyType;
 };
 
 export type ServicesStatsConfigType = {
@@ -33,3 +19,20 @@ export type ServicesStatsConfigType = {
 };
 
 export type ViewModeType = 'table' | 'card';
+
+export type ServiceActionType =
+  | { type: 'create' }
+  | { type: 'edit'; id: string }
+  | { type: 'duplicate'; id: string }
+  | { type: 'archive'; id: string }
+  | { type: 'delete'; id: string };
+
+export type ModeType = Extract<
+  ServiceActionType,
+  { type: 'create' | 'edit' | 'duplicate' }
+> | null;
+
+export type ConfirmActionType = Extract<
+  ServiceActionType,
+  { type: 'archive' | 'delete' }
+> | null;

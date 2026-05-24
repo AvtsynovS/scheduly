@@ -1,0 +1,43 @@
+import * as yup from 'yup';
+
+import type { CreateServiceType } from '../../../../model/types';
+import type { CurrencyType } from '@shared';
+import type { ObjectSchema } from 'yup';
+
+export const CURRENCIES = [
+  'USD',
+  'EUR',
+  'RUB',
+] as const satisfies readonly CurrencyType[];
+
+export const createServiceSchema = (translate: (id: string) => string) => {
+  return yup.object({
+    name: yup
+      .string()
+      .required(translate('business.service.error.name.required')),
+    categories: yup
+      .array()
+      .of(
+        yup
+          .string()
+          .required(translate('business.service.error.categories.required')),
+      )
+      .min(1, translate('business.service.error.categories.min'))
+      .required(translate('business.service.error.categories.required')),
+    duration: yup
+      .number()
+      .typeError(translate('validation.type.error'))
+      .required(translate('business.service.error.duration.required')),
+    price: yup.object({
+      amount: yup
+        .number()
+        .typeError(translate('validation.type.error'))
+        .required(translate('validation.price.error')),
+
+      currency: yup
+        .mixed<CurrencyType>()
+        .oneOf(CURRENCIES)
+        .required(translate('validation.currency.error')),
+    }),
+  }) satisfies ObjectSchema<CreateServiceType>;
+};

@@ -3,7 +3,7 @@ import { ClipboardListIcon, MEDIA, MoreIcon, spaces } from '@shared';
 
 import styled from 'styled-components';
 
-import type { ServiceType } from '../../../../../types';
+import type { ServiceType } from '../../../../../model/types';
 import type { NumberFormatConfigType, ResponsiveColumnsType } from '@shared';
 
 const { Text, Link } = Typography;
@@ -148,7 +148,10 @@ export const getServiceColumns = (
       hideBefore: 'lg',
       render: (_, { price }) => (
         <Text>
-          {format(price.amount, { type: 'currency', currency: price.currency })}
+          {format(price.amount, {
+            type: 'currency',
+            currency: price.currency,
+          })}
         </Text>
       ),
     },

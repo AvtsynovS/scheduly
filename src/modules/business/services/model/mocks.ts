@@ -1,4 +1,12 @@
-import type { ServiceType } from '../types';
+import type { ServiceType } from './types';
+import type { CurrencyType } from '@shared';
+
+const mockColors = {
+  cyan: 'rgb(40, 100, 140)',
+  red: 'rgb(140, 38, 38)',
+  green: 'rgb(38, 140, 74)',
+  violet: 'rgb(92, 38, 140)',
+};
 
 export const servicesStatsData = {
   averagePrice: 3455,
@@ -12,19 +20,30 @@ export const ALL_CATEGORIES_OPTION = {
   value: 'all',
 };
 
-export const CATEGORIES = [
-  { label: 'business.dropdown.option.haircut', value: 'haircut' },
-  { label: 'business.dropdown.option.coloring', value: 'coloring' },
-  { label: 'business.dropdown.option.styling', value: 'styling' },
-  { label: 'business.dropdown.option.nails', value: 'nails' },
-];
+export const CURRENCY: CurrencyType[] = ['RUB', 'USD', 'EUR'];
 
-const mockColors = {
-  cyan: 'rgb(40, 100, 140)',
-  red: 'rgb(140, 38, 38)',
-  green: 'rgb(38, 140, 74)',
-  violet: 'rgb(92, 38, 140)',
-};
+export const CATEGORIES = [
+  {
+    id: '1',
+    value: 'Стрижка',
+    color: mockColors.cyan,
+  },
+  {
+    id: '2',
+    value: 'Окрашивание',
+    color: mockColors.red,
+  },
+  {
+    id: '3',
+    value: 'Укладка',
+    color: mockColors.green,
+  },
+  {
+    id: '4',
+    value: 'Ногти',
+    color: mockColors.violet,
+  },
+];
 
 export const mockServices: ServiceType[] = [
   {
@@ -32,9 +51,6 @@ export const mockServices: ServiceType[] = [
     name: 'Женская стрижка',
     categories: [
       { id: '1', name: 'haircut', color: mockColors.cyan },
-      { id: '2', name: 'coloring', color: mockColors.red },
-      { id: '2', name: 'coloring', color: mockColors.red },
-      { id: '2', name: 'coloring', color: mockColors.red },
       { id: '2', name: 'coloring', color: mockColors.red },
     ],
     duration: 60,
