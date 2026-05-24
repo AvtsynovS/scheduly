@@ -1,6 +1,7 @@
 import { buttonTokens } from './antd/button';
 import { getCardTokens } from './antd/cardTokens';
 import { getDropdownTokens } from './antd/dropdown';
+import { inputTokens } from './antd/input';
 import { getLayoutTokens } from './antd/layoutTokens';
 import { getMenuTokens } from './antd/menuTokens';
 import { getSegmentedTokens } from './antd/segmented';
@@ -65,14 +66,15 @@ export const getAntdTheme = () => {
     },
     components: {
       Button: buttonTokens,
+      Card: getCardTokens(cssVar),
       Dropdown: getDropdownTokens(cssVar),
+      Input: inputTokens,
       Layout: getLayoutTokens(cssVar),
       Menu: getMenuTokens(cssVar),
+      Segmented: getSegmentedTokens(cssVar),
+      Select: getSelectTokens(cssVar),
       Spin: getSpinTokens(cssVar),
       Typography: typographyTokens,
-      Card: getCardTokens(cssVar),
-      Select: getSelectTokens(cssVar),
-      Segmented: getSegmentedTokens(cssVar),
     },
   };
 };

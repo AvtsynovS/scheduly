@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 import { Table } from '@common/ui-kit';
 import {
   EmptyBox,
@@ -6,13 +8,13 @@ import {
   useTranslate,
 } from '@shared';
 
-import { getServiceColumns } from './modal/ServiceColumns';
+import { getServiceColumns } from './model/getServiceColumns';
 
-import type { ServiceType } from '../../../../types';
+import type { ServiceType } from '../../../../model/types';
 
 type ServicesTableProps = { services: ServiceType[] };
 
-export const ServicesTable = ({ services }: ServicesTableProps) => {
+export const ServicesTable = memo(({ services }: ServicesTableProps) => {
   const { translate, locale } = useTranslate();
   const format = useNumberFormat();
 
@@ -32,4 +34,6 @@ export const ServicesTable = ({ services }: ServicesTableProps) => {
       }}
     />
   );
-};
+});
+
+ServicesTable.displayName = 'ServicesTable';

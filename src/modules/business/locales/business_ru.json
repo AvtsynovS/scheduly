@@ -3,11 +3,24 @@
 
   "business.button.label.add.service": "Добавить услугу",
 
+  "business.drawer.title.service.create": "Новый сервис",
+  "business.drawer.title.service.edit": "Редактирование сервиса",
+  "business.drawer.title.service.duplicate": "Новый сервис",
+
   "business.dropdown.option.haircut": "Стрижка",
   "business.dropdown.option.coloring": "Окрашивание",
   "business.dropdown.option.styling": "Укладка",
   "business.dropdown.option.nails": "Ногти",
   "business.dropdown.option.allCategories": "Все категории",
+
+  "business.input.service.name.label": "Сервис",
+  "business.input.service.categories.label": "Категории",
+  "business.input.service.duration.label": "Продолжительность",
+  "business.input.service.price.label": "Цена",
+  "business.input.service.name.placeholder": "Название сервиса",
+  "business.input.service.categories.placeholder": "Добавьте категории",
+  "business.input.service.duration.placeholder": "Продолжительность",
+  "business.input.service.price.placeholder": "Цена",
 
   "business.sider.title.menu": "Меню",
 
@@ -40,5 +53,11 @@
   "business.stats.average.time": "Среднее время",
 
   "business.page.title.services": "Услуги",
-  "business.page.description.services": "Управление услугами и ценами"
+  "business.page.description.services": "Управление услугами и ценами",
+
+  "business.service.error.name.required": "Введите название услуги",
+  "business.service.error.categories.required": "Выберите категории",
+  "business.service.error.categories.min": "Выберите хотя бы одну категорию",
+  "business.service.error.duration.required": "Введите длительность",
+  "business.service.error.price.required": "Укажите цену"
 }

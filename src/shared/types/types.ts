@@ -26,3 +26,5 @@ type ResponsiveMeta = {
 export type ResponsiveColumnType<T> = ColumnType<T> & ResponsiveMeta;
 
 export type ResponsiveColumnsType<T> = ResponsiveColumnType<T>[];
+
+export type CurrencyType = 'RUB' | 'USD' | 'EUR';

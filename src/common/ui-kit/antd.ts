@@ -9,6 +9,7 @@ export {
   Empty,
   Flex,
   Grid,
+  Input,
   Layout,
   Menu,
   Row,

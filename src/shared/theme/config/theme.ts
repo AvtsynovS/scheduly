@@ -72,6 +72,15 @@ export const theme = {
     xxxl: '48px',
   },
 
+  lineHeight: {
+    none: '1',
+    tight: 'var(--leading-tight)',
+    snug: 'var(--leading-snug)',
+    normal: 'var(--leading-normal)',
+    relaxed: 'var(--leading-relaxed)',
+    loose: 'var(--leading-loose)',
+  },
+
   borders: {
     default: 'var(--border-default)',
     subtle: 'var(--border-subtle)',
