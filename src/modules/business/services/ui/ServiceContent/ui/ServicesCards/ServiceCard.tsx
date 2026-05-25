@@ -1,24 +1,27 @@
-import { Button, Flex, Grid, Typography } from '@common/ui-kit';
+import { Flex, Grid, Typography } from '@common/ui-kit';
 import {
+  ActionsButton,
   BaseCard,
   ClockIcon,
-  MoreIcon,
   spaces,
   useNumberFormat,
+  useTranslate,
 } from '@shared';
+
+import { createServiceActions } from '../ServicesTable/model/createServiceActions';
 
 import styled from 'styled-components';
 
-import type { PriceType } from '../../../../types';
+import type { ServiceType } from '../../../../model/types';
+import type { ServiceActionType } from '../../../../types';
 
 const { useBreakpoint } = Grid;
 const { Text, Title } = Typography;
 const { Content } = BaseCard;
 
 type ServiceCardProps = {
-  name: string;
-  duration: number;
-  price: PriceType;
+  service: ServiceType;
+  onAction: (action: ServiceActionType) => void;
 };
 
 const StyledBaseCard = styled(BaseCard)`
@@ -36,12 +39,6 @@ const StyledTitle = styled(Title)`
   }
 `;
 
-const StyledButton = styled(Button)`
-  &.ant-btn-icon-only {
-    width: fit-content;
-  }
-`;
-
 const StyledIcon = styled(ClockIcon)`
   color: ${({ theme }) => theme.colors.muted};
 `;
@@ -52,9 +49,12 @@ const StyledPrice = styled(Text)`
   font-weight: 500;
 `;
 
-export const ServiceCard = ({ name, duration, price }: ServiceCardProps) => {
+export const ServiceCard = ({ service, onAction }: ServiceCardProps) => {
+  const { translate } = useTranslate();
   const format = useNumberFormat();
   const screen = useBreakpoint();
+
+  const { id, name, duration, price } = service;
 
   const isXs = screen.xs ?? false;
   const formattedPrice = format(price.amount, {
@@ -66,7 +66,9 @@ export const ServiceCard = ({ name, duration, price }: ServiceCardProps) => {
   return (
     <StyledBaseCard
       title={<StyledTitle level={5}>{name}</StyledTitle>}
-      extra={<StyledButton icon={<MoreIcon />} type="text" />}
+      extra={
+        <ActionsButton items={createServiceActions(id, onAction, translate)} />
+      }
       size={isXs ? 'small' : 'medium'}
       hoverable
     >

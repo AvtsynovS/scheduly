@@ -6,11 +6,15 @@ import { ServiceCard } from './ServiceCard';
 import styled from 'styled-components';
 
 import type { ServiceType } from '../../../../model/types';
+import type { ServiceActionType } from '../../../../types';
 
 const { Title } = Typography;
 const { Ribbon } = Badge;
 
-type ServicesCardsProps = { services: ServiceType[] };
+type ServicesCardsProps = {
+  services: ServiceType[];
+  onAction: (action: ServiceActionType) => void;
+};
 
 const StyledCategoryCard = styled(Flex)`
   padding: ${({ theme }) => theme.spaces.xl};
@@ -20,7 +24,7 @@ const StyledCategoryCard = styled(Flex)`
   box-shadow: ${({ theme }) => theme.shadows.layout.body};
 `;
 
-export const ServicesCards = ({ services }: ServicesCardsProps) => {
+export const ServicesCards = ({ services, onAction }: ServicesCardsProps) => {
   const { translate } = useTranslate();
 
   const servicesByCategory = useGroupByKey(services, 'categories');
@@ -44,9 +48,9 @@ export const ServicesCards = ({ services }: ServicesCardsProps) => {
               </Title>
             </Flex>
             <Row gutter={[16, 8]}>
-              {services.map(({ id, ...service }) => (
-                <Col key={id} xs={24} md={12} xl={8}>
-                  <ServiceCard {...service} />
+              {services.map((service) => (
+                <Col key={service.id} xs={24} md={12} xl={8}>
+                  <ServiceCard service={service} onAction={onAction} />
                 </Col>
               ))}
             </Row>

@@ -1,9 +1,12 @@
-import { Avatar, Button, Flex, Space, Tag, Typography } from '@common/ui-kit';
-import { ClipboardListIcon, MEDIA, MoreIcon, spaces } from '@shared';
+import { Avatar, Flex, Space, Tag, Typography } from '@common/ui-kit';
+import { ActionsButton, ClipboardListIcon, MEDIA, spaces } from '@shared';
+
+import { createServiceActions } from './createServiceActions';
 
 import styled from 'styled-components';
 
 import type { ServiceType } from '../../../../../model/types';
+import type { ServiceActionType } from '../../../../../types';
 import type { NumberFormatConfigType, ResponsiveColumnsType } from '@shared';
 
 const { Text, Link } = Typography;
@@ -21,13 +24,14 @@ export const getServiceColumns = (
   translate: (key: string) => string,
   locale: string,
   format: (value: number, config?: NumberFormatConfigType) => string,
+  onAction: (action: ServiceActionType) => void,
 ) =>
   [
     {
       key: 'mobile',
       title: translate('business.table.column.services'),
       hideAfter: 'md',
-      render: (_, { name, categories, duration, price }) => (
+      render: (_, { id, name, categories, duration, price }) => (
         <Flex vertical gap={spaces.xs}>
           <Flex align="center" justify="space-between" gap={spaces.s}>
             <Flex align="center" gap={spaces.s}>
@@ -38,7 +42,9 @@ export const getServiceColumns = (
               />
               <Link>{name}</Link>
             </Flex>
-            <Button type="text" icon={<MoreIcon />} />
+            <ActionsButton
+              items={createServiceActions(id, onAction, translate)}
+            />
           </Flex>
           <Text type="secondary">
             {`${translate('business.table.column.duration')}: ${format(duration, { type: 'duration' })}`}
@@ -158,6 +164,8 @@ export const getServiceColumns = (
     {
       width: 68,
       hideBefore: 'lg',
-      render: () => <Button type="text" icon={<MoreIcon />} />,
+      render: (_, { id }) => (
+        <ActionsButton items={createServiceActions(id, onAction, translate)} />
+      ),
     },
   ] satisfies ResponsiveColumnsType<ServiceColumnsType>;

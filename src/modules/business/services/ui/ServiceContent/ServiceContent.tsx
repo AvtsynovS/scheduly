@@ -10,7 +10,11 @@ import { ServicesTable } from './ui/ServicesTable/ServicesTable';
 
 import styled from 'styled-components';
 
-import type { ViewModeType } from '../../types';
+import type { ServiceActionType, ViewModeType } from '../../types';
+
+type ServiceContentProps = {
+  onAction: (action: ServiceActionType) => void;
+};
 
 // TODO (savtsynov) возможно стоит сделать стилизованные сегменты в будущем
 const StyledSegmented = styled(Segmented<ViewModeType>)`
@@ -21,7 +25,7 @@ const StyledSegmented = styled(Segmented<ViewModeType>)`
   }
 `;
 
-export const ServiceContent = () => {
+export const ServiceContent = ({ onAction }: ServiceContentProps) => {
   const [viewMode, setViewMode] = useState<ViewModeType>('table');
 
   // TODO получаем сервисы с бэка
@@ -39,9 +43,9 @@ export const ServiceContent = () => {
         onChange={handleChangeView}
       />
       {viewMode === 'table' ? (
-        <ServicesTable services={services} />
+        <ServicesTable services={services} onAction={onAction} />
       ) : (
-        <ServicesCards services={services} />
+        <ServicesCards services={services} onAction={onAction} />
       )}
     </Flex>
   );

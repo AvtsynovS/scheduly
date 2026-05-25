@@ -12,6 +12,10 @@
   "business.dropdown.option.styling": "Укладка",
   "business.dropdown.option.nails": "Ногти",
   "business.dropdown.option.allCategories": "Все категории",
+  "business.dropdown.option.edit": "Редактировать",
+  "business.dropdown.option.duplicate": "Дублировать",
+  "business.dropdown.option.archive": "Архивировать",
+  "business.dropdown.option.delete": "Удалить",
 
   "business.input.service.name.label": "Сервис",
   "business.input.service.categories.label": "Категории",
