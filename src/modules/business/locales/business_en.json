@@ -7,6 +7,10 @@
   "business.dropdown.option.styling": "Styling",
   "business.dropdown.option.nails": "Nails",
   "business.dropdown.option.allCategories": "All categories",
+  "business.dropdown.option.edit": "Edit",
+  "business.dropdown.option.duplicate": "Duplicate",
+  "business.dropdown.option.archive": "Archive",
+  "business.dropdown.option.delete": "Delete",
 
   "business.input.service.name.label": "Service",
   "business.input.service.categories.label": "Categories",

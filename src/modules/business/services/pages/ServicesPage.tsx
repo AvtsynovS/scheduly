@@ -62,7 +62,7 @@ export const ServicesPage = () => {
 
   const onCloseDrawer = () => setDrawerMode(null);
 
-  const handleActions = useCallback((action: ServiceActionType) => {
+  const onServiceActions = useCallback((action: ServiceActionType) => {
     switch (action.type) {
       case 'create':
         setDrawerMode({ type: 'create' });
@@ -114,7 +114,7 @@ export const ServicesPage = () => {
           <StyledButton
             icon={<PlusIcon />}
             type="primary"
-            onClick={() => handleActions({ type: 'create' })}
+            onClick={() => onServiceActions({ type: 'create' })}
           >
             {translate('business.button.label.add.service')}
           </StyledButton>
@@ -153,7 +153,7 @@ export const ServicesPage = () => {
           />
         </Col>
       </Row>
-      <ServiceContent />
+      <ServiceContent onAction={onServiceActions} />
       <ServiceDrawer mode={drawerMode} onClose={onCloseDrawer} />
     </StyledWrapper>
   );
