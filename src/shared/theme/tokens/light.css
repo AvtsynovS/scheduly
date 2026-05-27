@@ -31,6 +31,28 @@
   --color-base-blue-9: rgb(0, 105, 168); /* primary */
   --color-base-blue-10: rgb(20, 100, 160); /* deep text */
 
+  --color-base-green-1: rgb(240, 253, 244);
+  --color-base-green-2: rgb(220, 252, 231);
+  --color-base-green-3: rgb(187, 247, 208);
+  --color-base-green-4: rgb(134, 239, 172);
+  --color-base-green-5: rgb(74, 222, 128);
+  --color-base-green-6: rgb(34, 197, 94);
+  --color-base-green-7: rgb(22, 163, 74);
+  --color-base-green-8: rgb(21, 128, 61);
+  --color-base-green-9: rgb(22, 101, 52);
+  --color-base-green-10: rgb(20, 83, 45);
+
+  --color-base-amber-1: rgb(255, 251, 235);
+  --color-base-amber-2: rgb(254, 243, 199);
+  --color-base-amber-3: rgb(253, 230, 138);
+  --color-base-amber-4: rgb(252, 211, 77);
+  --color-base-amber-5: rgb(251, 191, 36);
+  --color-base-amber-6: rgb(245, 158, 11);
+  --color-base-amber-7: rgb(217, 119, 6);
+  --color-base-amber-8: rgb(180, 83, 9);
+  --color-base-amber-9: rgb(146, 64, 14);
+  --color-base-amber-10: rgb(120, 53, 15);
+
   --color-base-red-1: rgb(255, 245, 245); /* very light */
   --color-base-red-2: rgb(255, 232, 232);
   --color-base-red-3: rgb(255, 210, 210); /* bg / card */
@@ -92,14 +114,30 @@
   --color-bg-sidebar: var(--color-base-grey-1);
 
   /* ===== Statuses ===== */
-  --color-status-positive: rgb(0, 188, 125);
-  --color-status-negative: rgb(255, 77, 79);
-  --color-status-neutral: rgb(140, 140, 140);
-  --color-status-success: rgb(73, 149, 55);
-  --color-status-warning: rgb(207, 146, 0);
-  --color-status-error: var(--text-error);
-  --color-status-bg-error: var(--color-base-red-3);
-  --color-status-bg-error-hover: var(--color-base-red-4);
+  --color-status-positive: var(--color-base-green-7);
+  --color-bg-status-positive: var(--color-base-green-1);
+  --color-bg-status-positive-hover: var(--color-base-green-2);
+  --color-status-success: var(--color-base-green-7);
+  --color-bg-status-success: var(--color-base-green-1);
+  --color-bg-status-success-hover: var(--color-base-green-2);
+  --color-status-warning: var(--color-base-amber-8);
+  --color-bg-status-warning: var(--color-base-amber-1);
+  --color-bg-status-warning-hover: var(--color-base-amber-2);
+  --color-status-inactive: var(--color-base-amber-8);
+  --color-bg-status-inactive: var(--color-base-amber-1);
+  --color-bg-status-inactive-hover: var(--color-base-amber-2);
+  --color-status-negative: var(--color-base-red-7);
+  --color-bg-status-negative: var(--color-base-red-1);
+  --color-bg-status-negative-hover: var(--color-base-red-2);
+  --color-status-archive: var(--color-base-red-7);
+  --color-bg-status-archive: var(--color-base-red-1);
+  --color-bg-status-archive-hover: var(--color-base-red-2);
+  --color-status-error: var(--color-base-red-7);
+  --color-bg-status-error: var(--color-base-red-3);
+  --color-bg-status-error-hover: var(--color-base-red-4);
+  --color-status-neutral: var(--color-base-grey-6);
+  --color-bg-status-neutral: var(--color-base-grey-2);
+  --color-bg-status-neutral-hover: var(--color-base-grey-3);
 
   --color-icon: var(--color-base-grey-10);
   --color-placeholder: var(--color-base-grey-4);

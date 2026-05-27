@@ -1,6 +1,7 @@
 import { Avatar, Flex, Space, Tag, Typography } from '@common/ui-kit';
 import { ActionsButton, ClipboardListIcon, MEDIA, spaces } from '@shared';
 
+import { StatusTag } from '../../StatusTag/StatusTag';
 import { createServiceActions } from './createServiceActions';
 
 import styled from 'styled-components';
@@ -31,7 +32,7 @@ export const getServiceColumns = (
       key: 'mobile',
       title: translate('business.table.column.services'),
       hideAfter: 'md',
-      render: (_, { id, name, categories, duration, price }) => (
+      render: (_, { id, name, categories, duration, price, status }) => (
         <Flex vertical gap={spaces.xs}>
           <Flex align="center" justify="space-between" gap={spaces.s}>
             <Flex align="center" gap={spaces.s}>
@@ -49,7 +50,7 @@ export const getServiceColumns = (
           <Text type="secondary">
             {`${translate('business.table.column.duration')}: ${format(duration, { type: 'duration' })}`}
           </Text>
-          <Space orientation="vertical" size="middle">
+          <Space orientation="vertical" size="small">
             <Text type="secondary" strong>
               {`${translate('business.table.column.price')}: ${format(
                 price.amount,
@@ -60,12 +61,25 @@ export const getServiceColumns = (
               )}`}
             </Text>
             <Flex gap={spaces.xxs} wrap>
+              <Text type="secondary">
+                {`${translate('business.table.column.categories')}`}
+              </Text>
               {categories.map((category) => (
                 <Tag key={category.id} closable={false} color={category.color}>
-                  {translate(`business.text.category.${category.name}`)}
+                  {translate(`business.tag.category.${category.name}`)}
                 </Tag>
               ))}
             </Flex>
+            {status != 'active' && (
+              <Flex gap={spaces.xs}>
+                <Text type="secondary">
+                  {`${translate('business.table.column.status')}`}
+                </Text>
+                <StatusTag status={status}>
+                  {translate(`business.tag.status.${status}`)}
+                </StatusTag>
+              </Flex>
+            )}
           </Space>
         </Flex>
       ),
@@ -74,7 +88,7 @@ export const getServiceColumns = (
       key: 'laptop',
       title: translate('business.table.column.services'),
       only: ['lg'],
-      render: (_, { name, categories, duration }) => (
+      render: (_, { name, categories, duration, status }) => (
         <Flex vertical gap={spaces.xs}>
           <Flex align="center" gap={spaces.s}>
             <Avatar
@@ -84,17 +98,30 @@ export const getServiceColumns = (
             />
             <Link>{name}</Link>
           </Flex>
-          <Space orientation="vertical" size="middle">
+          <Space orientation="vertical" size="small">
             <Text type="secondary">
               {`${translate('business.table.column.duration')}: ${format(duration, { type: 'duration' })}`}
             </Text>
             <Flex gap={spaces.xxs} wrap>
+              <Text type="secondary">
+                {`${translate('business.table.column.categories')}`}
+              </Text>
               {categories.map((category) => (
                 <Tag key={category.id} closable={false} color={category.color}>
-                  {translate(`business.text.category.${category.name}`)}
+                  {translate(`business.tag.category.${category.name}`)}
                 </Tag>
               ))}
             </Flex>
+            {status != 'active' && (
+              <Flex gap={spaces.xs}>
+                <Text type="secondary">
+                  {`${translate('business.table.column.status')}`}
+                </Text>
+                <StatusTag status={status}>
+                  {translate(`business.tag.status.${status}`)}
+                </StatusTag>
+              </Flex>
+            )}
           </Space>
         </Flex>
       ),
@@ -127,7 +154,7 @@ export const getServiceColumns = (
         <StyledTagsWrapper gap={spaces.xs} wrap>
           {categories.map((category) => (
             <Tag key={category.id} closable={false} color={category.color}>
-              {translate(`business.text.category.${category.name}`)}
+              {translate(`business.tag.category.${category.name}`)}
             </Tag>
           ))}
         </StyledTagsWrapper>
@@ -160,6 +187,20 @@ export const getServiceColumns = (
           })}
         </Text>
       ),
+    },
+    {
+      key: 'status',
+      dataIndex: 'status',
+      hideBefore: 'xl',
+      render: (_, { status }) => {
+        if (status === 'active') return;
+
+        return (
+          <StatusTag status={status}>
+            {translate(`business.tag.status.${status}`)}
+          </StatusTag>
+        );
+      },
     },
     {
       width: 68,

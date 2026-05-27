@@ -12,6 +12,8 @@ export const theme = {
     success: 'var(--color-status-success)',
     warning: 'var(--color-status-warning)',
     error: 'var(--color-status-error)',
+    inactive: 'var(--color-status-inactive)',
+    archive: 'var(--color-status-archive)',
   },
 
   bg: {
@@ -19,6 +21,8 @@ export const theme = {
     default: 'var(--color-bg-default)',
     secondary: 'var(--color-bg-secondary)',
     muted: 'var(--color-bg-muted)',
+    inactive: 'var(--color-bg-status-inactive)',
+    archive: 'var(--color-bg-status-archive)',
     layout: {
       body: 'var(--color-bg-body)',
       header: 'var(--color-bg-header)',
