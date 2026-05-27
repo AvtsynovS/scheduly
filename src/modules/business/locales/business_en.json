@@ -27,11 +27,6 @@
   "business.drawer.title.service.edit": "Edit service",
   "business.drawer.title.service.duplicate": "New service",
 
-  "business.text.category.haircut": "Haircut",
-  "business.text.category.coloring": "Coloring",
-  "business.text.category.styling": "Styling",
-  "business.text.category.nails": "Nails",
-
   "business.menu.item.dashboard": "Dashboard",
   "business.menu.item.records": "Records",
   "business.menu.item.clients": "Clients",
@@ -49,6 +44,14 @@
   "business.table.column.duration": "Duration",
   "business.table.column.price": "Price",
   "business.table.column.serviceMobile": "Service",
+  "business.table.column.status": "Status",
+
+  "business.tag.category.haircut": "Haircut",
+  "business.tag.category.coloring": "Coloring",
+  "business.tag.category.styling": "Styling",
+  "business.tag.category.nails": "Nails",
+  "business.tag.status.inactive": "Inactive",
+  "business.tag.status.archive": "Archive",
 
   "business.stats.total": "Total services",
   "business.stats.categories": "Total categories",

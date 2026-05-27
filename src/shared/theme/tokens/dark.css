@@ -25,6 +25,28 @@
   --color-base-blue-9: rgb(190, 225, 248); /* strong highlight */
   --color-base-blue-10: rgb(240, 249, 255); /* bright foreground */
 
+  --color-base-green-1: rgb(12, 33, 24); /* subtle success bg */
+  --color-base-green-2: rgb(16, 48, 32); /* hover success bg */
+  --color-base-green-3: rgb(20, 66, 42); /* success container */
+  --color-base-green-4: rgb(28, 92, 56); /* success hover */
+  --color-base-green-5: rgb(40, 122, 72); /* active success surface */
+  --color-base-green-6: rgb(0, 188, 125); /* success action */
+  --color-base-green-7: rgb(72, 214, 156); /* success text */
+  --color-base-green-8: rgb(125, 232, 184); /* hover text */
+  --color-base-green-9: rgb(178, 245, 214); /* bright accent */
+  --color-base-green-10: rgb(226, 255, 241); /* bright foreground */
+
+  --color-base-amber-1: rgb(41, 29, 10); /* subtle warning bg */
+  --color-base-amber-2: rgb(59, 41, 12); /* hover warning bg */
+  --color-base-amber-3: rgb(82, 56, 15); /* warning container */
+  --color-base-amber-4: rgb(112, 74, 18); /* warning hover */
+  --color-base-amber-5: rgb(148, 98, 22); /* active warning surface */
+  --color-base-amber-6: rgb(207, 146, 0); /* warning action */
+  --color-base-amber-7: rgb(232, 182, 72); /* warning text */
+  --color-base-amber-8: rgb(245, 205, 120); /* hover text */
+  --color-base-amber-9: rgb(252, 225, 170); /* bright accent */
+  --color-base-amber-10: rgb(255, 243, 214); /* bright foreground */
+
   --color-base-red-1: rgb(38, 18, 18); /* subtle error bg */
   --color-base-red-2: rgb(55, 24, 24); /* hover error bg */
   --color-base-red-3: rgb(80, 30, 30); /* error container */
@@ -86,14 +108,30 @@
   --color-bg-sidebar: var(--color-base-grey-9);
 
   /* ===== Statuses ===== */
-  --color-status-positive: rgb(0, 188, 125);
-  --color-status-negative: rgb(255, 77, 79);
-  --color-status-neutral: rgb(140, 140, 140);
-  --color-status-success: rgb(73, 149, 55);
-  --color-status-warning: rgb(207, 146, 0);
-  --color-status-error: var(--text-error);
-  --color-status-bg-error: var(--color-base-red-2);
-  --color-status-bg-error-hover: var(--color-base-red-3);
+  --color-status-positive: var(--color-base-green-7);
+  --color-bg-status-positive: var(--color-base-green-1);
+  --color-bg-status-positive-hover: var(--color-base-green-2);
+  --color-status-success: var(--color-base-green-7);
+  --color-bg-status-success: var(--color-base-green-1);
+  --color-bg-status-success-hover: var(--color-base-green-2);
+  --color-status-warning: var(--color-base-amber-7);
+  --color-bg-status-warning: var(--color-base-amber-1);
+  --color-bg-status-warning-hover: var(--color-base-amber-2);
+  --color-status-inactive: var(--color-base-amber-7);
+  --color-bg-status-inactive: var(--color-base-amber-1);
+  --color-bg-status-inactive-hover: var(--color-base-amber-2);
+  --color-status-negative: var(--color-base-red-7);
+  --color-bg-status-negative: var(--color-base-red-1);
+  --color-bg-status-negative-hover: var(--color-base-red-2);
+  --color-status-archive: var(--color-base-red-7);
+  --color-bg-status-archive: var(--color-base-red-1);
+  --color-bg-status-archive-hover: var(--color-base-red-2);
+  --color-status-error: var(--color-base-red-7);
+  --color-bg-status-error: var(--color-base-red-2);
+  --color-bg-status-error-hover: var(--color-base-red-3);
+  --color-status-neutral: var(--color-base-grey-4);
+  --color-bg-status-neutral: var(--color-base-grey-8);
+  --color-bg-status-neutral-hover: var(--color-base-grey-7);
 
   --color-icon: var(--color-base-grey-1);
   --color-placeholder: var(--color-base-grey-4);

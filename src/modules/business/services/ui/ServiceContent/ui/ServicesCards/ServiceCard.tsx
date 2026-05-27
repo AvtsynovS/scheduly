@@ -9,6 +9,7 @@ import {
 } from '@shared';
 
 import { createServiceActions } from '../ServicesTable/model/createServiceActions';
+import { StatusTag } from '../StatusTag/StatusTag';
 
 import styled from 'styled-components';
 
@@ -54,7 +55,7 @@ export const ServiceCard = ({ service, onAction }: ServiceCardProps) => {
   const format = useNumberFormat();
   const screen = useBreakpoint();
 
-  const { id, name, duration, price } = service;
+  const { id, name, duration, price, status } = service;
 
   const isXs = screen.xs ?? false;
   const formattedPrice = format(price.amount, {
@@ -73,12 +74,19 @@ export const ServiceCard = ({ service, onAction }: ServiceCardProps) => {
       hoverable
     >
       <Content>
-        <Flex vertical gap={spaces.xs}>
-          <Flex gap={spaces.xs} align="center">
-            <StyledIcon />
-            <Text type="secondary">{formattedDuration}</Text>
+        <Flex align="flex-end" justify="space-between" gap={spaces.xxs}>
+          <Flex vertical gap={spaces.xs}>
+            <Flex gap={spaces.xs} align="center">
+              <StyledIcon />
+              <Text type="secondary">{formattedDuration}</Text>
+            </Flex>
+            <StyledPrice>{formattedPrice}</StyledPrice>
           </Flex>
-          <StyledPrice>{formattedPrice}</StyledPrice>
+          {status != 'active' && (
+            <StatusTag status={status}>
+              {translate(`business.tag.status.${status}`)}
+            </StatusTag>
+          )}
         </Flex>
       </Content>
     </StyledBaseCard>

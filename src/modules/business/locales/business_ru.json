@@ -28,11 +28,6 @@
 
   "business.sider.title.menu": "Меню",
 
-  "business.text.category.haircut": "Стрижка",
-  "business.text.category.coloring": "Окрашивание",
-  "business.text.category.styling": "Укладка",
-  "business.text.category.nails": "Ногти",
-
   "business.menu.item.dashboard": "Дашборд",
   "business.menu.item.records": "Записи",
   "business.menu.item.clients": "Клиенты",
@@ -50,6 +45,14 @@
   "business.table.column.duration": "Продолжительность",
   "business.table.column.price": "Цена",
   "business.table.column.serviceMobile": "Услуга",
+  "business.table.column.status": "Статус",
+
+  "business.tag.category.haircut": "Стрижка",
+  "business.tag.category.coloring": "Окрашивание",
+  "business.tag.category.styling": "Укладка",
+  "business.tag.category.nails": "Ногти",
+  "business.tag.status.inactive": "Не активна",
+  "business.tag.status.archive": "Архив",
 
   "business.stats.total": "Всего услуг",
   "business.stats.categories": "Всего категорий",

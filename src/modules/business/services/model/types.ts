@@ -7,12 +7,15 @@ export type CategoryType = {
   color: string;
 };
 
+export type ServiceStatusType = 'active' | 'inactive' | 'archive';
+
 export type ServiceType = {
   id: string;
   name: string;
   categories: CategoryType[];
   duration: number;
   price: PriceType;
+  status: ServiceStatusType;
 };
 
 export type CreateServiceType = Omit<

@@ -55,6 +55,7 @@ export const mockServices: ServiceType[] = [
     ],
     duration: 60,
     price: { amount: 2000, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '2',
@@ -62,6 +63,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '1', name: 'haircut', color: mockColors.cyan }],
     duration: 45,
     price: { amount: 1500, currency: 'RUB' },
+    status: 'inactive',
   },
   {
     id: '3',
@@ -69,6 +71,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '1', name: 'haircut', color: mockColors.cyan }],
     duration: 30,
     price: { amount: 1000, currency: 'RUB' },
+    status: 'archive',
   },
   {
     id: '4',
@@ -76,6 +79,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '2', name: 'coloring', color: mockColors.red }],
     duration: 120,
     price: { amount: 5000, currency: 'RUB' },
+    status: 'inactive',
   },
   {
     id: '5',
@@ -83,6 +87,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '2', name: 'coloring', color: mockColors.red }],
     duration: 180,
     price: { amount: 7000, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '6',
@@ -90,6 +95,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '2', name: 'coloring', color: mockColors.red }],
     duration: 210,
     price: { amount: 9000, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '7',
@@ -97,6 +103,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '3', name: 'styling', color: mockColors.green }],
     duration: 45,
     price: { amount: 1500, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '8',
@@ -104,6 +111,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '3', name: 'styling', color: mockColors.green }],
     duration: 90,
     price: { amount: 3500, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '9',
@@ -111,6 +119,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '4', name: 'nails', color: mockColors.violet }],
     duration: 60,
     price: { amount: 1800, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '10',
@@ -118,6 +127,7 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '4', name: 'nails', color: mockColors.violet }],
     duration: 75,
     price: { amount: 2200, currency: 'RUB' },
+    status: 'active',
   },
   {
     id: '11',
@@ -125,5 +135,6 @@ export const mockServices: ServiceType[] = [
     categories: [{ id: '4', name: 'nails', color: mockColors.violet }],
     duration: 120,
     price: { amount: 3500, currency: 'RUB' },
+    status: 'active',
   },
 ];
