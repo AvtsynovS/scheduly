@@ -16,10 +16,12 @@
   "business.input.service.categories.label": "Categories",
   "business.input.service.duration.label": "Duration",
   "business.input.service.price.label": "Price",
+  "business.input.service.status.label": "Status",
   "business.input.service.name.placeholder": "Service name",
   "business.input.service.categories.placeholder": "Add categories",
   "business.input.service.duration.placeholder": "Duration",
   "business.input.service.price.placeholder": "Price",
+  "business.input.service.status.placeholder": "Status",
 
   "business.sider.title.menu": "Menu",
 
@@ -38,6 +40,9 @@
 
   "business.select.placeholder.search": "Search...",
   "business.select.option.allCategories": "All Categories",
+  "business.select.option.active": "Active",
+  "business.select.option.inactive": "Inactive",
+  "business.select.option.archive": "Archive",
 
   "business.table.column.services": "Services",
   "business.table.column.categories": "Categories",

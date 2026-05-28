@@ -12,6 +12,8 @@ export type PriceType = {
   currency: CurrencyType;
 };
 
+export type ServiceStatusType = 'active' | 'inactive' | 'archive';
+
 export type ServicesStatsConfigType = {
   key: string;
   label: string;

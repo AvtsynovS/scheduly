@@ -1,6 +1,7 @@
 import * as yup from 'yup';
 
-import type { CreateServiceType } from '../../../../model/types';
+import type { ServiceStatusType } from '../../../../types';
+import type { ServiceValueType } from '../model/types';
 import type { CurrencyType } from '@shared';
 import type { ObjectSchema } from 'yup';
 
@@ -10,7 +11,13 @@ export const CURRENCIES = [
   'RUB',
 ] as const satisfies readonly CurrencyType[];
 
-export const createServiceSchema = (translate: (id: string) => string) => {
+export const STATUS = [
+  'active',
+  'inactive',
+  'archive',
+] as const satisfies readonly ServiceStatusType[];
+
+export const serviceSchema = (translate: (id: string) => string) => {
   return yup.object({
     name: yup
       .string()
@@ -39,5 +46,9 @@ export const createServiceSchema = (translate: (id: string) => string) => {
         .oneOf(CURRENCIES)
         .required(translate('validation.currency.error')),
     }),
-  }) satisfies ObjectSchema<CreateServiceType>;
+    status: yup
+      .mixed<ServiceStatusType>()
+      .oneOf(STATUS)
+      .required(translate('validation.currency.error')),
+  }) satisfies ObjectSchema<ServiceValueType>;
 };

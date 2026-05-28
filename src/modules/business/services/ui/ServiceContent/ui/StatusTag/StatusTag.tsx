@@ -2,7 +2,7 @@ import { Tag } from '@common/ui-kit';
 
 import styled, { css } from 'styled-components';
 
-import type { ServiceStatusType } from '../../../../model/types';
+import type { ServiceStatusType } from '../../../../types';
 import type { PropsWithChildren } from 'react';
 
 type StatusTagProps = { status: ServiceStatusType };

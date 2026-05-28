@@ -12,7 +12,7 @@
   "business.dropdown.option.styling": "Укладка",
   "business.dropdown.option.nails": "Ногти",
   "business.dropdown.option.allCategories": "Все категории",
-  "business.dropdown.option.edit": "Редактировать",
+  "business.dropdown.option.edit": "Изменить",
   "business.dropdown.option.duplicate": "Дублировать",
   "business.dropdown.option.archive": "Архивировать",
   "business.dropdown.option.delete": "Удалить",
@@ -21,10 +21,12 @@
   "business.input.service.categories.label": "Категории",
   "business.input.service.duration.label": "Продолжительность",
   "business.input.service.price.label": "Цена",
+  "business.input.service.status.label": "Статус",
   "business.input.service.name.placeholder": "Название сервиса",
   "business.input.service.categories.placeholder": "Добавьте категории",
   "business.input.service.duration.placeholder": "Продолжительность",
   "business.input.service.price.placeholder": "Цена",
+  "business.input.service.status.placeholder": "Статус",
 
   "business.sider.title.menu": "Меню",
 
@@ -39,6 +41,9 @@
 
   "business.select.placeholder.search": "Поиск...",
   "business.select.option.allCategories": "Все категории",
+  "business.select.option.active": "Активна",
+  "business.select.option.inactive": "Не активна",
+  "business.select.option.archive": "Архив",
 
   "business.table.column.services": "Услуги",
   "business.table.column.categories": "Категории",

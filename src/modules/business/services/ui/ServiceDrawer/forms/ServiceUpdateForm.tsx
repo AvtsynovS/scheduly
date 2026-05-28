@@ -3,25 +3,24 @@ import { ServiceForm } from './ServiceForm';
 import type { ServiceType } from '../../../model/types';
 import type { DictsType, ServiceValueType } from './model/types';
 
-type ServiceDuplicateFormProps = {
+type ServiceUpdateFormProps = {
   service: ServiceType;
   dicts: DictsType;
   onClose: () => void;
 };
 
-export const ServiceDuplicateForm = ({
+export const ServiceUpdateForm = ({
   service,
   dicts,
   onClose,
-}: ServiceDuplicateFormProps) => {
+}: ServiceUpdateFormProps) => {
   const defaultValues = {
     ...service,
-    name: '',
     categories: service.categories.map(({ id }) => id),
   };
 
-  const handleDuplicateService = (data: ServiceValueType) => {
-    console.log('duplicate service', { id: service.id, ...data });
+  const handleUpdateService = (data: ServiceValueType) => {
+    console.log('update service', { id: service.id, ...data });
     onClose();
   };
 
@@ -29,7 +28,7 @@ export const ServiceDuplicateForm = ({
     <ServiceForm
       dicts={dicts}
       defaultValues={defaultValues}
-      onSubmit={handleDuplicateService}
+      onSubmit={handleUpdateService}
       onClose={onClose}
     />
   );

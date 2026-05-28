@@ -1,3 +1,4 @@
+import type { ServiceStatusType } from '../types';
 import type { ServiceType } from './types';
 import type { CurrencyType } from '@shared';
 
@@ -21,6 +22,7 @@ export const ALL_CATEGORIES_OPTION = {
 };
 
 export const CURRENCY: CurrencyType[] = ['RUB', 'USD', 'EUR'];
+export const STATUS: ServiceStatusType[] = ['active', 'inactive', 'archive'];
 
 export const CATEGORIES = [
   {
