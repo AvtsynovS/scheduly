@@ -37,6 +37,10 @@
   "business.menu.item.finance": "Finance",
   "business.menu.item.reports": "Reports",
   "business.menu.item.settings": "Settings",
+  "business.modal.title.service.delete": "Delete service",
+  "business.modal.title.service.archive": "Archiving service",
+  "business.modal.content.service.delete": "Are you sure you want to delete the service <strong>{name}</strong>?",
+  "business.modal.content.service.archive": "Are you sure you want to move service <strong>{name}</strong> to the archive?",
 
   "business.select.placeholder.search": "Search...",
   "business.select.option.allCategories": "All Categories",

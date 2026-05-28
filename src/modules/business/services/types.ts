@@ -26,8 +26,8 @@ export type ServiceActionType =
   | { type: 'create' }
   | { type: 'edit'; id: string }
   | { type: 'duplicate'; id: string }
-  | { type: 'archive'; id: string }
-  | { type: 'delete'; id: string };
+  | { type: 'archive'; id: string; name: string }
+  | { type: 'delete'; id: string; name: string };
 
 export type ModeType = Extract<
   ServiceActionType,

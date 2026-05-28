@@ -39,6 +39,11 @@
   "business.menu.item.reports": "Отчеты",
   "business.menu.item.settings": "Настройки",
 
+  "business.modal.title.service.delete": "Удаление сервиса",
+  "business.modal.title.service.archive": "Архивация сервиса",
+  "business.modal.content.service.delete": "Вы действительно хотите удалить сервис <strong>{name}</strong>?",
+  "business.modal.content.service.archive": "Вы действительно хотите перенести сервис <strong>{name}</strong> в архив?",
+
   "business.select.placeholder.search": "Поиск...",
   "business.select.option.allCategories": "Все категории",
   "business.select.option.active": "Активна",

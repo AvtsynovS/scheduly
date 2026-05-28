@@ -19,6 +19,7 @@ import {
 } from '../model/mocks';
 import { ServiceContent } from '../ui/ServiceContent/ServiceContent';
 import { ServiceDrawer } from '../ui/ServiceDrawer/ServiceDrawer';
+import { ServiceModal } from '../ui/ServiceModal/ServiceModal';
 import { ServicesStatsCard } from '../ui/ServicesStatsCard/ServicesStatsCard';
 
 import styled from 'styled-components';
@@ -61,6 +62,7 @@ export const ServicesPage = () => {
   console.log('confirmAction', confirmAction);
 
   const onCloseDrawer = () => setDrawerMode(null);
+  const onCloseModal = () => setConfirmAction(null);
 
   const onServiceActions = useCallback((action: ServiceActionType) => {
     switch (action.type) {
@@ -74,10 +76,10 @@ export const ServicesPage = () => {
         setDrawerMode({ type: 'duplicate', id: action.id });
         break;
       case 'archive':
-        setConfirmAction({ type: 'archive', id: action.id });
+        setConfirmAction({ type: 'archive', id: action.id, name: action.name });
         break;
       case 'delete':
-        setConfirmAction({ type: 'delete', id: action.id });
+        setConfirmAction({ type: 'delete', id: action.id, name: action.name });
         break;
       default:
         break;
@@ -155,6 +157,7 @@ export const ServicesPage = () => {
       </Row>
       <ServiceContent onAction={onServiceActions} />
       <ServiceDrawer mode={drawerMode} onClose={onCloseDrawer} />
+      <ServiceModal mode={confirmAction} onClose={onCloseModal} />
     </StyledWrapper>
   );
 };
