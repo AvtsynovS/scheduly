@@ -22,7 +22,7 @@ export const ServiceDrawer = ({ mode, onClose }: ServiceDrawerProps) => {
       closable={{ placement: 'end' }}
       onClose={onClose}
     >
-      {mode && <ServiceFormRenderer mode={mode} />}
+      {mode && <ServiceFormRenderer mode={mode} onClose={onClose} />}
     </Drawer>
   );
 };

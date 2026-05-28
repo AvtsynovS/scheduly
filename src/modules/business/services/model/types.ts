@@ -1,13 +1,10 @@
-import type { PriceType } from '../types';
-import type { CurrencyType } from '@shared';
+import type { PriceType, ServiceStatusType } from '../types';
 
 export type CategoryType = {
   id: string;
   name: string;
   color: string;
 };
-
-export type ServiceStatusType = 'active' | 'inactive' | 'archive';
 
 export type ServiceType = {
   id: string;
@@ -16,12 +13,4 @@ export type ServiceType = {
   duration: number;
   price: PriceType;
   status: ServiceStatusType;
-};
-
-export type CreateServiceType = Omit<
-  ServiceType,
-  'id' | 'categories' | 'price'
-> & {
-  categories: string[];
-  price: { amount: number; currency: CurrencyType };
 };
