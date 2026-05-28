@@ -68,7 +68,9 @@ export const ServiceCard = ({ service, onAction }: ServiceCardProps) => {
     <StyledBaseCard
       title={<StyledTitle level={5}>{name}</StyledTitle>}
       extra={
-        <ActionsButton items={createServiceActions(id, onAction, translate)} />
+        <ActionsButton
+          items={createServiceActions({ id, name, onAction, translate })}
+        />
       }
       size={isXs ? 'small' : 'medium'}
       hoverable

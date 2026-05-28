@@ -44,7 +44,7 @@ export const getServiceColumns = (
               <Link>{name}</Link>
             </Flex>
             <ActionsButton
-              items={createServiceActions(id, onAction, translate)}
+              items={createServiceActions({ id, name, onAction, translate })}
             />
           </Flex>
           <Text type="secondary">
@@ -205,8 +205,10 @@ export const getServiceColumns = (
     {
       width: 68,
       hideBefore: 'lg',
-      render: (_, { id }) => (
-        <ActionsButton items={createServiceActions(id, onAction, translate)} />
+      render: (_, { id, name }) => (
+        <ActionsButton
+          items={createServiceActions({ id, name, onAction, translate })}
+        />
       ),
     },
   ] satisfies ResponsiveColumnsType<ServiceColumnsType>;

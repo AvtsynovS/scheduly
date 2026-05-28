@@ -12,6 +12,7 @@ export {
   Input,
   Layout,
   Menu,
+  Modal,
   Row,
   Segmented,
   Select,

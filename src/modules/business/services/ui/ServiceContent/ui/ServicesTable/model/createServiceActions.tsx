@@ -2,11 +2,19 @@ import { ArchiveIcon, DeleteIcon, DuplicateIcon, EditIcon } from '@shared';
 
 import type { ServiceActionType } from '../../../../../types';
 
-export const createServiceActions = (
-  id: string,
-  onAction: (action: ServiceActionType) => void,
-  translate: (key: string) => string,
-) => {
+type CreateServiceActionsProps = {
+  id: string;
+  name: string;
+  onAction: (action: ServiceActionType) => void;
+  translate: (key: string) => string;
+};
+
+export const createServiceActions = ({
+  id,
+  name,
+  onAction,
+  translate,
+}: CreateServiceActionsProps) => {
   return [
     {
       key: 'service-edit',
@@ -39,6 +47,7 @@ export const createServiceActions = (
         onAction({
           type: 'archive',
           id,
+          name,
         });
       },
     },
@@ -51,6 +60,7 @@ export const createServiceActions = (
         onAction({
           type: 'delete',
           id,
+          name,
         });
       },
     },

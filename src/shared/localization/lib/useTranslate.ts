@@ -38,5 +38,15 @@ export const useTranslate = () => {
     [formatMessage],
   );
 
-  return { translate, locale };
+  const translateRich = useCallback(
+    (
+      id: string,
+      messageSettings?: MessageSettings,
+      values?: Parameters<typeof formatMessage>[1],
+      opts?: Options,
+    ) => formatMessage({ id, ...messageSettings }, values, opts),
+    [formatMessage],
+  );
+
+  return { translate, translateRich, locale };
 };
