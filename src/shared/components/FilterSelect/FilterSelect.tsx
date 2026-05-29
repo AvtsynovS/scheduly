@@ -4,12 +4,25 @@ import { Select } from '@common/ui-kit';
 
 import { EmptyBox } from '../EmptyBox/EmptyBox';
 
+import styled from 'styled-components';
+
 import type { SelectProps } from '@common/ui-kit/types';
 
 type FilterSelectProps = SelectProps & {
   baseOption: { label: string; value: string };
   emptyDescription: string;
 };
+
+const StyledFilterWrapper = styled.div`
+  height: 100%;
+
+  & > .ant-select {
+    width: 100%;
+    height: 100%;
+
+    align-items: center;
+  }
+`;
 
 export const FilterSelect = ({
   baseOption,
@@ -67,12 +80,14 @@ export const FilterSelect = ({
   };
 
   return (
-    <Select
-      {...props}
-      value={selected}
-      options={options}
-      onChange={handleChange}
-      notFoundContent={<EmptyBox description={emptyDescription} />}
-    />
+    <StyledFilterWrapper>
+      <Select
+        {...props}
+        value={selected}
+        options={options}
+        onChange={handleChange}
+        notFoundContent={<EmptyBox description={emptyDescription} />}
+      />
+    </StyledFilterWrapper>
   );
 };
