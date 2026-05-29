@@ -43,9 +43,7 @@ export const ServicesCards = ({ services, onAction }: ServicesCardsProps) => {
         >
           <StyledCategoryCard vertical gap={spaces.xl}>
             <Flex align="center" justify="space-between" gap={spaces.xs}>
-              <Title level={5}>
-                {translate(`business.text.category.${category.name}`)}
-              </Title>
+              <Title level={5}>{category.name}</Title>
             </Flex>
             <Row gutter={[16, 8]}>
               {services.map((service) => (

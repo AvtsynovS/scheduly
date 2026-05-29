@@ -66,7 +66,7 @@ export const getServiceColumns = (
               </Text>
               {categories.map((category) => (
                 <Tag key={category.id} closable={false} color={category.color}>
-                  {translate(`business.tag.category.${category.name}`)}
+                  {category.name}
                 </Tag>
               ))}
             </Flex>
@@ -108,7 +108,7 @@ export const getServiceColumns = (
               </Text>
               {categories.map((category) => (
                 <Tag key={category.id} closable={false} color={category.color}>
-                  {translate(`business.tag.category.${category.name}`)}
+                  {category.name}
                 </Tag>
               ))}
             </Flex>
@@ -154,7 +154,7 @@ export const getServiceColumns = (
         <StyledTagsWrapper gap={spaces.xs} wrap>
           {categories.map((category) => (
             <Tag key={category.id} closable={false} color={category.color}>
-              {translate(`business.tag.category.${category.name}`)}
+              {category.name}
             </Tag>
           ))}
         </StyledTagsWrapper>

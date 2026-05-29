@@ -45,7 +45,6 @@
   "business.modal.content.service.archive": "Вы действительно хотите перенести сервис <strong>{name}</strong> в архив?",
 
   "business.select.placeholder.search": "Поиск...",
-  "business.select.option.allCategories": "Все категории",
   "business.select.option.active": "Активна",
   "business.select.option.inactive": "Не активна",
   "business.select.option.archive": "Архив",
@@ -57,10 +56,6 @@
   "business.table.column.serviceMobile": "Услуга",
   "business.table.column.status": "Статус",
 
-  "business.tag.category.haircut": "Стрижка",
-  "business.tag.category.coloring": "Окрашивание",
-  "business.tag.category.styling": "Укладка",
-  "business.tag.category.nails": "Ногти",
   "business.tag.status.inactive": "Не активна",
   "business.tag.status.archive": "Архив",
 

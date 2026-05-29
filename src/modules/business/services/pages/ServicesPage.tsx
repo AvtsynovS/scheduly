@@ -15,6 +15,7 @@ import { useServicesStats } from '../lib/useServicesStats';
 import {
   ALL_CATEGORIES_OPTION,
   CATEGORIES,
+  mockServices,
   servicesStatsData,
 } from '../model/mocks';
 import { ServiceContent } from '../ui/ServiceContent/ServiceContent';
@@ -24,6 +25,7 @@ import { ServicesStatsCard } from '../ui/ServicesStatsCard/ServicesStatsCard';
 
 import styled from 'styled-components';
 
+import type { ServiceType } from '../model/types';
 import type { ConfirmActionType, ModeType, ServiceActionType } from '../types';
 
 const StyledWrapper = styled(Flex)`
@@ -58,9 +60,6 @@ export const ServicesPage = () => {
   const [drawerMode, setDrawerMode] = useState<ModeType>(null);
   const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
 
-  // TODO для отображения модальных окон архивации и удаления
-  console.log('confirmAction', confirmAction);
-
   const onCloseDrawer = () => setDrawerMode(null);
   const onCloseModal = () => setConfirmAction(null);
 
@@ -86,6 +85,12 @@ export const ServicesPage = () => {
     }
   }, []);
 
+  // TODO получаем сервисы с бэка
+  const services = mockServices;
+
+  const [filteredServices, setFilteredServices] =
+    useState<ServiceType[]>(services);
+
   const options = useMemo(() => {
     const all = {
       ...ALL_CATEGORIES_OPTION,
@@ -104,7 +109,17 @@ export const ServicesPage = () => {
 
   const handleFilterChange = (value: string[]) => {
     // TODO (savtsynov) запрос на бэк с учетом фильтров
-    console.log('filter value', value);
+    if (value.includes('all')) {
+      setFilteredServices(services);
+
+      return;
+    }
+
+    const filtered = services.filter((service) =>
+      service.categories.some((category) => value.includes(category.name)),
+    );
+
+    setFilteredServices(filtered);
   };
 
   return (
@@ -147,15 +162,15 @@ export const ServicesPage = () => {
             showSearch={{
               optionFilterProp: 'label',
             }}
+            maxTagPlaceholder={(omittedValues) => `+${omittedValues.length}`}
             maxTagCount="responsive"
             allowClear
             onChange={handleFilterChange}
             emptyDescription={translate('empty.description')}
-            allTagLabel={translate('business.select.option.allCategories')}
           />
         </Col>
       </Row>
-      <ServiceContent onAction={onServiceActions} />
+      <ServiceContent services={filteredServices} onAction={onServiceActions} />
       <ServiceDrawer mode={drawerMode} onClose={onCloseDrawer} />
       <ServiceModal mode={confirmAction} onClose={onCloseModal} />
     </StyledWrapper>

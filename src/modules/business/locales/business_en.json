@@ -43,7 +43,6 @@
   "business.modal.content.service.archive": "Are you sure you want to move service <strong>{name}</strong> to the archive?",
 
   "business.select.placeholder.search": "Search...",
-  "business.select.option.allCategories": "All Categories",
   "business.select.option.active": "Active",
   "business.select.option.inactive": "Inactive",
   "business.select.option.archive": "Archive",
@@ -55,10 +54,6 @@
   "business.table.column.serviceMobile": "Service",
   "business.table.column.status": "Status",
 
-  "business.tag.category.haircut": "Haircut",
-  "business.tag.category.coloring": "Coloring",
-  "business.tag.category.styling": "Styling",
-  "business.tag.category.nails": "Nails",
   "business.tag.status.inactive": "Inactive",
   "business.tag.status.archive": "Archive",
 
