@@ -20,6 +20,7 @@ type SelectFieldProps<T extends FieldValues> = {
 
 const StyledSelect = styled(Select)`
   padding: ${({ theme }) => `${theme.spaces.xxs} ${theme.spaces.s}`};
+  min-height: 37.6px;
 `;
 
 export const SelectField = <T extends FieldValues>({

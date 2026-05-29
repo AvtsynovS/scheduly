@@ -1,13 +1,14 @@
 import { useCallback, useMemo, useState } from 'react';
 
-import { Button, Col, Flex, Row, Select } from '@common/ui-kit';
+import { Button, Col, Flex, Row } from '@common/ui-kit';
 import {
-  EmptyBox,
   FilterSelect,
   MEDIA,
   PageHeader,
   PlusIcon,
+  Search,
   spaces,
+  useDebounce,
   useTranslate,
 } from '@shared';
 
@@ -36,14 +37,6 @@ const StyledWrapper = styled(Flex)`
   }
 `;
 
-const StyledSearchField = styled(Select)`
-  width: 100%;
-`;
-
-const StyledFilterSelect = styled(FilterSelect)`
-  width: 100%;
-`;
-
 const StyledButton = styled(Button)`
   ${MEDIA.down('sm')} {
     span:not(.ant-btn-icon) {
@@ -57,8 +50,22 @@ export const ServicesPage = () => {
 
   const stats = useServicesStats(servicesStatsData);
 
+  // TODO получаем сервисы с бэка
+  const services = mockServices;
+
   const [drawerMode, setDrawerMode] = useState<ModeType>(null);
   const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
+  const [filteredServices, setFilteredServices] =
+    useState<ServiceType[]>(services);
+
+  const debounce = useDebounce((value: string) => {
+    // TODO (savtsynov) запрос на бэк с учетом поиска
+    const filtered = services.filter((service) =>
+      service.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()),
+    );
+
+    setFilteredServices(filtered);
+  }, 500);
 
   const onCloseDrawer = () => setDrawerMode(null);
   const onCloseModal = () => setConfirmAction(null);
@@ -85,12 +92,6 @@ export const ServicesPage = () => {
     }
   }, []);
 
-  // TODO получаем сервисы с бэка
-  const services = mockServices;
-
-  const [filteredServices, setFilteredServices] =
-    useState<ServiceType[]>(services);
-
   const options = useMemo(() => {
     const all = {
       ...ALL_CATEGORIES_OPTION,
@@ -106,6 +107,12 @@ export const ServicesPage = () => {
 
     return [all, ...categories];
   }, [translate]);
+
+  const handleSearch = (value: string) => debounce(value);
+
+  const handleSearchChange = (
+    event: React.ChangeEvent<HTMLInputElement, HTMLInputElement>,
+  ) => debounce(event.target.value);
 
   const handleFilterChange = (value: string[]) => {
     // TODO (savtsynov) запрос на бэк с учетом фильтров
@@ -146,15 +153,18 @@ export const ServicesPage = () => {
       </Row>
       <Row gutter={[16, 8]}>
         <Col xs={24} md={16} lg={18}>
-          <StyledSearchField
+          <Search
             placeholder={translate('business.select.placeholder.search')}
-            notFoundContent={
-              <EmptyBox description={translate('empty.description')} />
-            }
+            allowClear
+            // TODO пока идет запрос
+            disabled={false}
+            loading={false}
+            onSearch={handleSearch}
+            onChange={handleSearchChange}
           />
         </Col>
         <Col xs={24} md={8} lg={6}>
-          <StyledFilterSelect
+          <FilterSelect
             mode="multiple"
             defaultActiveFirstOption
             options={options}

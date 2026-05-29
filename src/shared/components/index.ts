@@ -9,3 +9,4 @@ export { TextField } from './fields/TextField';
 export { SelectField } from './fields/SelectField';
 export { PriceField } from './fields/PriceField';
 export { ActionsButton } from './ActionButton/ActionsButton';
+export { Search } from './Search/Search';

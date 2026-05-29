@@ -16,3 +16,4 @@ export type { SegmentedLabeledOption } from 'antd/es/segmented';
 export type { DefaultOptionType } from 'antd/es/select';
 export type { ColumnsType, ColumnType } from 'antd/es/table';
 export type { TextProps } from 'antd/es/typography/Text';
+export type { SearchProps } from 'antd/es/input';
