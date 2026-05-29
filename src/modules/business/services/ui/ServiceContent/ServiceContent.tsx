@@ -3,16 +3,17 @@ import { useState } from 'react';
 import { Flex, Segmented } from '@common/ui-kit';
 import { spaces, useTranslateOptions } from '@shared';
 
-import { mockServices } from '../../model/mocks';
 import { serviceViewType } from './model/constants';
 import { ServicesCards } from './ui/ServicesCards/ServicesCards';
 import { ServicesTable } from './ui/ServicesTable/ServicesTable';
 
 import styled from 'styled-components';
 
+import type { ServiceType } from '../../model/types';
 import type { ServiceActionType, ViewModeType } from '../../types';
 
 type ServiceContentProps = {
+  services: ServiceType[];
   onAction: (action: ServiceActionType) => void;
 };
 
@@ -25,11 +26,8 @@ const StyledSegmented = styled(Segmented<ViewModeType>)`
   }
 `;
 
-export const ServiceContent = ({ onAction }: ServiceContentProps) => {
+export const ServiceContent = ({ services, onAction }: ServiceContentProps) => {
   const [viewMode, setViewMode] = useState<ViewModeType>('table');
-
-  // TODO получаем сервисы с бэка
-  const services = mockServices;
 
   const options = useTranslateOptions(serviceViewType);
 
