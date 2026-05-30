@@ -1,4 +1,13 @@
-import { dropdownTokens } from './antd/dropdown';
+import { buttonTokens } from './antd/button';
+import { getCardTokens } from './antd/cardTokens';
+import { getDropdownTokens } from './antd/dropdown';
+import { inputTokens } from './antd/input';
+import { getLayoutTokens } from './antd/layoutTokens';
+import { getMenuTokens } from './antd/menuTokens';
+import { getSegmentedTokens } from './antd/segmented';
+import { getSelectTokens } from './antd/select';
+import { getSpinTokens } from './antd/spinTokens';
+import { typographyTokens } from './antd/typography';
 
 export const getCssVariables = (root: HTMLElement, variables: string[]) => {
   return variables.reduce(
@@ -21,36 +30,51 @@ export const getAntdTheme = () => {
 
   return {
     token: {
-      colorPrimary: cssVar('--foreground'),
+      colorPrimary: cssVar('--text-primary'),
 
-      controlItemBgActive: cssVar('--primary-active'),
-      controlItemBgActiveHover: cssVar('--primary-active-hover'),
-      controlItemBgHover: cssVar('--primary-hover'),
+      controlItemBgHover: cssVar('--color-control-bg-primary-hover'),
 
-      colorBgBase: cssVar('--background'),
-      colorBgContainer: cssVar('--card'),
-      colorBgElevated: cssVar('--card'),
+      colorBgContainer: cssVar('--color-bg-default'),
+      colorBgElevated: cssVar('--color-container-bg-elevated'),
+      colorBorder: cssVar('--color-base-grey-4'),
+      colorSplit: cssVar('--color-base-grey-5'),
+      colorIcon: cssVar('--color-icon'),
+      colorTextPlaceholder: cssVar('--color-placeholder'),
+      colorTextQuaternary: 'var(--text-muted)',
+      colorTextDescription: cssVar('--text-muted'),
 
-      colorTextBase: cssVar('--foreground'),
-      colorText: cssVar('--foreground'),
-      colorTextSecondary: cssVar('--secondary-foreground'),
-      colorTextDisabled: cssVar('--muted-foreground'),
+      colorText: cssVar('--text'),
+      colorTextSecondary: cssVar('--text-secondary'),
+      colorTextDisabled: cssVar('--text-muted'),
+      colorLink: cssVar('--text-primary'),
+      colorLinkActive: cssVar('--text-primary-active'),
+      colorLinkHover: cssVar('--text-primary-hover'),
 
-      colorBorder: cssVar('--border-color'),
+      colorSuccess: cssVar('--color-status-success'),
+      colorWarning: cssVar('--color-status-warning'),
+      colorError: cssVar('--color-status-error'),
 
-      colorSuccess: cssVar('--success'),
-      colorWarning: cssVar('--warning'),
-      colorError: cssVar('--error'),
+      // cards, buttons, surfaces
+      boxShadow: cssVar('--shadow-card'),
+      // dropdown, tooltip, popover, modal
+      boxShadowSecondary: cssVar('--shadow-dropdown'),
 
       fontFamily: cssVar('--font-sans'),
-
       fontSize: 14,
       borderRadius: 8,
       padding: 16,
-      controlHeight: 40,
     },
     components: {
-      Dropdown: dropdownTokens,
+      Button: buttonTokens,
+      Card: getCardTokens(cssVar),
+      Dropdown: getDropdownTokens(cssVar),
+      Input: inputTokens,
+      Layout: getLayoutTokens(cssVar),
+      Menu: getMenuTokens(cssVar),
+      Segmented: getSegmentedTokens(cssVar),
+      Select: getSelectTokens(cssVar),
+      Spin: getSpinTokens(cssVar),
+      Typography: typographyTokens,
     },
   };
 };

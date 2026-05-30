@@ -1,28 +1,48 @@
 export const theme = {
   colors: {
-    background: 'var(--background)',
-    foreground: 'var(--foreground)',
+    white: 'var(--text-white)',
+    default: 'var(--text)',
+    secondary: 'var(--text-secondary)',
+    primary: 'var(--text-primary)',
+    accent: 'var(--text-accent)',
+    muted: 'var(--text-muted)',
+    positive: 'var(--color-status-positive)',
+    negative: 'var(--color-status-negative)',
+    neutral: 'var(--color-status-neutral)',
+    success: 'var(--color-status-success)',
+    warning: 'var(--color-status-warning)',
+    error: 'var(--color-status-error)',
+    inactive: 'var(--color-status-inactive)',
+    archive: 'var(--color-status-archive)',
+  },
 
-    card: 'var(--card)',
-    cardForeground: 'var(--card-foreground)',
-
-    primary: 'var(--primary)',
-    primaryForeground: 'var(--primary-foreground)',
-
-    secondary: 'var(--secondary)',
-    secondaryForeground: 'var(--secondary-foreground)',
-
-    muted: 'var(--muted)',
-    mutedForeground: 'var(--muted-foreground)',
-
-    accent: 'var(--accent)',
-    accentForeground: 'var(--accent-foreground)',
-
-    destructive: 'var(--destructive)',
-
-    border: 'var(--border)',
-    input: 'var(--input)',
-    ring: 'var(--ring)',
+  bg: {
+    white: 'var(--color-bg-white)',
+    default: 'var(--color-bg-default)',
+    secondary: 'var(--color-bg-secondary)',
+    muted: 'var(--color-bg-muted)',
+    inactive: 'var(--color-bg-status-inactive)',
+    archive: 'var(--color-bg-status-archive)',
+    layout: {
+      body: 'var(--color-bg-body)',
+      header: 'var(--color-bg-header)',
+      footer: 'var(--color-bg-footer)',
+      sidebar: 'var(--color-bg-sidebar)',
+    },
+    card: {
+      default: {
+        base: 'var(--color-container-bg)',
+        hover: 'var(--color-container-bg-hover)',
+        active: 'var(--color-container-bg-active)',
+        focus: 'var(--color-container-bg-focus)',
+      },
+      primary: {
+        base: 'var(--color-container-bg-primary)',
+        hover: 'var(--color-container-bg-primary-hover)',
+        active: 'var(--color-container-bg-primary-active)',
+        focus: 'var(--color-container-bg-primary-focus)',
+      },
+    },
   },
 
   radius: {
@@ -52,5 +72,55 @@ export const theme = {
     m: '16px',
     l: '20px',
     xl: '24px',
+    xxl: '32px',
+    xxxl: '48px',
+  },
+
+  lineHeight: {
+    none: '1',
+    tight: 'var(--leading-tight)',
+    snug: 'var(--leading-snug)',
+    normal: 'var(--leading-normal)',
+    relaxed: 'var(--leading-relaxed)',
+    loose: 'var(--leading-loose)',
+  },
+
+  borders: {
+    default: 'var(--border-default)',
+    subtle: 'var(--border-subtle)',
+    strong: 'var(--border-strong)',
+    focus: 'var(--border-focus)',
+    layout: {
+      base: 'var(--border-layout)',
+    },
+    card: {
+      base: 'var(--border-card)',
+    },
+    input: {
+      base: 'var(--border-input)',
+    },
+  },
+
+  shadows: {
+    focus: 'var(--shadow-focus)',
+    layout: {
+      body: 'var(--shadow-body)',
+      hover: 'var(--shadow-body-hover)',
+    },
+    card: {
+      default: {
+        base: 'var(--shadow-card)',
+        hover: 'var(--shadow-card-hover)',
+      },
+    },
+    dropdown: {
+      base: 'var(--shadow-dropdown)',
+    },
+    popover: {
+      base: 'var(--shadow-popover)',
+    },
+    modal: {
+      base: 'var(--shadow-modal)',
+    },
   },
 };

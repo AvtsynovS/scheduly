@@ -1,33 +1,148 @@
 .dark {
-  --background: rgb(10, 10, 10);
-  --foreground: rgb(250, 250, 250);
+  /* ===== Base ===== */
+  --color-base-white: rgb(255, 255, 255);
+  --color-base-black: rgb(0, 0, 0);
 
-  --card: rgb(23, 23, 23);
-  --card-foreground: rgb(250, 250, 250);
+  --color-base-grey-1: rgb(245, 245, 245); /* primary text */
+  --color-base-grey-2: rgb(228, 228, 231); /* secondary text */
+  --color-base-grey-3: rgb(212, 212, 216); /* muted bright text */
+  --color-base-grey-4: rgb(161, 161, 170); /* disabled text */
+  --color-base-grey-5: rgb(113, 113, 122); /* subtle borders */
+  --color-base-grey-6: rgb(82, 82, 91); /* active surfaces */
+  --color-base-grey-7: rgb(63, 63, 70); /* hover surfaces */
+  --color-base-grey-8: rgb(39, 39, 42); /* elevated surfaces */
+  --color-base-grey-9: rgb(24, 24, 27); /* cards / containers */
+  --color-base-grey-10: rgb(10, 10, 10); /* app background */
 
-  --popover: rgb(23, 23, 23);
-  --popover-foreground: rgb(250, 250, 250);
+  --color-base-blue-1: rgb(6, 35, 54); /* subtle dark bg */
+  --color-base-blue-2: rgb(10, 50, 74); /* primary container */
+  --color-base-blue-3: rgb(15, 70, 102); /* focused container */
+  --color-base-blue-4: rgb(25, 95, 135); /* hover surface */
+  --color-base-blue-5: rgb(40, 120, 165); /* active surface */
+  --color-base-blue-6: rgb(0, 145, 220); /* primary action */
+  --color-base-blue-7: rgb(90, 175, 230); /* primary text */
+  --color-base-blue-8: rgb(140, 205, 240); /* links */
+  --color-base-blue-9: rgb(190, 225, 248); /* strong highlight */
+  --color-base-blue-10: rgb(240, 249, 255); /* bright foreground */
 
-  --primary: rgb(0, 89, 138);
-  --primary-foreground: rgb(240, 249, 255);
-  --primary-hover: rgb(51, 122, 161);
-  --primary-active: rgb(0, 80, 124);
-  --primary-active-hover: rgb(51, 122, 161);
+  --color-base-green-1: rgb(12, 33, 24); /* subtle success bg */
+  --color-base-green-2: rgb(16, 48, 32); /* hover success bg */
+  --color-base-green-3: rgb(20, 66, 42); /* success container */
+  --color-base-green-4: rgb(28, 92, 56); /* success hover */
+  --color-base-green-5: rgb(40, 122, 72); /* active success surface */
+  --color-base-green-6: rgb(0, 188, 125); /* success action */
+  --color-base-green-7: rgb(72, 214, 156); /* success text */
+  --color-base-green-8: rgb(125, 232, 184); /* hover text */
+  --color-base-green-9: rgb(178, 245, 214); /* bright accent */
+  --color-base-green-10: rgb(226, 255, 241); /* bright foreground */
 
-  --secondary: rgb(39, 39, 42);
-  --secondary-foreground: rgb(250, 250, 250);
+  --color-base-amber-1: rgb(41, 29, 10); /* subtle warning bg */
+  --color-base-amber-2: rgb(59, 41, 12); /* hover warning bg */
+  --color-base-amber-3: rgb(82, 56, 15); /* warning container */
+  --color-base-amber-4: rgb(112, 74, 18); /* warning hover */
+  --color-base-amber-5: rgb(148, 98, 22); /* active warning surface */
+  --color-base-amber-6: rgb(207, 146, 0); /* warning action */
+  --color-base-amber-7: rgb(232, 182, 72); /* warning text */
+  --color-base-amber-8: rgb(245, 205, 120); /* hover text */
+  --color-base-amber-9: rgb(252, 225, 170); /* bright accent */
+  --color-base-amber-10: rgb(255, 243, 214); /* bright foreground */
 
-  --muted: rgb(38, 38, 38);
-  --muted-foreground: rgb(161, 161, 161);
+  --color-base-red-1: rgb(38, 18, 18); /* subtle error bg */
+  --color-base-red-2: rgb(55, 24, 24); /* hover error bg */
+  --color-base-red-3: rgb(80, 30, 30); /* error container */
+  --color-base-red-4: rgb(110, 40, 40); /* error hover */
+  --color-base-red-5: rgb(150, 55, 55); /* active error surface */
+  --color-base-red-6: rgb(200, 70, 70); /* destructive action */
+  --color-base-red-7: rgb(230, 100, 100); /* error text */
+  --color-base-red-8: rgb(245, 135, 135); /* hover text */
+  --color-base-red-9: rgb(255, 170, 170); /* bright accent */
+  --color-base-red-10: rgb(255, 210, 210); /* bright foreground */
 
-  --accent: rgb(38, 38, 38);
-  --accent-foreground: rgb(250, 250, 250);
+  /* ===== Background colors ===== */
+  --color-bg-white: var(--color-base-white);
+  --color-bg-default: var(--color-base-grey-10); /*  основной фон */
+  --color-bg-secondary: var(--color-base-grey-9); /* sections */
+  --color-bg-muted: var(--color-base-grey-8);
 
-  --destructive: rgb(255, 100, 103);
+  /* ===== Controls ===== */
+  /* ===== Inputs, buttons, interactive surfaces ===== */
+  --color-control-bg: var(--color-base-grey-9);
+  --color-control-bg-disabled: var(--color-base-grey-8);
+  --color-control-bg-primary: var(--color-base-blue-6);
+  --color-control-bg-primary-hover: var(--color-base-blue-5);
+  --color-control-bg-primary-active: var(--color-base-blue-4);
 
-  --border-color: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.15);
-  --ring: rgb(115, 115, 115);
+  /* ===== Containers ===== */
+  /* ===== Cards, modals, dropdowns, popovers ===== */
+  --color-container-bg: var(--color-base-grey-8);
+  --color-container-bg-hover: var(--color-base-grey-7);
+  --color-container-bg-focus: var(--color-base-grey-6);
+  --color-container-bg-active: var(--color-base-grey-5);
+  /* elevated surfaces */
+  --color-container-bg-elevated: var(--color-base-grey-8);
+  --color-container-bg-primary: var(--color-base-blue-2);
+  --color-container-bg-primary-hover: var(--color-base-blue-3);
+  --color-container-bg-primary-focus: var(--color-base-blue-4);
+  --color-container-bg-primary-active: var(--color-base-blue-5);
+  --color-container-bg-overlay: var(--color-base-grey-8); /* modal / popover */
+
+  /* ===== Text colors ===== */
+  --text: var(--color-base-grey-1);
+  --text-secondary: var(--color-base-grey-2);
+  --text-muted: var(--color-base-grey-4); /* muted / helper text */
+  --text-disabled: var(--color-base-grey-5);
+  --text-white: var(--color-base-white);
+  --text-link: var(--color-base-blue-8);
+  --text-link-hover: var(--color-base-blue-9);
+  --text-primary: var(--color-base-blue-7);
+  --text-primary-hover: var(--color-base-blue-8);
+  --text-primary-active: var(--color-base-blue-6);
+  --text-primary-active-hover: var(--color-base-blue-7);
+  --text-soft: var(--color-base-blue-9);
+  --text-error: var(--color-base-red-7);
+
+  /* ===== Layout bg colors ===== */
+  --color-bg-body: var(--color-base-grey-10);
+  --color-bg-header: var(--color-base-grey-9);
+  --color-bg-footer: var(--color-base-grey-10);
+  --color-bg-sidebar: var(--color-base-grey-9);
+
+  /* ===== Statuses ===== */
+  --color-status-positive: var(--color-base-green-7);
+  --color-bg-status-positive: var(--color-base-green-1);
+  --color-bg-status-positive-hover: var(--color-base-green-2);
+  --color-status-success: var(--color-base-green-7);
+  --color-bg-status-success: var(--color-base-green-1);
+  --color-bg-status-success-hover: var(--color-base-green-2);
+  --color-status-warning: var(--color-base-amber-7);
+  --color-bg-status-warning: var(--color-base-amber-1);
+  --color-bg-status-warning-hover: var(--color-base-amber-2);
+  --color-status-inactive: var(--color-base-amber-7);
+  --color-bg-status-inactive: var(--color-base-amber-1);
+  --color-bg-status-inactive-hover: var(--color-base-amber-2);
+  --color-status-negative: var(--color-base-red-7);
+  --color-bg-status-negative: var(--color-base-red-1);
+  --color-bg-status-negative-hover: var(--color-base-red-2);
+  --color-status-archive: var(--color-base-red-7);
+  --color-bg-status-archive: var(--color-base-red-1);
+  --color-bg-status-archive-hover: var(--color-base-red-2);
+  --color-status-error: var(--color-base-red-7);
+  --color-bg-status-error: var(--color-base-red-2);
+  --color-bg-status-error-hover: var(--color-base-red-3);
+  --color-status-neutral: var(--color-base-grey-4);
+  --color-bg-status-neutral: var(--color-base-grey-8);
+  --color-bg-status-neutral-hover: var(--color-base-grey-7);
+
+  --color-icon: var(--color-base-grey-1);
+  --color-placeholder: var(--color-base-grey-4);
+
+  --color-bg-segmented: var(--color-base-grey-8);
+  --color-bg-segmented-hover: var(--color-base-grey-7);
+  --color-bg-segmented-active: var(--color-base-grey-10);
+  --color-bg-segmented-selected: var(--color-base-grey-10);
+
+  --popover: var(--color-base-grey-9);
+  --popover-foreground: var(--color-base-grey-1);
 
   --chart-1: rgb(116, 212, 255);
   --chart-2: rgb(0, 166, 244);
@@ -35,17 +150,5 @@
   --chart-4: rgb(0, 105, 168);
   --chart-5: rgb(0, 89, 138);
 
-  --sidebar: rgb(23, 23, 23);
-  --sidebar-foreground: rgb(250, 250, 250);
-  --sidebar-primary: rgb(0, 166, 244);
-  --sidebar-primary-foreground: rgb(5, 47, 74);
-  --sidebar-accent: rgb(38, 38, 38);
-  --sidebar-accent-foreground: rgb(250, 250, 250);
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: rgb(115, 115, 115);
-
-  /* Error / success */
-  --success: rgb(73, 149, 55);
-  --warning: rgb(207, 146, 0);
-  --error: var(--destructive);
+  --radius: 0.625rem;
 }

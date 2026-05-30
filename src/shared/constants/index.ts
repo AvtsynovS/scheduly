@@ -1,1 +1,1 @@
-export { spaces } from './constants';
+export { spaces, MEDIA } from './constants';

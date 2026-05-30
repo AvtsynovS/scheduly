@@ -1,13 +1,13 @@
-import { readFileSync } from "fs";
-import { visualizer } from "rollup-plugin-visualizer";
-import { defineConfig } from "vite";
-import mkcert from "vite-plugin-mkcert";
-import svgr from "vite-plugin-svgr";
+import { readFileSync } from 'fs';
+import { visualizer } from 'rollup-plugin-visualizer';
+import { defineConfig } from 'vite';
+import mkcert from 'vite-plugin-mkcert';
+import svgr from 'vite-plugin-svgr';
 
-import react from "@vitejs/plugin-react";
+import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
-  const isAnalyze = mode === "analyze";
+  const isAnalyze = mode === 'analyze';
 
   return {
     plugins: [
@@ -15,7 +15,7 @@ export default defineConfig(({ mode }) => {
       mkcert(),
       svgr({
         svgrOptions: {
-          exportType: "named",
+          exportType: 'named',
           ref: true,
           titleProp: true,
         },
@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
               open: true,
               gzipSize: true,
               brotliSize: true,
-              template: "treemap",
+              template: 'treemap',
             }),
           ]
         : []),
@@ -34,23 +34,23 @@ export default defineConfig(({ mode }) => {
     resolve: {
       tsconfigPaths: true,
       alias: {
-        "date-fns/locale": "date-fns/locale/ru",
+        'date-fns/locale': 'date-fns/locale/ru',
       },
     },
     optimizeDeps: {
-      include: ["antd/es/locale/ru_RU"],
+      include: ['antd/es/locale/ru_RU'],
     },
     server: {
-      port: 5173,
+      port: 5100,
       open: true,
       strictPort: true,
       https: {
-        key: readFileSync("./certs/localhost-key.pem"),
-        cert: readFileSync("./certs/localhost.pem"),
+        key: readFileSync('./certs/localhost-key.pem'),
+        cert: readFileSync('./certs/localhost.pem'),
       },
     },
     build: {
-      minify: "terser",
+      minify: 'terser',
       sourcemap: false,
       terserOptions: {
         compress: true,
@@ -67,11 +67,11 @@ export default defineConfig(({ mode }) => {
         external: [],
         output: {
           manualChunks(id) {
-            if (id.includes("node_modules")) {
-              if (id.includes("antd")) return "antd";
-              if (id.includes("date-fns")) return "date-fns";
+            if (id.includes('node_modules')) {
+              if (id.includes('antd')) return 'antd';
+              if (id.includes('date-fns')) return 'date-fns';
 
-              return "vendor";
+              return 'vendor';
             }
           },
         },

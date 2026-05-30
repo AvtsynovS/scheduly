@@ -1,0 +1,31 @@
+{
+  "button.label.home": "Вернуться на домашнюю страницу",
+  "button.label.create": "Создать",
+  "button.label.edit": "Редактировать",
+  "button.label.delete": "Удалить",
+  "button.label.cancel": "Отмена",
+
+  "empty.description": "Ничего не найдено",
+
+  "dropdown.option.light": "Светлая",
+  "dropdown.option.dark": "Темная",
+
+  "segmented.option.table": "Таблица",
+  "segmented.option.cards": "Карточки",
+
+  "sider.title.menu": "Меню",
+
+  "table.description.empty": "Нет данных",
+
+  "page.title.fallback": "Произошла непредвиденная ошибка",
+  "page.description.fallback": "Что-то пошло не так...",
+
+  "text.minute": "мин",
+  "text.hour": "часов",
+  "text.hours": "{hours, plural, one {# час} few {# часа} many {# часов} other {# часов}}",
+  "text.minutes": "{minutes, plural, one {# минута} few {# минуты} many {# минут} other {# минут}}",
+
+  "validation.type.error": "Не верный формат значения",
+  "validation.price.error": "Укажите цену",
+  "validation.currency.error": "Выберите валюту"
+}

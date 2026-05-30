@@ -1,25 +1,27 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
 
-import { MainLayout } from '@app';
-import { DashboardRoute } from '@app/routes';
+import { PrivateRoute, RootRedirectPage } from '@app/routes';
 import { AuthPage } from '@modules/auth';
-import { DashboardPage } from '@modules/dashboard';
+import { businessRoutes } from '@modules/business';
 import { ErrorPage } from '@shared';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayout />,
+    element: (
+      <PrivateRoute>
+        <Outlet />
+      </PrivateRoute>
+    ),
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <DashboardPage /> },
       {
-        path: 'dashboard',
-        element: <DashboardPage />,
+        index: true,
+        element: <RootRedirectPage />,
       },
       {
-        path: '/business/:businessId',
-        element: <DashboardRoute />,
+        path: 'business',
+        children: [...businessRoutes],
       },
     ],
   },

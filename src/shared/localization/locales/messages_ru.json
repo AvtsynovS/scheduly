@@ -1,9 +1,0 @@
-{
-  "button.label.home": "Вернуться на домашнюю страницу",
-
-  "dropdown.option.light": "Светлая",
-  "dropdown.option.dark": "Темная",
-
-  "page.title.fallback": "Произошла непредвиденная ошибка",
-  "page.description.fallback": "Что-то пошло не так..."
-}

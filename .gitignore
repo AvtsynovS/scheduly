@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 ideas.md
+CHANGELOG.rules.md
 
 # Editor directories and files
 .vscode/*

@@ -1,0 +1,48 @@
+:root {
+  /* ===== Base ===== */
+  --shadow-layer-1: 0 1px 2px rgba(0, 0, 0, 0.03);
+  --shadow-layer-2:
+    0 1px 2px rgba(0, 0, 0, 0.03), 0 1px 6px rgba(0, 0, 0, 0.02),
+    0 2px 4px rgba(0, 0, 0, 0.02);
+  --shadow-layer-3:
+    0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-layer-4:
+    0 3px 6px rgba(0, 0, 0, 0.04), 0 6px 16px rgba(0, 0, 0, 0.08);
+  --shadow-layer-5:
+    0 6px 16px rgba(0, 0, 0, 0.08), 0 12px 32px rgba(0, 0, 0, 0.12);
+  --shadow-outline-subtle: 0 0 0 1px rgba(0, 0, 0, 0.03);
+  --shadow-outline: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --shadow-outline-strong: 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+  /* ===== Semantic shadows ===== */
+  --shadow-body: var(--shadow-layer-2);
+  --shadow-body-hover: var(--shadow-layer-4);
+  --shadow-card: var(--shadow-layer-3);
+  --shadow-card-hover: var(--shadow-layer-5);
+  --shadow-dropdown: var(--shadow-layer-3);
+  --shadow-popover: var(--shadow-layer-4);
+  --shadow-modal: var(--shadow-layer-5);
+  --shadow-focus: 0 0 0 3px rgba(0, 105, 168, 0.18); /* focused controls */
+}
+
+.dark {
+  /* ===== Base ===== */
+  --shadow-layer-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-layer-2: 0 2px 6px rgba(0, 0, 0, 0.4);
+  --shadow-layer-3: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-layer-4: 0 8px 24px rgba(255, 255, 255, 0.55);
+  --shadow-layer-5: 0 12px 40px rgba(0, 0, 0, 0.7);
+  --shadow-outline-subtle: 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --shadow-outline: 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-outline-strong: 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+  /* ===== Semantic shadows ===== */
+  --shadow-body: var(--shadow-layer-1);
+  --shadow-body-hover: var(--shadow-layer-3);
+  --shadow-card: var(--shadow-layer-2), var(--shadow-outline-subtle);
+  --shadow-card-hover: var(--shadow-layer-4), var(--shadow-outline);
+  --shadow-dropdown: var(--shadow-layer-3), var(--shadow-outline);
+  --shadow-popover: var(--shadow-layer-4), var(--shadow-outline);
+  --shadow-modal: var(--shadow-layer-5), var(--shadow-outline-strong);
+  --shadow-focus: 0 0 0 3px rgba(0, 145, 220, 0.35); /* focused controls */
+}

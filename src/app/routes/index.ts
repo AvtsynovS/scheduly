@@ -1,1 +1,2 @@
-export { DashboardRoute } from './business/DashboardRoute';
+export { RootRedirectPage } from './RootRedirectPage';
+export { PrivateRoute } from './PrivateRoute';

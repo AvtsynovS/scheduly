@@ -1,0 +1,31 @@
+{
+  "button.label.home": "Go to home page",
+  "button.label.create": "Create",
+  "button.label.edit": "Edit",
+  "button.label.delete": "Delete",
+  "button.label.cancel": "Cancel",
+
+  "empty.description": "Nothing found",
+
+  "dropdown.option.light": "Light",
+  "dropdown.option.dark": "Dark",
+
+  "segmented.option.table": "Table",
+  "segmented.option.cards": "Cards",
+
+  "sider.title.menu": "Menu",
+
+  "table.description.empty": "No data",
+
+  "page.title.fallback": "An unexpected error occurred",
+  "page.description.fallback": "Something went wrong...",
+
+  "text.minute": "min",
+  "text.hour": "hours",
+  "text.hours": "{hours, plural, one {# hour} other {# hours}}",
+  "text.minutes": "{minutes, plural, one {# minute} other {# minutes}}",
+
+  "validation.type.error": "Invalid format value",
+  "validation.price.error": "Specify price",
+  "validation.currency.error": "Select currency"
+}

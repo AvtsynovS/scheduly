@@ -1,0 +1,75 @@
+{
+  "business.badge.service": "{count, plural, one {# услуга} few {# услуги} many {# услуги} other {# услуги}}",
+
+  "business.button.label.add.service": "Добавить услугу",
+
+  "business.drawer.title.service.create": "Новый сервис",
+  "business.drawer.title.service.edit": "Редактирование сервиса",
+  "business.drawer.title.service.duplicate": "Новый сервис",
+
+  "business.dropdown.option.haircut": "Стрижка",
+  "business.dropdown.option.coloring": "Окрашивание",
+  "business.dropdown.option.styling": "Укладка",
+  "business.dropdown.option.nails": "Ногти",
+  "business.dropdown.option.allCategories": "Все категории",
+  "business.dropdown.option.edit": "Изменить",
+  "business.dropdown.option.duplicate": "Дублировать",
+  "business.dropdown.option.archive": "Архивировать",
+  "business.dropdown.option.delete": "Удалить",
+
+  "business.input.service.name.label": "Сервис",
+  "business.input.service.categories.label": "Категории",
+  "business.input.service.duration.label": "Продолжительность",
+  "business.input.service.price.label": "Цена",
+  "business.input.service.status.label": "Статус",
+  "business.input.service.name.placeholder": "Название сервиса",
+  "business.input.service.categories.placeholder": "Добавьте категории",
+  "business.input.service.duration.placeholder": "Продолжительность",
+  "business.input.service.price.placeholder": "Цена",
+  "business.input.service.status.placeholder": "Статус",
+
+  "business.sider.title.menu": "Меню",
+
+  "business.menu.item.dashboard": "Дашборд",
+  "business.menu.item.records": "Записи",
+  "business.menu.item.clients": "Клиенты",
+  "business.menu.item.employees": "Сотрудники",
+  "business.menu.item.services": "Услуги",
+  "business.menu.item.finance": "Финансы",
+  "business.menu.item.reports": "Отчеты",
+  "business.menu.item.settings": "Настройки",
+
+  "business.modal.title.service.delete": "Удаление сервиса",
+  "business.modal.title.service.archive": "Архивация сервиса",
+  "business.modal.content.service.delete": "Вы действительно хотите удалить сервис <strong>{name}</strong>?",
+  "business.modal.content.service.archive": "Вы действительно хотите перенести сервис <strong>{name}</strong> в архив?",
+
+  "business.select.placeholder.search": "Поиск...",
+  "business.select.option.active": "Активна",
+  "business.select.option.inactive": "Не активна",
+  "business.select.option.archive": "Архив",
+
+  "business.table.column.services": "Услуги",
+  "business.table.column.categories": "Категории",
+  "business.table.column.duration": "Продолжительность",
+  "business.table.column.price": "Цена",
+  "business.table.column.serviceMobile": "Услуга",
+  "business.table.column.status": "Статус",
+
+  "business.tag.status.inactive": "Не активна",
+  "business.tag.status.archive": "Архив",
+
+  "business.stats.total": "Всего услуг",
+  "business.stats.categories": "Всего категорий",
+  "business.stats.average.price": "Средняя цена",
+  "business.stats.average.time": "Среднее время",
+
+  "business.page.title.services": "Услуги",
+  "business.page.description.services": "Управление услугами и ценами",
+
+  "business.service.error.name.required": "Введите название услуги",
+  "business.service.error.categories.required": "Выберите категории",
+  "business.service.error.categories.min": "Выберите хотя бы одну категорию",
+  "business.service.error.duration.required": "Введите длительность",
+  "business.service.error.price.required": "Укажите цену"
+}
