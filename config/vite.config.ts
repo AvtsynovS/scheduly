@@ -3,7 +3,6 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { defineConfig } from 'vite';
 import mkcert from 'vite-plugin-mkcert';
 import svgr from 'vite-plugin-svgr';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
 import react from '@vitejs/plugin-react';
 
@@ -21,7 +20,6 @@ export default defineConfig(({ mode }) => {
           titleProp: true,
         },
       }),
-      tsconfigPaths(),
       ...(isAnalyze
         ? [
             visualizer({

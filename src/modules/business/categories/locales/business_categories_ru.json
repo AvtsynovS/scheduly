@@ -1,6 +1,10 @@
 {
   "business.button.label.add.category": "Добавить категорию",
 
+  "business.card.text.description": "Описание",
+  "business.card.text.emptyDescription": "Нет описание",
+  "business.card.text.totalService": "Услуг в категории",
+
   "business.drawer.title.category.create": "Новая категория",
   "business.drawer.title.category.edit": "Редактирование категории",
 

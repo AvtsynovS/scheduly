@@ -1,6 +1,10 @@
 {
   "business.button.label.add.category": "Add category",
 
+  "business.card.text.description": "Description",
+  "business.card.text.emptyDescription": "No description",
+  "business.card.text.totalService": "Services in category",
+
   "business.drawer.title.category.create": "New category",
   "business.drawer.title.category.edit": "Edit category",
 

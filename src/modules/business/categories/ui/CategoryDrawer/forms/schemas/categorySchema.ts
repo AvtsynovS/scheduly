@@ -3,7 +3,9 @@ import * as yup from 'yup';
 import type { CategoryValueType } from '../model/types';
 import type { ObjectSchema } from 'yup';
 
-export const categorySchema = (translate: (id: string) => string) => {
+export const categorySchema = (
+  translate: (id: string) => string,
+): ObjectSchema<CategoryValueType> => {
   return yup.object({
     name: yup
       .string()
@@ -11,6 +13,6 @@ export const categorySchema = (translate: (id: string) => string) => {
     color: yup
       .string()
       .required(translate('business.category.error.color.required')),
-    description: yup.string(),
-  }) satisfies ObjectSchema<CategoryValueType>;
+    description: yup.string().optional(),
+  });
 };
