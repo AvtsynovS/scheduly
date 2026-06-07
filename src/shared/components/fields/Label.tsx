@@ -19,8 +19,10 @@ const StyledLabel = styled.label<LabelProps>`
     required &&
     css`
       &::after {
-        content: ' *';
+        content: '*';
         color: ${theme.colors.error};
+        margin-left: ${({ theme }) => theme.spaces.xxxs};
+        vertical-align: text-bottom;
       }
     `}
 `;

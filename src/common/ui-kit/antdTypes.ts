@@ -5,9 +5,11 @@ export type {
   InputProps,
   InputRef,
   MenuProps,
+  NotificationArgsProps,
   SegmentedProps,
   SelectProps,
   SpinProps,
+  ColorPickerProps,
 } from 'antd';
 
 export type { MenuInfo, SelectInfo } from '@rc-component/menu/lib/interface';
@@ -17,3 +19,4 @@ export type { DefaultOptionType } from 'antd/es/select';
 export type { ColumnsType, ColumnType } from 'antd/es/table';
 export type { TextProps } from 'antd/es/typography/Text';
 export type { SearchProps } from 'antd/es/input';
+export type { TextAreaProps } from 'antd/es/input';

@@ -1,6 +1,5 @@
-import type { ServiceType } from '../../../../model/types';
-import type { ServiceStatusType } from '../../../../types';
-import type { CurrencyType } from '@shared';
+import type { CurrencyType, ServiceType } from '../../../../model/types';
+import type { PriceType, ServiceStatusType } from '../../../../types';
 
 export type DictsType = {
   categories: {
@@ -8,10 +7,7 @@ export type DictsType = {
     value: string;
     color: string;
   }[];
-  currency: {
-    label: CurrencyType;
-    value: CurrencyType;
-  }[];
+  currency: CurrencyType[];
   status: {
     label: string;
     value: ServiceStatusType;
@@ -23,6 +19,6 @@ export type ServiceValueType = Omit<
   'id' | 'categories' | 'price'
 > & {
   categories: string[];
-  price: { amount: number; currency: CurrencyType };
+  price: PriceType;
   status: ServiceStatusType;
 };

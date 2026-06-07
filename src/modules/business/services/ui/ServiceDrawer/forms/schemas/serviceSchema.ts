@@ -2,14 +2,14 @@ import * as yup from 'yup';
 
 import type { ServiceStatusType } from '../../../../types';
 import type { ServiceValueType } from '../model/types';
-import type { CurrencyType } from '@shared';
+import type { CurrencyCodeType } from '@shared';
 import type { ObjectSchema } from 'yup';
 
 export const CURRENCIES = [
   'USD',
   'EUR',
   'RUB',
-] as const satisfies readonly CurrencyType[];
+] as const satisfies readonly CurrencyCodeType[];
 
 export const STATUS = [
   'active',
@@ -42,7 +42,7 @@ export const serviceSchema = (translate: (id: string) => string) => {
         .required(translate('validation.price.error')),
 
       currency: yup
-        .mixed<CurrencyType>()
+        .mixed<CurrencyCodeType>()
         .oneOf(CURRENCIES)
         .required(translate('validation.currency.error')),
     }),

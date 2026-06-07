@@ -1,6 +1,6 @@
 import type { ServiceStatusType } from '../types';
 import type { ServiceType } from './types';
-import type { CurrencyType } from '@shared';
+import type { CurrencyCodeType } from '@shared';
 
 const mockColors = {
   cyan: 'rgb(40, 100, 140)',
@@ -21,7 +21,7 @@ export const ALL_CATEGORIES_OPTION = {
   value: 'all',
 };
 
-export const CURRENCY: CurrencyType[] = ['RUB', 'USD', 'EUR'];
+export const CURRENCY: CurrencyCodeType[] = ['RUB', 'USD', 'EUR'];
 export const STATUS: ServiceStatusType[] = ['active', 'inactive', 'archive'];
 
 export const CATEGORIES = [

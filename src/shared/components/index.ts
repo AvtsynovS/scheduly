@@ -8,5 +8,8 @@ export { BaseCard } from './BaseCard';
 export { TextField } from './fields/TextField';
 export { SelectField } from './fields/SelectField';
 export { PriceField } from './fields/PriceField';
+export { TextAreaField } from './fields/TextAreaField';
+export { ColorPickerField } from './fields/ColorPickerField';
 export { ActionsButton } from './ActionButton/ActionsButton';
 export { Search } from './Search/Search';
+export { ModalFooter } from './ModalFooter/ModalFooter';

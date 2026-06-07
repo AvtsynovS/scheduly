@@ -20,6 +20,7 @@
       "@shared/theme/tokens": ["./src/shared/theme/tokens"],
       "@modules/auth": ["./src/modules/auth"],
       "@modules/business": ["./src/modules/business"],
+      "@modules/categories": ["./src/modules/business/categories"],
       "@modules/employee": ["./src/modules/employee"],
       "@modules/client": ["./src/modules/client"]
     },

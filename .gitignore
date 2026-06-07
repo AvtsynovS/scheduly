@@ -30,3 +30,5 @@ certs/*.pem
 certs/*.key
 
 dev_utils.ts
+.env.development.local
+.env.development

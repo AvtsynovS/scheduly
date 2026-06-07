@@ -51,7 +51,7 @@ export const ServiceForm = ({
     resolver: resolver,
     defaultValues: defaultValues ?? {
       price: {
-        currency: currency[0]?.value,
+        currency: currency[0]?.code,
       },
       status: status[0]?.value,
     },

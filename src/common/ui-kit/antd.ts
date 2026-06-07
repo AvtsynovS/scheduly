@@ -4,6 +4,8 @@ export {
   Button,
   Card,
   Col,
+  ColorPicker,
+  Divider,
   Drawer,
   Dropdown,
   Empty,
@@ -22,3 +24,5 @@ export {
   Table,
   Typography,
 } from 'antd';
+
+export { green, presetPalettes, red, blue } from '@ant-design/colors';

@@ -2,6 +2,7 @@
   "button.label.home": "Go to home page",
   "button.label.create": "Create",
   "button.label.edit": "Edit",
+  "button.label.archive": "Archive",
   "button.label.delete": "Delete",
   "button.label.cancel": "Cancel",
 
@@ -9,6 +10,10 @@
 
   "dropdown.option.light": "Light",
   "dropdown.option.dark": "Dark",
+  "dropdown.option.edit": "Edit",
+  "dropdown.option.duplicate": "Duplicate",
+  "dropdown.option.archive": "Archive",
+  "dropdown.option.delete": "Delete",
 
   "segmented.option.table": "Table",
   "segmented.option.cards": "Cards",

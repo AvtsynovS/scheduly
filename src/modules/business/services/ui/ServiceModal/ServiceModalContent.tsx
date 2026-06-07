@@ -1,7 +1,5 @@
 import { Flex, Typography } from '@common/ui-kit';
-import { spaces, useTranslate } from '@shared';
-
-import { ModalFooter } from './ModalFooter';
+import { ModalFooter, spaces, useTranslate } from '@shared';
 
 import type { ConfirmActionType } from '../../types';
 
@@ -20,7 +18,7 @@ export const ServiceModalContent = ({
   onClose,
   onConfirm,
 }: ServiceModalContentProps) => {
-  const { translateRich } = useTranslate();
+  const { translate, translateRich } = useTranslate();
 
   return (
     <Flex vertical gap={spaces.l}>
@@ -34,7 +32,14 @@ export const ServiceModalContent = ({
           },
         )}
       </Text>
-      <ModalFooter onClose={onClose} onConfirm={onConfirm} />
+      <ModalFooter
+        confirmText={translate(
+          type === 'archive' ? 'button.label.archive' : 'button.label.delete',
+        )}
+        cancelText={translate('button.label.cancel')}
+        onClose={onClose}
+        onConfirm={onConfirm}
+      />
     </Flex>
   );
 };

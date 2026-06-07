@@ -21,6 +21,7 @@ import { ReactComponent as PlusIcon } from './plus.svg?react';
 import { ReactComponent as SettingsIcon } from './settings.svg?react';
 import { ReactComponent as ThemeIcon } from './sun-moon.svg?react';
 import { ReactComponent as TableIcon } from './table.svg?react';
+import { ReactComponent as TagIcon } from './tag.svg?react';
 import { ReactComponent as UserIcon } from './user.svg?react';
 import { ReactComponent as UsersIcon } from './users.svg?react';
 import { ReactComponent as WalletIcon } from './wallet.svg?react';
@@ -49,6 +50,7 @@ export {
   SettingsIcon,
   ThemeIcon,
   TableIcon,
+  TagIcon,
   UserIcon,
   UsersIcon,
   WalletIcon,

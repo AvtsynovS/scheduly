@@ -5,6 +5,7 @@ import {
   DashboardIcon,
   PackageIcon,
   SettingsIcon,
+  TagIcon,
   UsersIcon,
   WalletIcon,
 } from '@shared';
@@ -36,6 +37,11 @@ export const items: ItemType[] = [
     key: 'services',
     label: 'business.menu.item.services',
     icon: <PackageIcon />,
+  },
+  {
+    key: 'categories',
+    label: 'business.menu.item.categories',
+    icon: <TagIcon />,
   },
   {
     key: 'finance',
