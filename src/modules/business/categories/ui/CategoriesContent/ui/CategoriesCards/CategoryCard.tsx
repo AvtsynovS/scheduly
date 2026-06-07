@@ -16,10 +16,30 @@ type CategoryCardProps = {
   onAction: (action: CategoryActionType) => void;
 };
 
-const StyledCard = styled(Card)`
+const StyledCard = styled(Card)<{ $color: string }>`
+  position: relative;
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   height: 210px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 8px;
+    background-color: ${({ $color }) => $color};
+
+    z-index: 1;
+  }
+
+  .ant-card-head {
+    padding: ${({ theme }) => `${theme.spaces.xs} ${theme.spaces.s} 0`};
+  }
 
   .ant-card-body {
     flex: 1;
@@ -78,6 +98,7 @@ export const CategoryCard = ({ category, onAction }: CategoryCardProps) => {
 
   return (
     <StyledCard
+      $color={color}
       title={
         <Flex gap={spaces.xxs} align="center">
           <ColorPicker value={color} size="small" disabled />
