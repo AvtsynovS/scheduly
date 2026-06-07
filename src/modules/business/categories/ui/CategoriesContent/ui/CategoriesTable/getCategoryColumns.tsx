@@ -52,17 +52,23 @@ export const getCategoryColumns = (
             />
           </Flex>
           <Divider size="small" />
-          <Flex gap={spaces.s}>
-            <StyledLabel>
-              {translate('business.table.text.description')}
-            </StyledLabel>
-            <Text type="secondary">{description}</Text>
-          </Flex>
-          <Flex gap={spaces.s} align="center">
-            <StyledLabel>
-              {translate('business.table.text.totalService')}
-            </StyledLabel>
-            <StyledTag icon={<TagIcon />}>{totalServices}</StyledTag>
+          <Flex vertical gap={spaces.s}>
+            <Flex gap={spaces.s}>
+              <StyledLabel>
+                {translate('business.table.text.description')}
+              </StyledLabel>
+              <Text type="secondary">
+                {description
+                  ? description
+                  : translate('business.card.text.emptyDescription')}
+              </Text>
+            </Flex>
+            <Flex gap={spaces.s} align="center">
+              <StyledLabel>
+                {translate('business.table.text.totalService')}
+              </StyledLabel>
+              <StyledTag icon={<TagIcon />}>{totalServices}</StyledTag>
+            </Flex>
           </Flex>
         </Flex>
       ),
@@ -113,7 +119,11 @@ export const getCategoryColumns = (
       minWidth: 200,
       hideBefore: 'md',
       render: (_, { description }) => (
-        <Text type="secondary">{description}</Text>
+        <Text type="secondary">
+          {description
+            ? description
+            : translate('business.card.text.emptyDescription')}
+        </Text>
       ),
     },
     {

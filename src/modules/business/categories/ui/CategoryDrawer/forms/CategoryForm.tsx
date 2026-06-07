@@ -44,7 +44,7 @@ export const CategoryForm = ({
   );
 
   const methods = useForm<CategoryValueType>({
-    resolver: resolver,
+    resolver,
     defaultValues: defaultValues
       ? defaultValues
       : {
