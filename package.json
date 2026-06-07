@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.4.0",
-    "@tanstack/react-query": "^5.96.2",
+    "@tanstack/react-query": "^5.100.14",
     "antd": "^6.3.5",
     "axios": "^1.14.0",
     "date-fns": "^4.1.0",
@@ -51,6 +51,7 @@
     "typescript-eslint": "^8.58.0",
     "vite": "^8.0.1",
     "vite-plugin-mkcert": "^1.17.10",
-    "vite-plugin-svgr": "^5.2.0"
+    "vite-plugin-svgr": "^5.2.0",
+    "vite-tsconfig-paths": "^6.1.1"
   }
 }

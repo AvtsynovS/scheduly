@@ -18,7 +18,7 @@ export const createServiceActions = ({
   return [
     {
       key: 'service-edit',
-      label: translate('business.dropdown.option.edit'),
+      label: translate('dropdown.option.edit'),
       icon: <EditIcon />,
       onClick: () => {
         onAction({
@@ -29,7 +29,7 @@ export const createServiceActions = ({
     },
     {
       key: 'service-duplicate',
-      label: translate('business.dropdown.option.duplicate'),
+      label: translate('dropdown.option.duplicate'),
       icon: <DuplicateIcon />,
       onClick: () => {
         onAction({
@@ -40,7 +40,7 @@ export const createServiceActions = ({
     },
     {
       key: 'service-archive',
-      label: translate('business.dropdown.option.archive'),
+      label: translate('dropdown.option.archive'),
       icon: <ArchiveIcon />,
       danger: true,
       onClick: () => {
@@ -53,7 +53,7 @@ export const createServiceActions = ({
     },
     {
       key: 'service-delete',
-      label: translate('business.dropdown.option.delete'),
+      label: translate('dropdown.option.delete'),
       icon: <DeleteIcon />,
       danger: true,
       onClick: () => {

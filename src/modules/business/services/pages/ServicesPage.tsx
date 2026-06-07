@@ -38,7 +38,7 @@ const StyledWrapper = styled(Flex)`
 `;
 
 const StyledButton = styled(Button)`
-  ${MEDIA.down('sm')} {
+  ${MEDIA.down('md')} {
     span:not(.ant-btn-icon) {
       display: none;
     }

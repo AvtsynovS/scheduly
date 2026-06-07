@@ -1,0 +1,30 @@
+{
+  "business.button.label.add.category": "Add category",
+
+  "business.drawer.title.category.create": "New category",
+  "business.drawer.title.category.edit": "Edit category",
+
+  "business.input.category.name.label": "Category",
+  "business.input.category.color.label": "Color",
+  "business.input.category.description.label": "Description",
+  "business.input.category.color.text": "Select color",
+  "business.input.category.name.placeholder": "Category name",
+  "business.input.category.description.placeholder": "Category description",
+
+  "business.modal.title.category.delete": "Deleting category",
+  "business.modal.content.category.delete": "Are you sure you want to delete the category <strong>{name}</strong>?",
+
+  "business.page.title.categories": "Categories",
+  "business.page.description.categories": "Managing categories to group services",
+
+  "business.table.column.categories": "Categories",
+  "business.table.column.color": "Color",
+  "business.table.column.name": "Name",
+  "business.table.column.description": "Description",
+  "business.table.column.totalService": "Services",
+  "business.table.text.totalService": "Services",
+  "business.table.text.description": "Description",
+
+  "business.category.error.name.required": "Enter the category name",
+  "business.category.error.color.required": "Select color"
+}

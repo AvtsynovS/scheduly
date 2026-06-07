@@ -66,6 +66,7 @@ export const theme = {
   },
 
   spaces: {
+    xxxs: '2px',
     xxs: '4px',
     xs: '8px',
     s: '12px',

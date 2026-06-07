@@ -2,6 +2,7 @@
   "button.label.home": "Вернуться на домашнюю страницу",
   "button.label.create": "Создать",
   "button.label.edit": "Редактировать",
+  "button.label.archive": "Архивировать",
   "button.label.delete": "Удалить",
   "button.label.cancel": "Отмена",
 
@@ -9,6 +10,10 @@
 
   "dropdown.option.light": "Светлая",
   "dropdown.option.dark": "Темная",
+  "dropdown.option.edit": "Изменить",
+  "dropdown.option.duplicate": "Дублировать",
+  "dropdown.option.archive": "Архивировать",
+  "dropdown.option.delete": "Удалить",
 
   "segmented.option.table": "Таблица",
   "segmented.option.cards": "Карточки",

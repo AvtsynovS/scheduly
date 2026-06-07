@@ -45,6 +45,10 @@ export default tseslint.config(
             ['@shared', './src/shared'],
             ['@modules/auth', './src/modules/auth'],
             ['@modules/dashboard', './src/modules/dashboard'],
+            ['@modules/business', './src/modules/business'],
+            ['@modules/categories', './src/modules/business/categories'],
+            ['@modules/employee', './src/modules/employee'],
+            ['@modules/client', './src/modules/client'],
           ],
           extensions: ['.ts', '.js', '.tsx', '.json'],
         },
@@ -92,6 +96,18 @@ export default tseslint.config(
             {
               target: ['./src/modules/dashboard'],
               from: ['./src/modules/auth'],
+              message:
+                'Запрещено использовать импорт из любых модулей, за исключением @common и @shared.',
+            },
+            {
+              target: [
+                './src/modules/business/dashboard',
+                './src/modules/business/employees',
+                './src/modules/business/services',
+                './src/modules/client/**',
+                './src/modules/employee/**',
+              ],
+              from: ['./src/modules/business/categories'],
               message:
                 'Запрещено использовать импорт из любых модулей, за исключением @common и @shared.',
             },

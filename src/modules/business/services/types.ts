@@ -1,4 +1,4 @@
-import type { CurrencyType, NumberFormatConfigType } from '@shared';
+import type { CurrencyCodeType, NumberFormatConfigType } from '@shared';
 
 export type ServicesStatsData = {
   averagePrice: number;
@@ -9,7 +9,7 @@ export type ServicesStatsData = {
 
 export type PriceType = {
   amount: number;
-  currency: CurrencyType;
+  currency: CurrencyCodeType;
 };
 
 export type ServiceStatusType = 'active' | 'inactive' | 'archive';

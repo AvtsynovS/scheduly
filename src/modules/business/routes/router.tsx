@@ -1,5 +1,6 @@
 import { Navigate } from 'react-router-dom';
 
+import { CategoriesPage } from '../categories';
 import { DashboardPage } from '../dashboard';
 import { BusinessLayout } from '../layout/BusinessLayout';
 import { ServicesPage } from '../services';
@@ -20,6 +21,7 @@ export const businessRoutes = [
       { path: 'clients', element: <DashboardPage /> },
       { path: 'employees', element: <DashboardPage /> },
       { path: 'services', element: <ServicesPage /> },
+      { path: 'categories', element: <CategoriesPage /> },
       { path: 'finance', element: <DashboardPage /> },
       { path: 'reports', element: <DashboardPage /> },
       { path: 'settings', element: <DashboardPage /> },

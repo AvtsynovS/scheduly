@@ -1,6 +1,12 @@
 import type { PriceType, ServiceStatusType } from '../types';
+import type { CurrencyCodeType } from '@shared';
 
-export type CategoryType = {
+export type CurrencyType = {
+  code: CurrencyCodeType;
+  label: string;
+};
+
+export type ServiceCategoryType = {
   id: string;
   name: string;
   color: string;
@@ -9,7 +15,7 @@ export type CategoryType = {
 export type ServiceType = {
   id: string;
   name: string;
-  categories: CategoryType[];
+  categories: ServiceCategoryType[];
   duration: number;
   price: PriceType;
   status: ServiceStatusType;

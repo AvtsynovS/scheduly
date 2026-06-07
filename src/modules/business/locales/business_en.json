@@ -7,10 +7,6 @@
   "business.dropdown.option.styling": "Styling",
   "business.dropdown.option.nails": "Nails",
   "business.dropdown.option.allCategories": "All categories",
-  "business.dropdown.option.edit": "Edit",
-  "business.dropdown.option.duplicate": "Duplicate",
-  "business.dropdown.option.archive": "Archive",
-  "business.dropdown.option.delete": "Delete",
 
   "business.input.service.name.label": "Service",
   "business.input.service.categories.label": "Categories",
@@ -34,13 +30,18 @@
   "business.menu.item.clients": "Clients",
   "business.menu.item.employees": "Employees",
   "business.menu.item.services": "Services",
+  "business.menu.item.categories": "Categories",
   "business.menu.item.finance": "Finance",
   "business.menu.item.reports": "Reports",
   "business.menu.item.settings": "Settings",
-  "business.modal.title.service.delete": "Delete service",
+
+  "business.modal.title.service.delete": "Deleting service",
   "business.modal.title.service.archive": "Archiving service",
   "business.modal.content.service.delete": "Are you sure you want to delete the service <strong>{name}</strong>?",
   "business.modal.content.service.archive": "Are you sure you want to move service <strong>{name}</strong> to the archive?",
+
+  "business.notification.error.currencies.title": "List available currencies",
+  "business.notification.error.currencies.description": "Failed to load list available currencies",
 
   "business.select.placeholder.search": "Search...",
   "business.select.option.active": "Active",

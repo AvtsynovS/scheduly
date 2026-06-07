@@ -1,0 +1,30 @@
+{
+  "business.button.label.add.category": "Добавить категорию",
+
+  "business.drawer.title.category.create": "Новая категория",
+  "business.drawer.title.category.edit": "Редактирование категории",
+
+  "business.input.category.name.label": "Категория",
+  "business.input.category.color.label": "Цвет",
+  "business.input.category.description.label": "Описание",
+  "business.input.category.color.text": "Выберите цвет",
+  "business.input.category.name.placeholder": "Название категории",
+  "business.input.category.description.placeholder": "Описание категории",
+
+  "business.modal.title.category.delete": "Удаление категории",
+  "business.modal.content.category.delete": "Вы действительно хотите удалить категорию <strong>{name}</strong>?",
+
+  "business.page.title.categories": "Категории",
+  "business.page.description.categories": "Управление категориями для группировки услуг",
+
+  "business.table.column.categories": "Категории",
+  "business.table.column.color": "Цвет",
+  "business.table.column.name": "Название",
+  "business.table.column.description": "Описание",
+  "business.table.column.totalService": "Сервисы",
+  "business.table.text.totalService": "Сервисов",
+  "business.table.text.description": "Описание",
+
+  "business.category.error.name.required": "Введите название категории",
+  "business.category.error.color.required": "Выберите цвет"
+}
