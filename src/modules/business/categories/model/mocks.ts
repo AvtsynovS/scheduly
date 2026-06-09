@@ -4,7 +4,7 @@ const mockColors = {
   green: 'rgb(38, 140, 74)',
   violet: 'rgb(92, 38, 140)',
 };
-
+// TODO удалить после настройки АПИ
 export const mockCategories = [
   {
     id: '1',

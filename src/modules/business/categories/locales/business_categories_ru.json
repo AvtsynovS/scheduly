@@ -30,5 +30,8 @@
   "business.table.text.description": "Описание",
 
   "business.category.error.name.required": "Введите название категории",
-  "business.category.error.color.required": "Выберите цвет"
+  "business.category.error.color.required": "Выберите цвет",
+
+  "business.category.error.query.categories.title": "Загрузка категорий",
+  "business.category.error.query.categories.description": "Не удалось загрузить категории"
 }
