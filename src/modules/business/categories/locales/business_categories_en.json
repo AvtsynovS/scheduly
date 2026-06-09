@@ -30,5 +30,8 @@
   "business.table.text.description": "Description",
 
   "business.category.error.name.required": "Enter the category name",
-  "business.category.error.color.required": "Select color"
+  "business.category.error.color.required": "Select color",
+
+  "business.category.error.query.categories.title": "Loading categories",
+  "business.category.error.query.categories.description": "Failed to load categories"
 }

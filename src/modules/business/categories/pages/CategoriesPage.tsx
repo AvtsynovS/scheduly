@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import { Button, Flex } from '@common/ui-kit';
 import {
@@ -7,16 +7,17 @@ import {
   PlusIcon,
   Search,
   spaces,
+  Spin,
   useDebounce,
+  useNotification,
   useTranslate,
 } from '@shared';
 
-import { mockCategories } from '../model/mocks';
+import { useCategories } from '../model/queries/useCategories';
 import { CategoriesContent, CategoryDrawer, CategoryModal } from '../ui';
 
 import styled from 'styled-components';
 
-import type { CategoryType } from '../model/types';
 import type { CategoryActionType, ConfirmActionType, ModeType } from '../types';
 
 const StyledWrapper = styled(Flex)`
@@ -37,23 +38,24 @@ const StyledButton = styled(Button)`
 
 export const CategoriesPage = () => {
   const { translate } = useTranslate();
+  const { showNotification } = useNotification();
 
-  // TODO получаем сервисы с бэка
-  const categories = mockCategories;
+  const { categories, isCategoryLoading, isCategoryError } = useCategories();
 
   const [drawerMode, setDrawerMode] = useState<ModeType>(null);
   const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
-  const [filteredCategories, setFilteredCategories] =
-    useState<CategoryType[]>(categories);
+  const [search, setSearch] = useState('');
 
-  const debounce = useDebounce((value: string) => {
-    // TODO (savtsynov) запрос на бэк с учетом поиска
-    const filtered = categories.filter((category) =>
-      category.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()),
+  // TODO (savtsynov) запрос на бэк с учетом поиска
+  const debounce = useDebounce((value: string) => setSearch(value), 500);
+
+  const filteredCategories = useMemo(() => {
+    const list = categories ?? [];
+
+    return list.filter((c) =>
+      c.name.toLowerCase().includes(search.toLowerCase()),
     );
-
-    setFilteredCategories(filtered);
-  }, 500);
+  }, [categories, search]);
 
   const handleSearch = (value: string) => debounce(value);
 
@@ -79,6 +81,20 @@ export const CategoriesPage = () => {
 
   const onCloseDrawer = () => setDrawerMode(null);
   const onCloseModal = () => setConfirmAction(null);
+
+  useEffect(() => {
+    if (isCategoryError) {
+      showNotification({
+        type: 'error',
+        title: translate('business.category.error.query.categories.title'),
+        description: translate(
+          'business.category.error.query.categories.description',
+        ),
+      });
+    }
+  }, [isCategoryError, showNotification, translate]);
+
+  if (isCategoryLoading) return <Spin />;
 
   return (
     <StyledWrapper vertical gap={spaces.xl}>
