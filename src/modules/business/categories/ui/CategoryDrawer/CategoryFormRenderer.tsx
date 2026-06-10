@@ -1,6 +1,3 @@
-import { Spin } from '@shared';
-
-import { mockCategories } from '../../model/mocks';
 import { CategoryCreateForm } from './forms/CategoryCreateForm';
 import { CategoryUpdateForm } from './forms/CategoryUpdateForm';
 
@@ -20,15 +17,7 @@ export const CategoryFormRenderer = ({
       return <CategoryCreateForm onClose={onClose} />;
 
     case 'edit': {
-      // TODO (savtsynov) запрос на бэк для получения информации по категории
-      const category = mockCategories.find(
-        (category) => category.id === mode.id,
-      );
-
-      // TODO (savtsynov) отобразить лодер, пока загружается категория
-      if (!category) return <Spin />;
-
-      return <CategoryUpdateForm category={category} onClose={onClose} />;
+      return <CategoryUpdateForm id={mode.id} onClose={onClose} />;
     }
 
     default:

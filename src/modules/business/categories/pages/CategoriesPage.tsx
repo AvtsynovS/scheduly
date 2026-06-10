@@ -40,7 +40,8 @@ export const CategoriesPage = () => {
   const { translate } = useTranslate();
   const { showNotification } = useNotification();
 
-  const { categories, isCategoryLoading, isCategoryError } = useCategories();
+  const { categories, isCategoriesLoading, isCategoriesError } =
+    useCategories();
 
   const [drawerMode, setDrawerMode] = useState<ModeType>(null);
   const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
@@ -83,7 +84,7 @@ export const CategoriesPage = () => {
   const onCloseModal = () => setConfirmAction(null);
 
   useEffect(() => {
-    if (isCategoryError) {
+    if (isCategoriesError) {
       showNotification({
         type: 'error',
         title: translate('business.category.error.query.categories.title'),
@@ -92,9 +93,9 @@ export const CategoriesPage = () => {
         ),
       });
     }
-  }, [isCategoryError, showNotification, translate]);
+  }, [isCategoriesError, showNotification, translate]);
 
-  if (isCategoryLoading) return <Spin />;
+  if (isCategoriesLoading) return <Spin />;
 
   return (
     <StyledWrapper vertical gap={spaces.xl}>

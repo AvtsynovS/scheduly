@@ -1,7 +1,7 @@
 {
   "button.label.home": "Go to home page",
   "button.label.create": "Create",
-  "button.label.edit": "Edit",
+  "button.label.update": "Edit",
   "button.label.archive": "Archive",
   "button.label.delete": "Delete",
   "button.label.cancel": "Cancel",

@@ -1,32 +1,31 @@
 import { Button, Flex } from '@common/ui-kit';
 import { spaces } from '@shared';
 
-type ModalFooterProps = {
+type DrawerFooterProps = {
   confirmText: string;
   cancelText: string;
   isLoading: boolean;
   onClose: () => void;
-  onConfirm: () => void;
+  onConfirm?: () => void;
 };
 
-export const ModalFooter = ({
+export const DrawerFooter = ({
   confirmText,
   cancelText,
   isLoading,
   onClose,
-  onConfirm,
-}: ModalFooterProps) => {
+}: DrawerFooterProps) => {
   return (
-    <Flex gap={spaces.l} justify="flex-end">
-      <Button disabled={isLoading} onClick={onClose}>
+    <Flex gap={spaces.m} align="center" justify="space-between">
+      <Button block disabled={isLoading} onClick={onClose}>
         {cancelText}
       </Button>
       <Button
+        htmlType="submit"
+        block
         type="primary"
-        danger
         disabled={isLoading}
         loading={isLoading}
-        onClick={onConfirm}
       >
         {confirmText}
       </Button>

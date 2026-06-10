@@ -1,10 +1,11 @@
 import { useMemo } from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
 
-import { blue, Button, Flex } from '@common/ui-kit';
+import { blue, Flex } from '@common/ui-kit';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {
   ColorPickerField,
+  DrawerFooter,
   spaces,
   TextAreaField,
   TextField,
@@ -18,6 +19,7 @@ import styled from 'styled-components';
 import type { CategoryValueType } from './model/types';
 
 type CategoryFormProps = {
+  isLoading: boolean;
   defaultValues?: CategoryValueType;
   onSubmit: (data: CategoryValueType) => void;
   onClose: () => void;
@@ -32,6 +34,7 @@ const StyledForm = styled.form`
 `;
 
 export const CategoryForm = ({
+  isLoading,
   defaultValues,
   onSubmit,
   onClose,
@@ -84,15 +87,16 @@ export const CategoryForm = ({
             disabledFormat
           />
         </Flex>
-
-        <Flex gap={spaces.m} align="center" justify="space-between">
-          <Button htmlType="submit" block type="primary">
-            {translate('button.label.create')}
-          </Button>
-          <Button block onClick={onClose}>
-            {translate('button.label.cancel')}
-          </Button>
-        </Flex>
+        <DrawerFooter
+          confirmText={
+            defaultValues
+              ? translate('button.label.update')
+              : translate('button.label.create')
+          }
+          cancelText={translate('button.label.cancel')}
+          isLoading={isLoading}
+          onClose={onClose}
+        />
       </StyledForm>
     </FormProvider>
   );

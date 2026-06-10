@@ -6,9 +6,8 @@ import { categoryQueryKeys } from './query.keys';
 export const useCategories = () => {
   const {
     data: categories,
-    isLoading: isCategoryLoading,
-    isSuccess: isCategorySuccess,
-    isError: isCategoryError,
+    isLoading: isCategoriesLoading,
+    isError: isCategoriesError,
   } = useQuery({
     queryKey: categoryQueryKeys.all,
     queryFn: () => categoryApiClient.getCategories(),
@@ -16,5 +15,9 @@ export const useCategories = () => {
     throwOnError: false,
   });
 
-  return { categories, isCategoryLoading, isCategorySuccess, isCategoryError };
+  return {
+    categories,
+    isCategoriesLoading,
+    isCategoriesError,
+  };
 };
