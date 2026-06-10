@@ -13,6 +13,6 @@ export const categorySchema = (
     color: yup
       .string()
       .required(translate('business.category.error.color.required')),
-    description: yup.string().optional(),
+    description: yup.string().optional().nullable(),
   });
 };

@@ -32,6 +32,21 @@
   "business.category.error.name.required": "Enter the category name",
   "business.category.error.color.required": "Select color",
 
+  "business.category.success.query.create.title": "Create category",
+  "business.category.success.query.create.description": "Category successfully created",
+  "business.category.success.query.update.title": "Update category",
+  "business.category.success.query.update.description": "Category successfully updated",
+  "business.category.success.query.delete.title": "Delete category",
+  "business.category.success.query.delete.description": "Category successfully deleted",
+
   "business.category.error.query.categories.title": "Loading categories",
-  "business.category.error.query.categories.description": "Failed to load categories"
+  "business.category.error.query.categories.description": "Failed to load categories",
+  "business.category.error.query.category.title": "Loading category",
+  "business.category.error.query.category.description": "Failed to load category",
+  "business.category.error.query.create.title": "Create category",
+  "business.category.error.query.create.description": "Failed to create category",
+  "business.category.error.query.update.title": "Update category",
+  "business.category.error.query.update.description": "Failed to update category",
+  "business.category.error.query.delete.title": "Delete category",
+  "business.category.error.query.delete.description": "Failed to delete category"
 }

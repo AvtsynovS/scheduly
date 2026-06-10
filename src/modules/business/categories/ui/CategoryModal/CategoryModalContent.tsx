@@ -8,6 +8,7 @@ const { Text } = Typography;
 type CategoryModalContentProps = {
   name: string;
   type: NonNullable<ConfirmActionType>['type'];
+  isLoading: boolean;
   onClose: () => void;
   onConfirm: () => void;
 };
@@ -15,6 +16,7 @@ type CategoryModalContentProps = {
 export const CategoryModalContent = ({
   name,
   type,
+  isLoading,
   onClose,
   onConfirm,
 }: CategoryModalContentProps) => {
@@ -35,6 +37,7 @@ export const CategoryModalContent = ({
       <ModalFooter
         confirmText={translate('button.label.delete')}
         cancelText={translate('button.label.cancel')}
+        isLoading={isLoading}
         onClose={onClose}
         onConfirm={onConfirm}
       />

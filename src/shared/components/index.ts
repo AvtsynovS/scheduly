@@ -13,3 +13,4 @@ export { ColorPickerField } from './fields/ColorPickerField';
 export { ActionsButton } from './ActionButton/ActionsButton';
 export { Search } from './Search/Search';
 export { ModalFooter } from './ModalFooter/ModalFooter';
+export { DrawerFooter } from './DrawerFooter/DrawerFooter';

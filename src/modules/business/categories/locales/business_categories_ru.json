@@ -2,7 +2,7 @@
   "business.button.label.add.category": "Добавить категорию",
 
   "business.card.text.description": "Описание",
-  "business.card.text.emptyDescription": "Нет описание",
+  "business.card.text.emptyDescription": "Нет описания",
   "business.card.text.totalService": "Услуг в категории",
 
   "business.drawer.title.category.create": "Новая категория",
@@ -32,6 +32,21 @@
   "business.category.error.name.required": "Введите название категории",
   "business.category.error.color.required": "Выберите цвет",
 
+  "business.category.success.query.create.title": "Создание категории",
+  "business.category.success.query.create.description": "Категория успешно создана",
+  "business.category.success.query.update.title": "Обновление категории",
+  "business.category.success.query.update.description": "Категория успешно обновлена",
+  "business.category.success.query.delete.title": "Удаление категории",
+  "business.category.success.query.delete.description": "Категория успешно удалена",
+
   "business.category.error.query.categories.title": "Загрузка категорий",
-  "business.category.error.query.categories.description": "Не удалось загрузить категории"
+  "business.category.error.query.categories.description": "Не удалось загрузить категории",
+  "business.category.error.query.category.title": "Загрузка категории",
+  "business.category.error.query.category.description": "Не удалось загрузить категорию",
+  "business.category.error.query.create.title": "Создание категории",
+  "business.category.error.query.create.description": "Не удалось создать категорию",
+  "business.category.error.query.update.title": "Обновление категории",
+  "business.category.error.query.update.description": "Не удалось обновить категорию",
+  "business.category.error.query.delete.title": "Удаление категории",
+  "business.category.error.query.delete.description": "Не удалось удалить категорию"
 }
