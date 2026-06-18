@@ -21,6 +21,8 @@
   "business.page.title.categories": "Категории",
   "business.page.description.categories": "Управление категориями для группировки услуг",
 
+  "business.select.placeholder.search.categories": "Введите название категории",
+
   "business.table.column.categories": "Категории",
   "business.table.column.color": "Цвет",
   "business.table.column.name": "Название",

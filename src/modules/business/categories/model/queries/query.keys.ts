@@ -2,7 +2,7 @@ const category = ['category'] as const;
 
 const clientObjectKeys = {
   query: {
-    all: [...category] as const,
+    all: (search: string) => [...category, search] as const,
     one: (id: string) => [...category, id] as const,
   },
 

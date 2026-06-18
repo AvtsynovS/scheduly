@@ -1,4 +1,5 @@
 import { httpClient } from '@common/data-access';
+import { cleanParams } from '@shared';
 
 import type {
   CategoryApiClientType,
@@ -7,10 +8,13 @@ import type {
   UpdateCategoryRequestType,
 } from './requestTypes';
 
-const getCategories = async () => {
+const getCategories = async (search?: string) => {
   const { data } = await httpClient.request<CategoryResponseType[]>({
     url: `/categories`,
     method: 'GET',
+    params: cleanParams({
+      search: search?.trim(),
+    }),
   });
 
   return data;

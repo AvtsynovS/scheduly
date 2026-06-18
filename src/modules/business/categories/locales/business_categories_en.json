@@ -21,6 +21,8 @@
   "business.page.title.categories": "Categories",
   "business.page.description.categories": "Managing categories to group services",
 
+  "business.select.placeholder.search.categories": "Enter category name",
+
   "business.table.column.categories": "Categories",
   "business.table.column.color": "Color",
   "business.table.column.name": "Name",
