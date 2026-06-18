@@ -10,7 +10,7 @@ export type UpdateCategoryRequestType = {
 };
 
 export type CategoryApiClientType = {
-  getCategories: () => Promise<CategoryResponseType[]>;
+  getCategories: (search?: string) => Promise<CategoryResponseType[]>;
   getCategoryById: (id: string) => Promise<CategoryResponseType>;
   createCategory: (
     category: CategoryRequestType,

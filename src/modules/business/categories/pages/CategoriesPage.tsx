@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import { Button, Flex } from '@common/ui-kit';
 import {
@@ -7,7 +7,6 @@ import {
   PlusIcon,
   Search,
   spaces,
-  Spin,
   useDebounce,
   useNotification,
   useTranslate,
@@ -40,29 +39,18 @@ export const CategoriesPage = () => {
   const { translate } = useTranslate();
   const { showNotification } = useNotification();
 
-  const { categories, isCategoriesLoading, isCategoriesError } =
-    useCategories();
-
   const [drawerMode, setDrawerMode] = useState<ModeType>(null);
   const [confirmAction, setConfirmAction] = useState<ConfirmActionType>(null);
   const [search, setSearch] = useState('');
 
-  // TODO (savtsynov) запрос на бэк с учетом поиска
-  const debounce = useDebounce((value: string) => setSearch(value), 500);
+  const { categories, isCategoriesLoading, isCategoriesError } =
+    useCategories(search);
 
-  const filteredCategories = useMemo(() => {
-    const list = categories ?? [];
-
-    return list.filter((c) =>
-      c.name.toLowerCase().includes(search.toLowerCase()),
-    );
-  }, [categories, search]);
-
-  const handleSearch = (value: string) => debounce(value);
+  const onSearch = useDebounce((value: string) => setSearch(value), 500);
 
   const handleSearchChange = (
     event: React.ChangeEvent<HTMLInputElement, HTMLInputElement>,
-  ) => debounce(event.target.value);
+  ) => onSearch(event.target.value);
 
   const onCategoryActions = useCallback((action: CategoryActionType) => {
     switch (action.type) {
@@ -95,8 +83,6 @@ export const CategoriesPage = () => {
     }
   }, [isCategoriesError, showNotification, translate]);
 
-  if (isCategoriesLoading) return <Spin />;
-
   return (
     <StyledWrapper vertical gap={spaces.xl}>
       <PageHeader
@@ -113,16 +99,15 @@ export const CategoriesPage = () => {
         }
       />
       <Search
-        placeholder={translate('business.select.placeholder.search')}
+        placeholder={translate('business.select.placeholder.search.categories')}
         allowClear
-        // TODO пока идет запрос
-        disabled={false}
-        loading={false}
-        onSearch={handleSearch}
+        loading={isCategoriesLoading}
+        onSearch={onSearch}
         onChange={handleSearchChange}
       />
       <CategoriesContent
-        categories={filteredCategories}
+        categories={categories || []}
+        isLoading={isCategoriesLoading}
         onAction={onCategoryActions}
       />
       <CategoryDrawer mode={drawerMode} onClose={onCloseDrawer} />

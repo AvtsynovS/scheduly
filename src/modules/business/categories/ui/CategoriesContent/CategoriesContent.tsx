@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { Flex, Segmented } from '@common/ui-kit';
-import { spaces, useTranslateOptions } from '@shared';
+import { spaces, Spin, useTranslateOptions } from '@shared';
 
 import { CategoriesCards } from './ui/CategoriesCards/CategoriesCards';
 import { CategoriesTable } from './ui/CategoriesTable/CategoriesTable';
@@ -14,6 +14,7 @@ import type { CategoryActionType, ViewModeType } from '../../types';
 
 type CategoriesContentProps = {
   categories: CategoryType[];
+  isLoading: boolean;
   onAction: (action: CategoryActionType) => void;
 };
 
@@ -28,6 +29,7 @@ const StyledSegmented = styled(Segmented<ViewModeType>)`
 
 export const CategoriesContent = ({
   categories,
+  isLoading,
   onAction,
 }: CategoriesContentProps) => {
   const [viewMode, setViewMode] = useState<ViewModeType>('table');
@@ -35,6 +37,8 @@ export const CategoriesContent = ({
   const options = useTranslateOptions(categoriesTabs);
 
   const handleChangeView = (view: ViewModeType) => setViewMode(view);
+
+  if (isLoading) return <Spin />;
 
   return (
     <Flex vertical gap={spaces.m}>
